@@ -2,18 +2,22 @@ export const SPACE_DATA = [
   {
     id: 1,
     title: "작업장 '봄'",
+    section: 'michuhol',
   },
   {
     id: 2,
     title: '(주) 위드달',
+    section: 'michuhol',
   },
   {
     id: 3,
     title: '코드아트',
+    section: 'michuhol',
   },
   {
     id: 4,
     title: '주식회사 한울소리',
+    section: 'michuhol',
     location: '인천광역시 미추홀구 소성로 285, [지하]',
     program:
       "두두림파티! 어서옵SHOW! - 베이스드럼, 난타북, 스네어 등의 악기를 활용하여 바투카다를 배우고, 클래식 앙상블단체 ‘코드아트'와의 협연 연주에 함께 참여해요!",
@@ -41,22 +45,27 @@ export const SPACE_DATA = [
   {
     id: 5,
     title: '공간인공빛',
+    section: 'jung',
   },
   {
     id: 6,
     title: '공예루틴',
+    section: 'jung',
   },
   {
     id: 7,
     title: '모이소',
+    section: 'jung',
   },
   {
     id: 8,
     title: '올라 아트컴퍼니',
+    section: 'jung',
   },
   {
     id: 9,
     title: '창작집단 <발아>',
+    section: 'jung',
     location: '인천 중구 송월동1가 4-67, [2층]',
     program: 'OHP프로젝터로 펼쳐지는 발아극장 - 공간의 다양한 희곡과 동화책',
     projectSchedule: '2024.10.15.(화) ~ 17.(목) 18:00 ~ 22:00',
@@ -84,10 +93,12 @@ export const SPACE_DATA = [
   {
     id: 10,
     title: '카츠오리진 연구소',
+    section: 'jung',
   },
   {
     id: 11,
     title: '어벙또벙 이야기 수선집',
+    section: 'dong',
     location: '인천광역시 동구 송림로16 [2층]',
     program:
       "들차리 퍼포먼스 - 어벙또벙 이야기 수선집 들차리 오세요! 이야기 수선의 첫 시작으로 첫보금자리인 ‘이야기 수선집'에서 찾은 이야기를 수선합니다.",
