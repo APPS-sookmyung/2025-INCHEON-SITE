@@ -13,14 +13,15 @@ const SpaceDetailPage = () => {
 
   const imageMap = {
     michuhol: '/MichuholDot.svg',
-    dong: '/MichuholDot.svg',
-    jung: '/MichuholDot.svg',
+    dong: '/DongDot.svg',
+    jung: '/JungDot.svg',
   };
 
   const imageSrc = imageMap[section];
 
   return (
     <div className='bg-[#FDFCF8] relative font-pretendard'>
+      {/* 배경 */}
       <div className='absolute top-[180px]'>
         <img src={detailBackground1} alt='background top' className='w-full' />
         <img
@@ -29,7 +30,9 @@ const SpaceDetailPage = () => {
           className='w-full'
         />
       </div>
-      <div className='absolute flex top-0'>
+
+      {/* intro */}
+      <div className='absolute flex top-0 w-full'>
         <div className='pl-[150px] pr-[50px] pt-[180px] w-1/2'>
           <h1 className='font-black text-6xl tracking-tighter mb-[80px]'>
             {space.title}
