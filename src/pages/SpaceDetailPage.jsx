@@ -94,31 +94,74 @@ const SpaceDetailPage = () => {
             <p>{space.projectSchedule}</p>
           </DetailCard>
           <DetailCard title='오픈스튜디오 정보 및 운영 일정'>
-            <p>
-              {space.studioInfo.map((group, groupIdx) => (
-                <div key={groupIdx} className='mb-8'>
-                  {group.map((item, i) => (
-                    <div key={i} className='flex pt-1 '>
-                      {i >= 2 && (
-                        <span
-                          className={`h-3 w-3 mt-1.5 mr-2 ml-8 rounded-full flex-shrink-0 ${
-                            dotColors[space.section]
-                          }`}>
-                          {' '}
-                        </span>
-                      )}
-                      <p className={i === 0 ? 'font-bold mb-1' : ''}>{item}</p>
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </p>
+            {space.studioInfo.map((group, groupIdx) => (
+              <div key={groupIdx} className='mb-8'>
+                {group.map((item, i) => (
+                  <div key={i} className='flex pt-1 '>
+                    {i >= 2 && (
+                      <span
+                        className={`h-3 w-3 mt-1.5 mr-2 ml-8 rounded-full flex-shrink-0 ${
+                          dotColors[space.section]
+                        }`}>
+                        {' '}
+                      </span>
+                    )}
+                    <p className={i === 0 ? 'font-bold mb-1' : ''}>{item}</p>
+                  </div>
+                ))}
+              </div>
+            ))}
           </DetailCard>
           <img
             src={detailDot}
             alt='detailDot'
             className='h-[160px] ml-[100px]'
           />
+        </div>
+
+        {/* interview intro*/}
+        <div className='flex justify-center mb-[100px]'>
+          <div className='w-[50%] pr-35'>
+            <p className='block text-lg font-semibold border-b-2 border-black w-full pb-5'>
+              팀원
+            </p>
+            <div className='flex justify-between relative'>
+              <div className='inline-block pt-5'>
+                {space.members.map((member, idx) => (
+                  <p key={idx} className='font-base mb-1'>
+                    {member}
+                  </p>
+                ))}
+              </div>
+              <img
+                src={`${imagePath}/interview.webp`}
+                alt='interviewImage'
+                className='w-[65%] h-[350px] grayscale rounded-br-[70%] object-cover'
+              />
+              <p
+                className='absolute bottom-5 left-1/2 -translate-x-1/2 
+                   bg-white text-black rounded-full px-8 py-2 text-sm font-bold'>
+                인터뷰
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* interview */}
+        <div className='w-[55%] absolute left-[400px]'>
+          {space.interview.map((interview, interviewIdx) => (
+            <div
+              key={interviewIdx}
+              className='flex mb-8 pb-8 border-b-1 border-black items-start'>
+              <span className='text-7xl pr-6'>
+                {(interviewIdx + 1).toString().padStart(2, '0')}
+              </span>
+              <div>
+                <p className='font-bold mb-6 pt-2'>{interview.q}</p>
+                <p className='text-sm'>{interview.a}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
