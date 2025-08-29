@@ -1,8 +1,9 @@
 import {SPACE_DATA} from '../util/spaceInfo.js';
 import detailBackground1 from '../assets/DetailBackground1.svg';
 import detailBackground2 from '../assets/DetailBackground2.svg';
-import introDot from '../assets/introDot.svg';
+import introDot from '../assets/IntroDot.svg';
 import detailDot from '../assets/DetailDot.svg';
+import spaceImgDot from '../assets/SpaceImgDot.svg';
 import mapIcon from '../assets/MapIcon.svg';
 
 import {useParams} from 'react-router-dom';
@@ -40,11 +41,13 @@ const SpaceDetailPage = () => {
       {/* 배경 */}
       <div className='absolute top-[180px]'>
         <img src={detailBackground1} alt='background top' className='w-full' />
+        <div className='h-[150px]'></div>
         <img
           src={detailBackground2}
           alt='background bottom'
           className='w-full'
         />
+        <div className='w-full h-[1000px] bg-[#FDFCF8]' />
       </div>
 
       {/* contents */}
@@ -148,7 +151,7 @@ const SpaceDetailPage = () => {
         </div>
 
         {/* interview */}
-        <div className='w-[55%] absolute left-[400px]'>
+        <div className='w-[55%] relative left-[400px]'>
           {space.interview.map((interview, interviewIdx) => (
             <div
               key={interviewIdx}
@@ -162,6 +165,66 @@ const SpaceDetailPage = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* space img */}
+        <div>
+          <div className='flex flex-col items-end'>
+            <img
+              src={spaceImgDot}
+              alt='spaceImgDot'
+              className='h-[40px] mt-[130px] mr-[150px]'></img>
+            <p className='font-bold text-base mt-4 mr-[330px] mb-[100px]'>
+              내부 공간
+            </p>
+          </div>
+          <div className='flex flex-col items-center'>
+            <div className='grid grid-cols-[1fr_2fr] grid-rows-[3fr_2fr] gap-6 h-[450px] w-[950px]  mb-16'>
+              <img
+                src={`${imagePath}/1.webp`}
+                alt='spaceImg'
+                className='w-full h-full object-cover'
+              />
+              <img
+                src={`${imagePath}/2.webp`}
+                alt='spaceImg'
+                className='row-span-2 w-full h-full object-cover'
+              />
+              <img
+                src={`${imagePath}/3.webp`}
+                alt='spaceImg'
+                className='h-full w-2/3 object-cover justify-self-end'
+              />
+            </div>
+            <div className='grid grid-cols-[2fr_1fr] grid-rows-[2fr_1fr] gap-6 w-[950px] mb-12'>
+              <img
+                src={`${imagePath}/4.webp`}
+                alt='spaceImg'
+                className='w-full justify-self-end object-cover'></img>
+              <img
+                src={`${imagePath}/5.webp`}
+                alt='spaceImg'
+                className='w-full self-end'></img>
+              <p className='h-1'></p>
+              <img
+                src={`${imagePath}/6.webp`}
+                alt='h-full object-cover spaceImg'></img>
+            </div>
+            <div className='grid grid-cols-2 grid-rows-[3fr_2fr] gap-6 w-[850px]'>
+              <img
+                src={`${imagePath}/7.webp`}
+                alt='spaceImg'
+                className='w-[70%] h-[400px] self-end object-cover col-span-2'></img>
+              <img
+                src={`${imagePath}/8.webp`}
+                alt='spaceImg'
+                className='h-full object-cover'></img>
+              <img
+                src={`${imagePath}/9.webp`}
+                alt='spaceImg'
+                className='h-full object-cover'></img>
+            </div>
+          </div>
         </div>
       </div>
     </div>
