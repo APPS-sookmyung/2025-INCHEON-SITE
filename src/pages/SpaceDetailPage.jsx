@@ -1,10 +1,10 @@
 import {SPACE_DATA} from '../util/spaceInfo.js';
-import detailBackground1 from '../assets/DetailBackground1.svg';
-import detailBackground2 from '../assets/DetailBackground2.svg';
-import introDot from '../assets/IntroDot.svg';
-import detailDot from '../assets/DetailDot.svg';
-import spaceImgDot from '../assets/SpaceImgDot.svg';
-import mapIcon from '../assets/MapIcon.svg';
+import detailBackground1 from '../assets/detail/DetailBackground1.svg';
+import detailBackground2 from '../assets/detail/DetailBackground2.svg';
+import introDot from '../assets/detail/IntroDot.svg';
+import detailDot from '../assets/detail/DetailDot.svg';
+import spaceImgDot from '../assets/detail/SpaceImgDot.svg';
+import mapIcon from '../assets/detail/MapIcon.svg';
 
 import {useParams} from 'react-router-dom';
 
