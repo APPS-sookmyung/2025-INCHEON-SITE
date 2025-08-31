@@ -1,8 +1,8 @@
 import iconSvg from '../../assets/svg/icons.svg';
 
-const Icon = ({id, classname, width, height, ...props}) => {
+const Icon = ({id, width, height, className, ...props}) => {
   return (
-    <svg className={classname} width={width} height={height} {...props}>
+    <svg width={width} height={height} className={className} {...props}>
       <use href={`${iconSvg}#${id}`} />
     </svg>
   );
