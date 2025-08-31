@@ -1,19 +1,16 @@
-import Icon from '../components/mainpage/icon';
-import Layout from '../components/mainpage/layout';
+import background from '../assets/svg/background.svg';
+import Preview from '../components/mainpage/Preview';
 
 const MainPage = () => {
   return (
-    <div className='relative flex justify-center'>
-      <Layout>
-        <Icon
-          id='b1'
-          className='aboslute float-left z-1000 top-0 left-0'
-          width='140'
-          height='140'
-        />
-      </Layout>
+    <div className='flex justify-center py-15'>
+      <div className='relative w-full max-w-[1078px]'>
+        <div className='relative aspect-[1078/5214]'>
+          <img src={background} alt='' className='' />
+          <Preview />
+        </div>
+      </div>
     </div>
   );
 };
-
 export default MainPage;
