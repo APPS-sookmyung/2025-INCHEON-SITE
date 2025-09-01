@@ -1,5 +1,6 @@
 import Icon from './icon';
 import arrow from '../../assets/svg/arrow.svg';
+import description from '../../assets/svg/description.svg';
 
 const W = 1078;
 const H = 5214;
@@ -23,6 +24,7 @@ const icons = [
 const Preview = () => {
   return (
     <div>
+      <img className='absolute z-0 top-13 left-102' src={description} alt='' />
       {icons.map(({id, x, y, label, bg}) => {
         const left = (x / W) * 100;
         const top = (y / H) * 100;
