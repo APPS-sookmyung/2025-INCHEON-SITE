@@ -2,7 +2,7 @@ import Icon from './icon';
 import arrow from '../../assets/svg/arrow.svg';
 
 const W = 1078;
-const H = 5214;
+const H = 1024;
 
 const icons = [
   {id: 'b1', x: 65, y: 0, label: '작업장봄', bg: 'bg-orange'},
