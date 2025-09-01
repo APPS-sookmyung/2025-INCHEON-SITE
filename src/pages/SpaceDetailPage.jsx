@@ -15,9 +15,9 @@ const SpaceDetailPage = () => {
   const section = space?.section;
 
   const imageMap = {
-    michuhol: '/MichuholDot.svg',
-    dong: '/DongDot.svg',
-    jung: '/JungDot.svg',
+    michuhol: '/detail/MichuholDot.svg',
+    dong: '/detail/DongDot.svg',
+    jung: '/detail/JungDot.svg',
   };
   const imageSrc = imageMap[section];
 
