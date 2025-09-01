@@ -6,7 +6,7 @@ import {useNavigate} from 'react-router-dom';
 const W = 1078;
 const H = 5214;
 
-const icons = [
+const spaces = [
   {id: 'b1', x: 65, y: 0, label: '작업장봄', bg: 'bg-orange'},
   {id: 'b2', x: 225, y: 0, label: '공간인공빛', bg: 'bg-purple'},
   {id: 'b3', x: 70, y: 390, label: '코드아트', bg: 'bg-green'},
@@ -28,7 +28,7 @@ const Preview = () => {
   return (
     <div>
       <img className='absolute z-0 top-13 left-102' src={description} alt='' />
-      {icons.map(({id, x, y, label, bg}, index) => {
+      {spaces.map(({id, x, y, label, bg}, index) => {
         const left = (x / W) * 100;
         const top = (y / H) * 100;
 
