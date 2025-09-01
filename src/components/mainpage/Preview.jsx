@@ -39,7 +39,7 @@ const Preview = () => {
             {label && (
               <div
                 className={`hidden group-hover:flex top-40 absolute ${bg} z-10 justify-end items-center gap-2.5 border-none pl-6 pr-1.5 py-0.5 rounded-[140px]`}>
-                <span className='whitespace-nowrap text-lg text-white leading-[45px] px-4'>
+                <span className='whitespace-nowrap text-lg text-white leading-[40px] px-3.5'>
                   {label}
                 </span>
                 <img
