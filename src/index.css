@@ -1,6 +1,9 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 @import 'tailwindcss';
 
 :root {
+  font-family: Pretendard;
   background-color: #fdfcf8;
 
   font-synthesis: none;
