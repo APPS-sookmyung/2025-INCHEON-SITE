@@ -1,6 +1,7 @@
 import Icon from './icon';
 import arrow from '../../assets/svg/arrow.svg';
 import description from '../../assets/svg/description.svg';
+import {useNavigate} from 'react-router-dom';
 
 const W = 1078;
 const H = 5214;
@@ -22,15 +23,18 @@ const icons = [
 ];
 
 const Preview = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <img className='absolute z-0 top-13 left-102' src={description} alt='' />
-      {icons.map(({id, x, y, label, bg}) => {
+      {icons.map(({id, x, y, label, bg}, index) => {
         const left = (x / W) * 100;
         const top = (y / H) * 100;
 
         return (
           <div
+            onClick={() => navigate(`spaces/${index + 1}`)}
             key={id}
             className='absolute group flex flex-col items-center cursor-pointer hover:drop-shadow-hover hover:z-20'
             style={{
