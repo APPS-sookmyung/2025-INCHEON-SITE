@@ -1,5 +1,14 @@
 @import 'tailwindcss';
 
+:root {
+  background-color: #fdfcf8;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @theme {
   --color-purple: #7268ff;
   --color-orange: #ffb522;
