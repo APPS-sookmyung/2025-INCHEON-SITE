@@ -38,15 +38,11 @@ const SpaceDetailPage = () => {
 
   return (
     <div className='bg-[#FDFCF8] relative font-pretendard'>
-      {/* 배경 */}
+      {/* background */}
       <div className='absolute top-[180px]'>
-        <img src={detailBackground1} alt='background top' className='w-full' />
+        <img src={detailBackground1} alt='상단 배경 요소' className='w-full' />
         <div className='h-[150px]'></div>
-        <img
-          src={detailBackground2}
-          alt='background bottom'
-          className='w-full'
-        />
+        <img src={detailBackground2} alt='하단 배경 요소' className='w-full' />
         <div className='w-full h-[1000px] bg-[#FDFCF8]' />
       </div>
 
@@ -64,7 +60,7 @@ const SpaceDetailPage = () => {
             <p className='w-[80%] text-xl/10 text-left font-medium mt-[30px]'>
               {space.program}
             </p>
-            <img src={introDot} alt='introDot' className='h-[30px] mt-[80px]' />
+            <img src={introDot} alt='' className='h-[30px] mt-[80px]' />
           </div>
           <div className='relative w-1/2 h-[700px] overflow-hidden rounded-bl-full '>
             <img
@@ -74,7 +70,7 @@ const SpaceDetailPage = () => {
             />
             <img
               src={imageSrc}
-              alt={section}
+              alt=''
               className='absolute -right-[20px] top-[50px] h-[95%] z-20'
             />
           </div>
@@ -89,7 +85,7 @@ const SpaceDetailPage = () => {
               className='mt-5 inline-flex items-center rounded-full border px-1 py-1 pr-4 text-sm'
               // onClick={() => 길찾기 로직}
             >
-              <img src={mapIcon} alt='mapIcon' className='pr-2 h-6' />
+              <img src={mapIcon} alt='지도 아이콘' className='pr-2 h-6' />
               길찾기
             </button>
           </DetailCard>
@@ -115,11 +111,7 @@ const SpaceDetailPage = () => {
               </div>
             ))}
           </DetailCard>
-          <img
-            src={detailDot}
-            alt='detailDot'
-            className='h-[160px] ml-[100px]'
-          />
+          <img src={detailDot} alt='' className='h-[160px] ml-[100px]' />
         </div>
 
         {/* interview intro*/}
@@ -138,7 +130,7 @@ const SpaceDetailPage = () => {
               </div>
               <img
                 src={`${imagePath}/interview.webp`}
-                alt='interviewImage'
+                alt='인터뷰 대표 사진'
                 className='w-[65%] h-[350px] grayscale rounded-br-[70%] object-cover'
               />
               <p
@@ -172,7 +164,7 @@ const SpaceDetailPage = () => {
           <div className='flex flex-col items-end'>
             <img
               src={spaceImgDot}
-              alt='spaceImgDot'
+              alt=''
               className='h-[40px] mt-[130px] mr-[150px]'></img>
             <p className='font-bold text-base mt-4 mr-[330px] mb-[100px]'>
               내부 공간
@@ -182,46 +174,47 @@ const SpaceDetailPage = () => {
             <div className='grid grid-cols-[1fr_2fr] grid-rows-[3fr_2fr] gap-6 h-[450px] w-[950px]  mb-16'>
               <img
                 src={`${imagePath}/1.webp`}
-                alt='spaceImg'
+                alt='내부 공간 사진1'
                 className='w-full h-full object-cover'
               />
               <img
                 src={`${imagePath}/2.webp`}
-                alt='spaceImg'
+                alt='내부 공간 사진2'
                 className='row-span-2 w-full h-full object-cover'
               />
               <img
                 src={`${imagePath}/3.webp`}
-                alt='spaceImg'
+                alt='내부 공간 사진3'
                 className='h-full w-2/3 object-cover justify-self-end'
               />
             </div>
             <div className='grid grid-cols-[2fr_1fr] grid-rows-[2fr_1fr] gap-6 w-[950px] mb-12'>
               <img
                 src={`${imagePath}/4.webp`}
-                alt='spaceImg'
+                alt='내부 공간 사진4'
                 className='w-full justify-self-end object-cover'></img>
               <img
                 src={`${imagePath}/5.webp`}
-                alt='spaceImg'
+                alt='내부 공간 사진5'
                 className='w-full self-end'></img>
               <p className='h-1'></p>
               <img
                 src={`${imagePath}/6.webp`}
-                alt='h-full object-cover spaceImg'></img>
+                alt='내부 공간 사진6'
+                className='h-full object-cover'></img>
             </div>
             <div className='grid grid-cols-2 grid-rows-[3fr_2fr] gap-6 w-[850px]'>
               <img
                 src={`${imagePath}/7.webp`}
-                alt='spaceImg'
+                alt='내부 공간 사진7'
                 className='w-[70%] h-[400px] self-end object-cover col-span-2'></img>
               <img
                 src={`${imagePath}/8.webp`}
-                alt='spaceImg'
+                alt='내부 공간 사진8'
                 className='h-full object-cover'></img>
               <img
                 src={`${imagePath}/9.webp`}
-                alt='spaceImg'
+                alt='내부 공간 사진9'
                 className='h-full object-cover'></img>
             </div>
           </div>
