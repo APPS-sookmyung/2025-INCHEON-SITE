@@ -22,7 +22,7 @@ const spaces = [
   {id: 'd2', x: 890, y: 225},
 ];
 
-const Preview = () => {
+const Preview = ({setHover}) => {
   const navigate = useNavigate();
 
   return (
@@ -34,9 +34,11 @@ const Preview = () => {
 
         return (
           <div
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
             onClick={() => navigate(`spaces/${index + 1}`)}
             key={id}
-            className='absolute group flex flex-col items-center cursor-pointer hover:drop-shadow-hover hover:z-20'
+            className='absolute group flex flex-col items-center cursor-pointer hover:drop-shadow-hover hover:z-30'
             style={{
               left: `${left}%`,
               top: `${top}%`,
@@ -44,7 +46,7 @@ const Preview = () => {
             <Icon id={id} />
             {label && (
               <div
-                className={`hidden group-hover:flex top-40 absolute ${bg} z-10 justify-end items-center gap-2.5 border-none pl-6 pr-1.5 py-0.5 rounded-[140px]`}>
+                className={`hidden group-hover:flex top-40 absolute ${bg} z-20 justify-end items-center gap-2.5 border-none pl-6 pr-1.5 py-0.5 rounded-[140px]`}>
                 <span className='whitespace-nowrap text-lg text-white leading-[40px] px-3.5'>
                   {label}
                 </span>
