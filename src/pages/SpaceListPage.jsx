@@ -1,24 +1,27 @@
 import { ArrowDownRight, Instagram, Search, Menu } from 'lucide-react';
 import { useMemo } from 'react';
-import { Navigate } from 'wouter';
-import { useLocation } from 'wouter';
+import { useNavigate } from 'react-router-dom';
+import Header from '../components/header';
+
+// className 유틸리티 함수
+const cx = (...classes) => classes.filter(Boolean).join(' ');
 
 
 
 const ListPage = () => {
-    const [, navigate] = useLocation();
+    const navigate = useNavigate();
     const items = useMemo(() => [
-        { id: "1", title: "작업장 ‘봄’", region: "미추홀구", district: "인천 남구", image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop&sat=-20" },
-        { id: "2", title: "(주) 위드달", region: "미추홀구", district: "인천 남구", image: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1600&auto=format&fit=crop&sat=-20" },
-        { id: "3", title: "코드아트", region: "미추홀구", district: "인천 남구", image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop&sat=-20" },
-        { id: "4", title: "주식회사 한울소리", region: "미추홀구", district: "인천 남구", image: "https://images.unsplash.com/photo-1492447166138-50c3889fccb1?q=80&w=1600&auto=format&fit=crop&sat=-20" },
-        { id: "4", title: "공간인공빛", region: "중구", district: "인천", image: "https://images.unsplash.com/photo-1492447166138-50c3889fccb1?q=80&w=1600&auto=format&fit=crop&sat=-20" },
-        { id: "5", title: "공예루틴", region: "중구", district: "인천", image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1600&auto=format&fit=crop&sat=-20" },
-        { id: "6", title: "모이소", region: "중구", district: "인천", image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1600&auto=format&fit=crop&sat=-20" },
-        { id: "7", title: "올라 아트컴퍼니", region: "중구", district: "인천", image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?q=80&w=1600&auto=format&fit=crop&sat=-20" },
-        { id: "8", title: "창작집단 <발아>", region: "중구", district: "인천", image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop&sat=-20" },
-        { id: "9", title: "카츠오리진 연구소", region: "중구", district: "인천", image: "https://images.unsplash.com/photo-1504805572947-34fad45aed93?q=80&w=1600&auto=format&fit=crop&sat=-20" },
-        { id: "10", title: "어벙또벙 이야기 수선점", region: "동구", district: "인천", image: "https://images.unsplash.com/photo-1456086272160-b28b0645b729?q=80&w=1600&auto=format&fit=crop&sat=-20" },
+        { id: "1", title: "작업장 ‘봄’", region: "미추홀구", district: "인천 남구", image: "src/assets/coverimage/cover_ex.png" },
+        { id: "2", title: "(주) 위드달", region: "미추홀구", district: "인천 남구", image: "src/assets/coverimage/cover_ex.png" },
+        { id: "3", title: "코드아트", region: "미추홀구", district: "인천 남구", image: "src/assets/coverimage/cover_ex.png" },
+        { id: "4", title: "주식회사 한울소리", region: "미추홀구", district: "인천 남구", image: "src/assets/coverimage/cover_ex.png" },
+        { id: "4", title: "공간인공빛", region: "중구", district: "인천", image: "src/assets/coverimage/cover_ex.png" },
+        { id: "5", title: "공예루틴", region: "중구", district: "인천", image: "src/assets/coverimage/cover_ex.png" },
+        { id: "6", title: "모이소", region: "중구", district: "인천", image: "src/assets/coverimage/cover_ex.png" },
+        { id: "7", title: "올라 아트컴퍼니", region: "중구", district: "인천", image: "src/assets/coverimage/cover_ex.png" },
+        { id: "8", title: "창작집단 <발아>", region: "중구", district: "인천", image: "src/assets/coverimage/cover_ex.png" },
+        { id: "9", title: "카츠오리진 연구소", region: "중구", district: "인천", image: "src/assets/coverimage/cover_ex.png" },
+        { id: "10", title: "어벙또벙 이야기 수선점", region: "동구", district: "인천", image: "src/assets/coverimage/cover_ex.png" },
     ], []);
 
     return (
@@ -31,7 +34,7 @@ const ListPage = () => {
        
         
         
-        {/* 2D 그리드 라인 */}
+        {/* 그리드 라인 */}
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-neutral-300">
         {items.map((p) => (
         <Card key={p.id} place={p} />
@@ -48,7 +51,6 @@ const ListPage = () => {
         }
         
         
-        // ────────────────────────────────────────────────────────────────
         // 카드
         function Card({ place }) {
         return (
@@ -80,17 +82,17 @@ const ListPage = () => {
         
         {/* 좌측하단: 배지 */}
         <div className="absolute left-3 bottom-3 z-10 flex items-center gap-2 text-[11px]">
-        <Badge tone="chip">{place.district.toUpperCase()}</Badge>
-        <Badge tone="chip">{place.region}</Badge>
+        <Badge tone="chip">{place.region.toUpperCase()}</Badge>
+        <Badge tone="chip">{place.district}</Badge>
         </div>
         
         
-        {/* 우측하단: 자세히 보기 아이콘 */}
+        {/* 우측하단: 자세히 보기 */}
         <a
         href="#"
         className="absolute right-3 bottom-3 z-10 inline-flex items-center gap-1.5 text-[11px] text-neutral-600 group-hover:text-white transition-colors"
         >
-        자세히 보기 <ArrowDownRight size={14} />
+         <ArrowDownRight size={14} />
         </a>
         </article>
         );
@@ -105,3 +107,5 @@ const ListPage = () => {
         else classes = "bg-neutral-100 text-neutral-700 border-neutral-200";
         return <span className={cx("px-2.5 py-1 rounded-full border text-[11px]", classes)}>{children}</span>;
         }
+
+export default ListPage;
