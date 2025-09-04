@@ -3,6 +3,7 @@ import { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/header';
 import Footer from '../components/footer'
+import listPageBg from '../assets/ListPageBg.png'
 
 // className 유틸리티 함수
 const cx = (...classes) => classes.filter(Boolean).join(' ');
@@ -33,29 +34,28 @@ const ListPage = () => {
 
 
     return (
-        <div className="min-h-svh bg-[#FAFAF7] text-[#1A1A1A]">
-        <Header />
-        
-        
-        {/* 콘텐츠 */}
-        <main className="mx-auto max-w-6xl px-5 py-12">
-       
-        
-        
-        {/* 그리드 라인 */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-neutral-300">
-        {items.map((p) => (
-        <Card key={p.id} place={p} />
-        ))}
-        </section>
-        </main>
-        
-        
-            <Footer/>
+        <div className="min-h-svh flex flex-col bg-[#FAFAF7] text-[#1A1A1A]">
+          <Header />
+      
+          <main
+            className="flex-grow bg-cover bg-bottom bg-contain"
+            style={{ backgroundImage: `url(${listPageBg})` }}
+          >
+            <div className="mx-auto max-w-6xl px-5 py-12">
+              {/* 그리드 라인 */}
+              <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-neutral-300">
+                {items.map((p) => (
+                  <Card key={p.id} place={p} />
+                ))}
+              </section>
+            </div>
+          </main>
+      
+          <Footer />
         </div>
-        );
-        }
-        
+      );
+}
+      
         
         // 카드
         function Card({ place }) {
@@ -127,4 +127,6 @@ const ListPage = () => {
                 </span>
             );
         }
+
+
 export default ListPage;
