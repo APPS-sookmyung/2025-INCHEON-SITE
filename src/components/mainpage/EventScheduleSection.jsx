@@ -1,23 +1,25 @@
 import purpleDotsUrl from '../../assets/svg/purple-dots.svg';
 import greenDotsUrl from '../../assets/svg/green-dots.svg';
+import InfoTag from './InfoTag';
 
 const W = 1078;
 const H = 2738;
 
-const dotplaces = [
-  {x: 551, y: 422, color: 'green'},
-  {x: 715, y: 422, color: 'yellow'},
-  {x: 590, y: 822, color: 'yellow'},
-  {x: 868, y: 822, color: 'yellow'},
-  {x: 250, y: 1100, color: 'green'},
-  {x: 405, y: 1100, color: 'yellow'},
-  {x: 325, y: 1462, color: 'green'},
-  {x: 706, y: 1462, color: 'yellow'},
-  {x: 850, y: 1462, color: 'purple'},
-  {x: 325, y: 1820, color: 'yellow'},
-  {x: 504, y: 1820, color: 'green'},
-  {x: 678, y: 1820, color: 'purple'},
-  {x: 468, y: 2175, color: 'yellow'},
+const items = [
+  {x: 551, y: 422, type: 'dot', color: 'green'},
+  {x: 715, y: 422, type: 'dot', color: 'yellow'},
+  {x: 590, y: 822, type: 'dot', color: 'yellow'},
+  {x: 868, y: 822, type: 'dot', color: 'yellow'},
+  {x: 250, y: 1100, type: 'dot', color: 'green'},
+  {x: 405, y: 1100, type: 'dot', color: 'yellow'},
+  {x: 325, y: 1462, type: 'dot', color: 'green'},
+  {x: 706, y: 1462, type: 'dot', color: 'yellow'},
+  {x: 850, y: 1462, type: 'dot', color: 'purple'},
+  {x: 325, y: 1820, type: 'dot', color: 'yellow'},
+  {x: 504, y: 1820, type: 'dot', color: 'green'},
+  {x: 678, y: 1820, type: 'dot', color: 'purple'},
+  {x: 468, y: 2175, type: 'dot', color: 'yellow'},
+  {x: 820, y: 255, type: 'tag', variant: 'year', text: '2025'},
 ];
 
 const EventScheduleSection = () => {
@@ -37,9 +39,9 @@ const EventScheduleSection = () => {
           className='w-[696px] h-[587px]'
         />
       </div>
-      {dotplaces.map((dot, i) => {
-        const left = (dot.x / W) * 100;
-        const top = (dot.y / H) * 100;
+      {items.map((item, i) => {
+        const left = (item.x / W) * 100;
+        const top = (item.y / H) * 100;
 
         return (
           <div
@@ -49,9 +51,15 @@ const EventScheduleSection = () => {
               left: `${left}%`,
               top: `${top}%`,
             }}>
-            <svg width='40' height='134'>
-              <use href={`src/assets/svg/dotplace.svg#${dot.color}dotplace`} />
-            </svg>
+            {item.type === 'dot' ? (
+              <svg width='40' height='134'>
+                <use
+                  href={`src/assets/svg/dotplace.svg#${item.color}dotplace`}
+                />
+              </svg>
+            ) : (
+              <InfoTag variant={item.variant}>{item.text}</InfoTag>
+            )}
           </div>
         );
       })}
