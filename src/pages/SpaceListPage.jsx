@@ -2,14 +2,21 @@ import { ArrowDownRight, Instagram, Search, Menu } from 'lucide-react';
 import { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/header';
+import Footer from '../components/footer'
 
 // className 유틸리티 함수
 const cx = (...classes) => classes.filter(Boolean).join(' ');
 
+const districtColors={
+    "미추홀구|인천 남구": "border-[#7268FF] text-[#7268FF]",
+    "중구|인천": "border-[#4DAB4E] text-[#4DAB4E]",
+    "동구|인천": "border-[#F4A301] text-[#F4A301]",
+}
 
 
 const ListPage = () => {
     const navigate = useNavigate();
+    
     const items = useMemo(() => [
         { id: "1", title: "작업장 ‘봄’", region: "미추홀구", district: "인천 남구", image: "src/assets/coverimage/cover_ex.png" },
         { id: "2", title: "(주) 위드달", region: "미추홀구", district: "인천 남구", image: "src/assets/coverimage/cover_ex.png" },
@@ -23,6 +30,7 @@ const ListPage = () => {
         { id: "9", title: "카츠오리진 연구소", region: "중구", district: "인천", image: "src/assets/coverimage/cover_ex.png" },
         { id: "10", title: "어벙또벙 이야기 수선점", region: "동구", district: "인천", image: "src/assets/coverimage/cover_ex.png" },
     ], []);
+
 
     return (
         <div className="min-h-svh bg-[#FAFAF7] text-[#1A1A1A]">
@@ -43,9 +51,7 @@ const ListPage = () => {
         </main>
         
         
-        <footer className="mt-8 border-t border-neutral-300 py-10 text-center text-sm text-neutral-500">
-        © {new Date().getFullYear()} 점점 (Demo). All rights reserved.
-        </footer>
+            <Footer/>
         </div>
         );
         }
@@ -81,10 +87,16 @@ const ListPage = () => {
         
         
         {/* 좌측하단: 배지 */}
-        <div className="absolute left-3 bottom-3 z-10 flex items-center gap-2 text-[11px]">
-        <Badge tone="chip">{place.region.toUpperCase()}</Badge>
-        <Badge tone="chip">{place.district}</Badge>
+        <div className="absolute left-3 bottom-3 z-10 flex items-center gap-2 text-[11px] font-black group-hover:text-white transition-colors break-keep">
+            {/* region은 공통 스타일 */}
+            <Badge>{place.region.toUpperCase()}</Badge>
+
+             {/* district는 region + district 조합 색상 */}
+            <Badge region={place.region} district={place.district}>
+                {place.district}
+            </Badge>
         </div>
+
         
         
         {/* 우측하단: 자세히 보기 */}
@@ -100,12 +112,19 @@ const ListPage = () => {
         
         
         // 배지
-        function Badge({ children, tone = "neutral" }) {
-        let classes = "";
-        if (tone === "soft") classes = "bg-emerald-500/10 text-emerald-700 border-emerald-600/20";
-        else if (tone === "chip") classes = "bg-black/80 text-white border-black/0 group-hover:bg-white group-hover:text-black transition-colors";
-        else classes = "bg-neutral-100 text-neutral-700 border-neutral-200";
-        return <span className={cx("px-2.5 py-1 rounded-full border text-[11px]", classes)}>{children}</span>;
+        function Badge({ children, region, district }) {
+            const key=`${region}|${district}`;
+            const colorClass=
+                districtColors[key] || "bg-neutral-100 text-neutral-700 border-neutral-200 transition-colors group-hover:bg-transparent group-hover:text-white group-hover:border-white";
+        
+            return(
+                <span
+                    className={cx(
+                        "px-2.5 py-1 rounded-full border text-[11px]",colorClass
+                    )}
+                >
+                    {children}
+                </span>
+            );
         }
-
 export default ListPage;

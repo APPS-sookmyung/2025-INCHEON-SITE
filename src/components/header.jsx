@@ -35,7 +35,6 @@ export default function Header() {
                 />
             </a>
           <button className="px-3 py-1.5 rounded-full border border-neutral-300 text-xs hover:bg-white">공식 사이트</button>
-          <button className="md:hidden p-2"><Menu /></button>
         </div>
       </div>
     </header>
