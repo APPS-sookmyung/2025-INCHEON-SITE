@@ -18,9 +18,10 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-20 bg-[#F2F1EC]/80 backdrop-blur border-b border-neutral-300/70">
       <div className="mx-auto max-w-6xl px-5 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-6">
-          <img src="src/assets/dotdotdot_logo.png" alt="logo" className="h-8" 
-          onClick={()=> goToMainAndScroll("top")}/>
+        <div className="flex items-center gap-6 ">
+          <Link to="/mainpage" onClick={() => goToMainAndScroll("top")}>
+            <img src="src/assets/dotdotdot_logo.png" alt="logo" className="h-8" />
+          </Link>
           <nav className="hidden md:flex items-center gap-6 text-sm text-neutral-600">
             <Link className="hover:text-black" to="/spaces">창작 공간들</Link>
             <Link className="hover:text-black" onClick={() => goToMainAndScroll("schedule")}>행사 일정</Link>
