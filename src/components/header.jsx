@@ -1,16 +1,30 @@
 import { Instagram, Menu, Globe } from "lucide-react";
-import { Link } from "react-router-dom";
+import { use } from "react";
+import { Link , useNavigate, useLocation} from "react-router-dom";
 
 export default function Header() {
+
+  const naviagte=useNavigate();
+  const location=useLocation();
+
+  const goToMainAndScroll=(section) => {
+    if (location.pathname==="/mainpage"){
+      navigate("/mainpage", {state: {scrollTo: section}});
+
+    } else{
+      navigate("/mainpage", {state: {scrollTo: section}});
+    }
+  }
   return (
     <header className="sticky top-0 z-20 bg-[#F2F1EC]/80 backdrop-blur border-b border-neutral-300/70">
       <div className="mx-auto max-w-6xl px-5 h-16 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <img src="src/assets/dotdotdot_logo.png" alt="logo" className="h-8" />
+          <img src="src/assets/dotdotdot_logo.png" alt="logo" className="h-8" 
+          onClick={()=> goToMainAndScroll("top")}/>
           <nav className="hidden md:flex items-center gap-6 text-sm text-neutral-600">
             <Link className="hover:text-black" to="/spaces">창작 공간들</Link>
-            <a className="hover:text-black" href="#">행사 일정</a>
-            <a className="hover:text-black" href="#">이벤트 정보</a>
+            <Link className="hover:text-black" onClick={() => goToMainAndScroll("schedule")}>행사 일정</Link>
+            <Link className="hover:text-black" onClick={() => goToMainAndScroll("event")}>이벤트 정보</Link>
           </nav>
         </div>
         <div className="flex items-center gap-3 text-neutral-600">

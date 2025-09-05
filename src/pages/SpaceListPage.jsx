@@ -1,9 +1,10 @@
 import { ArrowDownRight } from 'lucide-react';
-import { useMemo } from 'react';
+import { useMemo} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/header';
 import Footer from '../components/footer'
 import listPageBg from '../assets/ListPageBg.png'
+import {useRef} from 'react';
 
 
 // district 조건과 같이 화살표 색상 설정
