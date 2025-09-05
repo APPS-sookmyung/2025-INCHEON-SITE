@@ -1,9 +1,19 @@
-import { ArrowDownRight, Instagram, Search, Menu } from 'lucide-react';
+import { ArrowDownRight } from 'lucide-react';
 import { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/header';
 import Footer from '../components/footer'
 import listPageBg from '../assets/ListPageBg.png'
+
+
+// district 조건과 같이 화살표 색상 설정
+function getDistrictTextColor(region, district) {
+    const key = `${region}|${district}`;
+    const clasName=districtColors[key];
+
+    const match=clasName?.match(/text-\[#([0-9a-fA-F]{6})\]/);
+    return match? `#${match[1]}`: 'text-neutral-600';
+}
 
 // className 유틸리티 함수
 const cx = (...classes) => classes.filter(Boolean).join(' ');
@@ -103,8 +113,9 @@ const ListPage = () => {
         <a
         href="#"
         className="absolute right-3 bottom-3 z-10 inline-flex items-center gap-1.5 text-[11px] text-neutral-600 group-hover:text-white transition-colors"
+        style={{ color: getDistrictTextColor(place.region, place.district) }}
         >
-         <ArrowDownRight size={14} />
+         <ArrowDownRight size={25} />
         </a>
         </article>
         );
