@@ -126,7 +126,7 @@ const ListPage = () => {
         function Badge({ children, region, district }) {
             const key=`${region}|${district}`;
             const colorClass=
-                districtColors[key] || "bg-neutral-100 text-neutral-700 border-neutral-200 transition-colors group-hover:bg-transparent group-hover:text-white group-hover:border-white";
+                districtColors[key] || "bg-[#000000] text-[#FFFFFF] border-neutral-200 transition-colors group-hover:bg-transparent group-hover:text-white group-hover:border-white";
         
             return(
                 <span
