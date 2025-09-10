@@ -5,6 +5,9 @@ import introDot from '../assets/detail/IntroDot.svg';
 import detailDot from '../assets/detail/DetailDot.svg';
 import spaceImgDot from '../assets/detail/SpaceImgDot.svg';
 import mapIcon from '../assets/detail/MapIcon.svg';
+import michuholLinear from '../assets/detail/MichuholLinear.svg';
+import dongLinear from '../assets/detail/DongLinear.svg';
+import jungLinear from '../assets/detail/JungLinear.svg';
 
 import {useParams} from 'react-router-dom';
 
@@ -23,10 +26,10 @@ const SpaceDetailPage = () => {
 
   const DetailCard = ({title, children}) => (
     <div>
-      <h3 className='text-lg pb-6 font-semibold border-b-2 border-black'>
+      <h3 className='text-lg pb-6 font-semibold border-b-[1.8px] border-black'>
         {title}
       </h3>
-      <div className='text-base mt-5'>{children}</div>
+      <div className='text-base pt-5 relative'>{children}</div>
     </div>
   );
 
@@ -37,7 +40,7 @@ const SpaceDetailPage = () => {
   };
 
   return (
-    <div className='bg-[#FDFCF8] relative font-pretendard'>
+    <div className='bg-[#FDFCF8] relative'>
       {/* background */}
       <div className='absolute top-[180px]'>
         <img src={detailBackground1} alt='상단 배경 요소' className='w-full' />
@@ -77,7 +80,14 @@ const SpaceDetailPage = () => {
         </div>
 
         {/* detail */}
-        <div className='grid mt-[100px] px-[150px] grid-cols-1 md:grid-cols-3 gap-14'>
+        <div className='relative grid mt-[100px] px-[150px] grid-cols-1 md:grid-cols-3 gap-14'>
+          {section == 'jung' && (
+            <img
+              src={jungLinear}
+              alt=''
+              className='absolute -left-8 top-[8.8px] h-[45px]'
+            />
+          )}
           <DetailCard title='공간'>
             <p>{space.location}</p>
             <button
@@ -93,33 +103,51 @@ const SpaceDetailPage = () => {
             <p>{space.projectSchedule}</p>
           </DetailCard>
           <DetailCard title='오픈스튜디오 정보 및 운영 일정'>
-            {space.studioInfo.map((group, groupIdx) => (
-              <div key={groupIdx} className='mb-8'>
-                {group.map((item, i) => (
-                  <div key={i} className='flex pt-1 '>
-                    {i >= 2 && (
-                      <span
-                        className={`h-3 w-3 mt-1.5 mr-2 ml-8 rounded-full flex-shrink-0 ${
-                          dotColors[space.section]
-                        }`}>
-                        {' '}
-                      </span>
-                    )}
-                    <p className={i === 0 ? 'font-bold mb-1' : ''}>{item}</p>
-                  </div>
-                ))}
-              </div>
-            ))}
+            <div className='relative'>
+              {section == 'michuhol' && (
+                <img
+                  src={michuholLinear}
+                  alt=''
+                  className='absolute !w-[200px] !h-[45px] -right-[150px] -top-[63px]'
+                />
+              )}
+              {space.studioInfo.map((group, groupIdx) => (
+                <div key={groupIdx} className='mb-8'>
+                  {group.map((item, i) => (
+                    <div key={i} className='flex pt-1 '>
+                      {i >= 2 && (
+                        <span
+                          className={`h-3 w-3 mt-1.5 mr-2 ml-8 rounded-full flex-shrink-0 ${
+                            dotColors[space.section]
+                          }`}>
+                          {' '}
+                        </span>
+                      )}
+                      <p className={i === 0 ? 'font-bold mb-1' : ''}>{item}</p>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </DetailCard>
           <img src={detailDot} alt='' className='h-[160px] ml-[100px]' />
         </div>
 
         {/* interview intro*/}
-        <div className='flex justify-center mb-[100px]'>
+        <div className='flex justify-center mb-[100px] relative'>
           <div className='w-[50%] pr-35'>
-            <p className='block text-lg font-semibold border-b-2 border-black w-full pb-5'>
-              팀원
-            </p>
+            <div className='relative'>
+              <p className='block text-lg font-semibold border-b-[0.13vw] border-black w-full pb-[3%]'>
+                팀원
+              </p>
+              {section == 'dong' && (
+                <img
+                  src={dongLinear}
+                  alt=''
+                  className='absolute w-full h-[50px] -left-[75%] -top-[5%]'
+                />
+              )}
+            </div>
             <div className='flex justify-between relative'>
               <div className='inline-block pt-5'>
                 {space.members.map((member, idx) => (
