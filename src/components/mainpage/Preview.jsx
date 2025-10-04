@@ -4,7 +4,7 @@ import description from '../../assets/svg/description.svg';
 import {useNavigate} from 'react-router-dom';
 
 const W = 1078;
-const H = 5214;
+const H = 1024;
 
 const spaces = [
   {id: 'b1', x: 65, y: 0, label: '작업장봄', bg: 'bg-orange'},
