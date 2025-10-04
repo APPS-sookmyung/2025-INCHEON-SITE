@@ -1,7 +1,8 @@
 import Icon from './icon';
-import arrow from '../../assets/svg/arrow.svg';
+
 import description from '../../assets/svg/description.svg';
 import {useNavigate} from 'react-router-dom';
+import SpaceTag from './SpaceTag';
 
 const W = 1078;
 const H = 1024;
@@ -44,19 +45,7 @@ const Preview = ({setHover}) => {
               top: `${top}%`,
             }}>
             <Icon id={id} />
-            {label && (
-              <div
-                className={`hidden group-hover:flex top-40 absolute ${bg} z-20 justify-end items-center gap-2.5 border-none pl-6 pr-1.5 py-0.5 rounded-[140px]`}>
-                <span className='whitespace-nowrap text-lg text-white leading-[40px] px-3.5'>
-                  {label}
-                </span>
-                <img
-                  className='bg-white border-none rounded-full p-2'
-                  src={arrow}
-                  alt='arrow'
-                />
-              </div>
-            )}
+            {label && <SpaceTag label={label} color={bg} />}
           </div>
         );
       })}
