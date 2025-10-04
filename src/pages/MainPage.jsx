@@ -19,40 +19,29 @@ const MainPage = () => {
         Incheon Foundation
       </h1> */}
       <div className='w-full max-w-[1078px]'>
-        {/* PreviewSection */}
         <div
-          className='relative w-full h-[1024px]'
+          className='relative w-full'
           style={{
             backgroundImage: `url(${background})`,
-            backgroundPosition: '0 0',
-            backgroundSize: '1078px 5214px',
+            backgroundSize: '100% 100%',
             backgroundRepeat: 'no-repeat',
+            aspectRatio: '1078 / 5214',
           }}>
-          <Preview setHover={setHover} />
-        </div>
-
-        {/* EventScheduleSection */}
-        <div
-          className='relative w-full h-[2738px]'
-          style={{
-            backgroundImage: `url(${background})`,
-            backgroundPosition: '0 -1024px',
-            backgroundSize: '1078px 5214px',
-            backgroundRepeat: 'no-repeat',
-          }}>
-          <EventScheduleSection />
-        </div>
-
-        {/* EventInfoSection */}
-        <div
-          className='relative w-full h-[1452px]'
-          style={{
-            backgroundImage: `url(${background})`,
-            backgroundPosition: '0 -3762px',
-            backgroundSize: '1078px 5214px',
-            backgroundRepeat: 'no-repeat',
-          }}>
-          <EventInfoSection />
+          <div
+            className='absolute w-full'
+            style={{top: '0%', height: '19.64%' /* 1024/5214 */}}>
+            <Preview setHover={setHover} />
+          </div>
+          <div
+            className='absolute w-full'
+            style={{top: '19.64%', height: '52.51%' /* 2738/5214 */}}>
+            <EventScheduleSection />
+          </div>
+          <div
+            className='absolute w-full'
+            style={{top: '72.15%', height: '27.85%' /* 1452/5214 */}}>
+            <EventInfoSection />
+          </div>
         </div>
       </div>
     </div>
