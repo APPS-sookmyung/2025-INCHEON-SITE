@@ -1,4 +1,4 @@
-import Icon from './icon';
+import Space from './Space';
 
 import description from '../../assets/svg/description.svg';
 import {useNavigate} from 'react-router-dom';
@@ -44,7 +44,7 @@ const Preview = ({setHover}) => {
               left: `${left}%`,
               top: `${top}%`,
             }}>
-            <Icon id={id} />
+            <Space id={id} />
             {label && <SpaceTag label={label} color={bg} />}
           </div>
         );
