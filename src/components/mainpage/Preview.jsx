@@ -1,4 +1,4 @@
-import Icon from './icon';
+import Icon from './Icon';
 import arrow from '../../assets/svg/arrow.svg';
 
 const W = 1078;
