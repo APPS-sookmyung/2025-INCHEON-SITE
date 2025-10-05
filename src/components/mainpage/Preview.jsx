@@ -37,7 +37,8 @@ const Preview = ({setHover}) => {
           <div
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
-            onClick={() => navigate(`spaces/${index + 1}`)}
+            // onClick={() => navigate(`spaces/${index + 1}`)}
+            onClick={() => navigate(`spaces/4`)}
             key={id}
             className='absolute group flex flex-col items-center cursor-pointer hover:drop-shadow-hover hover:z-30'
             style={{
