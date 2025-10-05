@@ -7,17 +7,18 @@ export default function Header() {
   const location = useLocation();
 
   const goToMainAndScroll = (section) => {
-    if (location.pathname === '/mainpage') {
-      navigate('/mainpage', {state: {scrollTo: section}});
+    if (location.pathname === '/') {
+      navigate('/', {state: {scrollTo: section}});
     } else {
-      navigate('/mainpage', {state: {scrollTo: section}});
+      navigate('/', {state: {scrollTo: section}});
     }
   };
+
   return (
     <header className='sticky top-0 z-20 bg-[#F2F1EC]/80 backdrop-blur border-b border-neutral-300/70'>
       <div className='mx-auto max-w-6xl px-5 h-16 flex items-center justify-between'>
         <div className='flex items-center gap-6 '>
-          <Link to='/mainpage' onClick={() => goToMainAndScroll('top')}>
+          <Link to='/' onClick={() => goToMainAndScroll('top')}>
             <img
               src='src/assets/dotdotdot_logo.png'
               alt='logo'
