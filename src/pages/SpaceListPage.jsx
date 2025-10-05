@@ -112,7 +112,7 @@ const ListPage = () => {
 
   return (
     <div className='min-h-svh flex flex-col bg-[#FAFAF7] text-[#1A1A1A]'>
-      <Header />
+      {/* <Header /> */}
 
       <main
         className='flex-grow bg-cover bg-bottom bg-contain'
@@ -127,7 +127,7 @@ const ListPage = () => {
         </div>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
