@@ -22,8 +22,6 @@ const items = [
   {x: 820, y: 255, type: 'tag', variant: 'year', text: '2025'},
   {x: 523, y: 365, type: 'tag', variant: 'date', text: '10.11(금)'},
   {x: 550, y: 760, type: 'tag', variant: 'date', text: '10.12(토)'},
-  {x: 150, y: 422, type: 'tag', variant: 'date', text: '10.13(일)'},
-  {x: 150, y: 422, type: 'tag', variant: 'date', text: '10.15(화)'},
 ];
 const EventScheduleSection = () => {
   return (
