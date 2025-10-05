@@ -10,7 +10,7 @@ const MainPage = () => {
   const [hover, setHover] = useState(false);
 
   return (
-    <div className='flex justify-center py-20'>
+    <div className='relative flex justify-center py-20'>
       <img className='absolute z-0 top-8 left-7' src={title} alt='' />
       {hover && (
         <img className={`absolute z-10`} src={background_blur} alt='' />
