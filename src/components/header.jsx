@@ -1,6 +1,8 @@
 import {Instagram, Menu, Globe} from 'lucide-react';
 import {use} from 'react';
 import {Link, useNavigate, useLocation} from 'react-router-dom';
+import dotdotdot_logo from '../assets/dotdotdot_logo.png';
+import blog from '../assets/svg/blog.svg';
 
 export default function Header() {
   const navigate = useNavigate();
@@ -19,11 +21,7 @@ export default function Header() {
       <div className='mx-auto max-w-6xl px-5 h-16 flex items-center justify-between'>
         <div className='flex items-center gap-6 '>
           <Link to='/' onClick={() => goToMainAndScroll('top')}>
-            <img
-              src='src/assets/dotdotdot_logo.png'
-              alt='logo'
-              className='h-8'
-            />
+            <img src={dotdotdot_logo} alt='logo' className='h-8' />
           </Link>
           <nav className='hidden md:flex items-center gap-6 text-sm text-neutral-600'>
             <Link className='hover:text-black' to='/spaces'>
