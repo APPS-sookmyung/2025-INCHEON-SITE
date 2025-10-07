@@ -27,30 +27,9 @@ export default function Header() {
             <Link className='hover:text-black' to='/spaces'>
               창작 공간들
             </Link>
-            <Link
-              className='hover:text-black'
-              onClick={() => goToMainAndScroll('schedule')}>
-              행사 일정
-            </Link>
-            <Link
-              className='hover:text-black'
-              onClick={() => goToMainAndScroll('event')}>
-              이벤트 정보
-            </Link>
           </nav>
         </div>
         <div className='flex items-center gap-3 text-neutral-600'>
-          <a
-            aria-label='instagram'
-            href='https://www.instagram.com/3point_incheon/'
-            className='p-3 hover:text-black'>
-            <img
-              src='src/assets/ig_logo.jpg'
-              alt='instagram'
-              className='w-5 h-5'
-            />
-          </a>
-
           <a
             href='https://blog.naver.com/ifacpr'
             className='p-8 hover:text-black'>
@@ -60,9 +39,6 @@ export default function Header() {
               className='w-7 h-7'
             />
           </a>
-          <button className='px-3 py-1.5 rounded-full border border-neutral-300 text-xs hover:bg-white'>
-            공식 사이트
-          </button>
         </div>
       </div>
     </header>
