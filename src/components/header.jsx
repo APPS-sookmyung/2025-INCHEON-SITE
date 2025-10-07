@@ -33,15 +33,14 @@ export default function Header() {
           </nav>
         </div>
         <div className='flex items-center gap-3 text-neutral-600'>
-          <a
-            href='https://blog.naver.com/ifacpr'
-            className='p-8 hover:text-black'>
-            <img
-              src='src/assets/blog_logo.png'
-              alt='global'
-              className='w-7 h-7'
-            />
-          </a>
+          <button
+            onClick={() => {
+              window.open('https://blog.naver.com/ifacpr');
+            }}
+            className='text-sm text-neutral-600 hover:text-black'>
+            <img src={blog} alt='블로그' className='w-6 h-6 md:hidden' />
+            <span className='hidden md:flex'>인천문화재단 블로그</span>
+          </button>
         </div>
       </div>
     </header>
