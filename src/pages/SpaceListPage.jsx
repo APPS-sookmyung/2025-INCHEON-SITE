@@ -4,6 +4,7 @@ import {useNavigate} from 'react-router-dom';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import listPageBg from '../assets/ListPageBg.png';
+import thumbnail from '../assets/coverimage/cover_ex.png';
 import {useRef} from 'react';
 
 // district 조건과 같이 화살표 색상 설정
@@ -146,7 +147,8 @@ function Card({place}) {
       <div
         aria-hidden
         className='absolute inset-0 z-0 bg-center bg-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100'
-        style={{backgroundImage: `url(${place.image})`}}
+        // style={{backgroundImage: `url(${place.image})`}}
+        style={{backgroundImage: `url(${thumbnail})`}}
       />
       <div
         aria-hidden
