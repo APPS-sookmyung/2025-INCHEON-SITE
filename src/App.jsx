@@ -8,6 +8,7 @@ import MainPage from './pages/MainPage';
 import SpaceDetailPage from './pages/SpaceDetailPage';
 import SpaceListPage from './pages/SpaceListPage';
 import Layout from './layout/Layout';
+import SurveyPage from './pages/SurveyPage';
 
 const App = () => {
   const router = createBrowserRouter(
@@ -16,6 +17,7 @@ const App = () => {
         <Route index element={<MainPage />} />
         <Route path='spaces' element={<SpaceListPage />} />
         <Route path='spaces/:id' element={<SpaceDetailPage />} />
+        <Route path='survey' element={<SurveyPage />} />
       </Route>
     )
   );
