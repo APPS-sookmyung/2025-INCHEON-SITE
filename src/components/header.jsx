@@ -27,6 +27,9 @@ export default function Header() {
             <Link className='hover:text-black' to='/spaces'>
               창작 공간들
             </Link>
+            <Link className='hover:text-black' to='/survey'>
+              설문 조사
+            </Link>
           </nav>
         </div>
         <div className='flex items-center gap-3 text-neutral-600'>
