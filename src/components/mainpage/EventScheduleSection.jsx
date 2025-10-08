@@ -1,6 +1,6 @@
 import purpleDotsUrl from '../../assets/svg/purple-dots.svg';
 import greenDotsUrl from '../../assets/svg/green-dots.svg';
-import dotplaceUrl from '../../assets/svg/dotplace.svg';
+import dotplaceUrl from '../../assets/svg/dotplace.svg?url';
 import InfoTag from './InfoTag';
 
 const W = 1078;
