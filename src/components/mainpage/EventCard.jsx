@@ -1,7 +1,7 @@
 const EventCard = ({event}) => {
   return (
     // 카드 전체 레이아웃
-    <div className='w-536px h-493px flex flex-col gap-11'>
+    <div className='w-[536px] h-[493px] flex flex-col gap-11'>
       {/* 01. 이벤트 제목 */}
       <p className='text-3xl font-semibold leading-[1.56rem]'>
         {event.id}. {event.title}
