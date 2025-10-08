@@ -1,5 +1,6 @@
 import purpleDotsUrl from '../../assets/svg/purple-dots.svg';
 import greenDotsUrl from '../../assets/svg/green-dots.svg';
+import dotplaceUrl from '../../assets/svg/dotplace.svg';
 import InfoTag from './InfoTag';
 
 const W = 1078;
@@ -86,9 +87,7 @@ const EventScheduleSection = () => {
             }}>
             {item.type === 'dot' ? (
               <svg width='40' height='134'>
-                <use
-                  href={`src/assets/svg/dotplace.svg#${item.color}dotplace`}
-                />
+                <use href={`${dotplaceUrl}#${item.color}dotplace`} />
               </svg>
             ) : item.type === 'name' ? (
               <div
