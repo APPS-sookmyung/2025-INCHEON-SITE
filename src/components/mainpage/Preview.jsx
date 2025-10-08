@@ -1,3 +1,4 @@
+import arrow from '../../assets/svg/arrow.svg';
 import Space from './Space';
 
 import description from '../../assets/svg/description.svg';
