@@ -42,7 +42,7 @@ const EventCard = ({event}) => {
 
         {/* 계정 태그 */}
         <div className='flex flex-col'>
-          <label className='text-lg font-normal leading-[1.88rem]'>
+          <label className='text-lg font-medium leading-[1.88rem]'>
             계정 태그
           </label>
           <div className='border-b border-black mt-3'></div>
@@ -53,7 +53,7 @@ const EventCard = ({event}) => {
 
         {/* 이벤트 참여 기간 */}
         <div className='flex flex-col'>
-          <label className='text-lg font-normal leading-[1.88rem]'>
+          <label className='text-lg font-medium leading-[1.88rem]'>
             이벤트 참여 기간
           </label>
           <div className='border-b border-black mt-3'></div>
@@ -64,7 +64,7 @@ const EventCard = ({event}) => {
 
         {/* 당첨 인원 */}
         <div className='flex flex-col'>
-          <label className='text-lg font-normal leading-[1.88rem]'>
+          <label className='text-lg font-medium leading-[1.88rem]'>
             당첨 인원
           </label>
           <div className='border-b border-black mt-3'></div>
