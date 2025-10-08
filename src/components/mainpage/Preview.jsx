@@ -1,10 +1,15 @@
 import Icon from './Icon';
 import arrow from '../../assets/svg/arrow.svg';
+import Space from './Space';
+
+import description from '../../assets/svg/description.svg';
+import {useNavigate} from 'react-router-dom';
+import SpaceTag from './SpaceTag';
 
 const W = 1078;
 const H = 1024;
 
-const icons = [
+const spaces = [
   {id: 'b1', x: 65, y: 0, label: '작업장봄', bg: 'bg-orange'},
   {id: 'b2', x: 225, y: 0, label: '공간인공빛', bg: 'bg-purple'},
   {id: 'b3', x: 70, y: 390, label: '코드아트', bg: 'bg-green'},
@@ -20,35 +25,30 @@ const icons = [
   {id: 'd2', x: 890, y: 225},
 ];
 
-const Preview = () => {
+const Preview = ({setHover}) => {
+  const navigate = useNavigate();
+
   return (
     <div>
-      {icons.map(({id, x, y, label, bg}) => {
+      <img className='absolute z-0 top-13 left-102' src={description} alt='' />
+      {spaces.map(({id, x, y, label, bg}, index) => {
         const left = (x / W) * 100;
         const top = (y / H) * 100;
 
         return (
           <div
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            // onClick={() => navigate(`spaces/${index + 1}`)}
+            onClick={() => navigate(`spaces/4`)}
             key={id}
-            className='absolute group flex flex-col items-center cursor-pointer hover:drop-shadow-hover hover:z-20'
+            className='absolute group flex flex-col items-center cursor-pointer hover:drop-shadow-hover hover:z-30'
             style={{
               left: `${left}%`,
               top: `${top}%`,
             }}>
-            <Icon id={id} />
-            {label && (
-              <div
-                className={`hidden group-hover:flex top-40 absolute ${bg} z-10 justify-end items-center gap-2.5 border-none pl-6 pr-1.5 py-0.5 rounded-[140px]`}>
-                <span className='whitespace-nowrap text-lg text-white leading-[40px] px-3.5'>
-                  {label}
-                </span>
-                <img
-                  className='bg-white border-none rounded-full p-2'
-                  src={arrow}
-                  alt='arrow'
-                />
-              </div>
-            )}
+            <Space id={id} />
+            {label && <SpaceTag label={label} color={bg} />}
           </div>
         );
       })}
