@@ -1,4 +1,3 @@
-import Icon from './Icon';
 import arrow from '../../assets/svg/arrow.svg';
 import Space from './Space';
 
