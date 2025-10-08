@@ -126,12 +126,19 @@ const ListPage = () => {
               const isLastRow = row === rows;
               const isLastItem = i === items.length - 1; // 전체 마지막 아이템
               const isIncompleteLastRow = isLastItem && col < COLS; // 마지막 행이 불완전한 경우
+
+              // 3열이면서 다음 행의 3열에 카드가 없는 경우도 하단선 필요
+              const nextRowSameCol = i + COLS; // 다음 행 같은 열의 인덱스
+              const isLastInColumn =
+                col === COLS && nextRowSameCol >= items.length;
+
               return (
                 <Card
                   key={`${p.id}-${i}`}
                   place={p}
                   isFirstCol={col === 1}
                   isLastRow={isLastRow}
+                  isLastInColumn={isLastInColumn}
                   isIncompleteLastRow={isIncompleteLastRow}
                 />
               );
@@ -146,7 +153,13 @@ const ListPage = () => {
 };
 
 // 카드
-function Card({place, isFirstCol, isLastRow, isIncompleteLastRow}) {
+function Card({
+  place,
+  isFirstCol,
+  isLastRow,
+  isLastInColumn,
+  isIncompleteLastRow,
+}) {
   const navigate = useNavigate();
   return (
     <article
@@ -158,22 +171,22 @@ function Card({place, isFirstCol, isLastRow, isIncompleteLastRow}) {
       {/* 배경 이미지 */}
       <div
         aria-hidden
-        className='absolute inset-0 z-0 bg-center bg-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100'
+        className='absolute inset-0 z-0 bg-center bg-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100 rounded-[10px]'
         // style={{backgroundImage: `url(${place.image})`}}
         style={{backgroundImage: `url(${thumbnail})`}}
       />
       <div
         aria-hidden
-        className='absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[linear-gradient(to_top,rgba(0,0,0,.45),rgba(0,0,0,.1),transparent)]'
+        className='absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[linear-gradient(to_top,rgba(0,0,0,.45),rgba(0,0,0,.1),transparent)] rounded-[10px]'
       />
       <div className='pointer-events-none absolute inset-0'>
         {/* 모든 카드에 상단선 */}
         <div className='absolute top-0 h-px bg-black left-[7.5px] right-[7.5px]' />
-        {/* 마지막 행에만 하단선 */}
-        {isLastRow && (
+        {/* 마지막 행이거나 열의 마지막 카드에 하단선 */}
+        {(isLastRow || isLastInColumn) && (
           <div className='absolute bottom-0 h-px bg-black left-[7.5px] right-[7.5px]' />
         )}
-        {/* 세로: 첫 번째 열 제외하고만 left */}
+        {/* 세로: 첫 번째 열 제외하고만 */}
         {!isFirstCol && (
           <div className='absolute left-0 w-px bg-black top-[7.5px] bottom-[7.5px]' />
         )}
