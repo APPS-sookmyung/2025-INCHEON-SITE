@@ -8,12 +8,17 @@ const EventInfoSection = () => {
 
   // 이벤트 카드 위치 정의
   const eventPositions = [
-    {eventId: 1, x: 269, y: 50}, // 첫 번째 이벤트 카드 위치
+    {eventId: 1, x: 269, y: 40}, // 첫 번째 이벤트 카드 위치
     {eventId: 2, x: 269, y: 735}, // 두 번째 이벤트 카드 위치
   ];
 
   return (
     <div className='relative w-full h-full'>
+      <div className='absolute top-[20px] -left-8 text-6xl font-extrabold'>
+        EVENTS
+        <br />
+        INFO
+      </div>
       <div className='absolute top-[351px] -left-56 pointer-events-none z-0'>
         <img
           src={yellowDotsUrl}
