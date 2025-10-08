@@ -1,7 +1,7 @@
 import purpleDotsUrl from '../../assets/svg/purple-dots.svg';
 import greenDotsUrl from '../../assets/svg/green-dots.svg';
-import dotplaceUrl from '../../assets/svg/dotplace.svg?url';
 import InfoTag from './InfoTag';
+import DotIcon from './DotIcon';
 
 const W = 1078;
 const H = 2738;
@@ -20,7 +20,7 @@ const items = [
   {x: 524, y: 1820, type: 'dot', color: 'green'},
   {x: 698, y: 1820, type: 'dot', color: 'purple'},
   {x: 488, y: 2175, type: 'dot', color: 'yellow'},
-  {x: 870, y: 255, type: 'tag', variant: 'year', text: '2025'},
+  {x: 877, y: 255, type: 'tag', variant: 'year', text: '2025'},
   {x: 573, y: 367, type: 'tag', variant: 'date', text: '10.11(금)'},
   {x: 613, y: 767, type: 'tag', variant: 'date', text: '10.12(토)'},
   {x: 887, y: 767, type: 'tag', variant: 'date', text: '10.13(일)'},
@@ -86,9 +86,7 @@ const EventScheduleSection = () => {
               transform: 'translateX(-50%)',
             }}>
             {item.type === 'dot' ? (
-              <svg width='40' height='134'>
-                <use href={`${dotplaceUrl}#${item.color}dotplace`} />
-              </svg>
+              <DotIcon color={item.color} />
             ) : item.type === 'name' ? (
               <div
                 className='text-center text-lg font-medium text-black'
