@@ -9,15 +9,16 @@ import SpaceDetailPage from './pages/SpaceDetailPage';
 import SpaceListPage from './pages/SpaceListPage';
 import Layout from './layout/Layout';
 import SurveyPage from './pages/SurveyPage';
+import ComingSoonPage from './pages/ComingSoonPage';
 
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<Layout />}>
         <Route index element={<MainPage />} />
-        <Route path='spaces' element={<SpaceListPage />} />
-        <Route path='spaces/:id' element={<SpaceDetailPage />} />
-        <Route path='survey' element={<SurveyPage />} />
+        <Route path='spaces' element={<ComingSoonPage />} />
+        <Route path='spaces/:id' element={<ComingSoonPage />} />
+        <Route path='events' element={<ComingSoonPage />} />
       </Route>
     )
   );
