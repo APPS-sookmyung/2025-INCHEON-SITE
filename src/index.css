@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'SejongGeulggot'; /* 이 폰트를 뭐라고 부를지 이름 지정 */
+  font-family: 'SejongGeulggot';
   src: url('/src/assets/fonts/SejongGeulggot.ttf') format('truetype'); /* 폰트 파일의 위치 */
   font-weight: normal;
   font-style: normal;
@@ -22,9 +22,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  background-image: url('/src/assets/texture-tile.png');
-  background-repeat: repeat;
-  background-size: 150px 150px;
   word-break: keep-all;
 }
 
