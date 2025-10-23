@@ -1,21 +1,39 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@font-face {
+  font-family: 'SejongGeulggot'; /* 이 폰트를 뭐라고 부를지 이름 지정 */
+  src: url('/src/assets/fonts/SejongGeulggot.ttf') format('truetype'); /* 폰트 파일의 위치 */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BrightChalk';
+  src: url('/src/assets/fonts/BrightChalk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @import 'tailwindcss';
 
 :root {
-  font-family: Pretendard;
-  background-color: #fdfcf8;
-
+  font-family: 'SejongGeulggot', Pretendard;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  background-image: url('/src/assets/texture-tile.png');
+  background-repeat: repeat;
+  background-size: 150px 150px;
+}
 
 @theme {
-  --color-purple: #7268ff;
-  --color-orange: #ffb522;
-  --color-green: #4ac24b;
-
-  --drop-shadow-hover: 3px 10px 20px #bdbbb4;
+  --color-primary-1: #c5d596;
+  --color-primary-2: #f4ced2;
+  --color-primary-3: #bcd5ee;
+  --color-primary-4: #f8f1b5;
+  --color-sub-1: #f6f1e1;
+  --color-head1: #d5cfc2;
+  --color-head2: #5a5240;
+  --color-body: #a49a85;
 }
