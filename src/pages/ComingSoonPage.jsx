@@ -28,12 +28,12 @@ const ComingSoonPage = () => {
       }}>
       <section className='relative px-8 -translate-y-30'>
         <img
-          className={`absolute transition-transform duration-300 ${curvesTransformStyle}`}
+          className={`absolute ${curvesTransformStyle}`}
           src={curves}
           alt='graphic'
         />
         <img
-          className={`absolute transition-transform duration-300 ${sparklesTransformStyle}`}
+          className={`absolute ${sparklesTransformStyle}`}
           src={sparkles}
           alt='graphic'
         />
