@@ -25,6 +25,7 @@ body {
   background-image: url('/src/assets/texture-tile.png');
   background-repeat: repeat;
   background-size: 150px 150px;
+  word-break: keep-all;
 }
 
 @theme {
