@@ -1,43 +1,73 @@
-import {Instagram, Menu, Globe} from 'lucide-react';
-import {use} from 'react';
-import {Link, useNavigate, useLocation} from 'react-router-dom';
-import dotdotdot_logo from '../assets/dotdotdot_logo.png';
-import blog from '../assets/svg/blog.svg';
+import {Link} from 'react-router-dom';
+import dotdotdotlogo from '../assets/svg/dotdotdot-logo.svg';
+import blog from '../assets/svg/blog-icon.svg';
+import instagram from '../assets/svg/instagram-icon.svg';
 
 export default function Header() {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const goToMainAndScroll = (section) => {
-    if (location.pathname === '/') {
-      navigate('/', {state: {scrollTo: section}});
-    } else {
-      navigate('/', {state: {scrollTo: section}});
-    }
-  };
-
   return (
-    <header className='sticky top-0 z-20 bg-[#F2F1EC]/80 backdrop-blur border-b border-neutral-300/70'>
-      <div className='mx-auto max-w-6xl px-5 h-16 flex items-center justify-between text-base font-medium text-neutral-600'>
-        <Link to='/' onClick={() => goToMainAndScroll('top')}>
-          <img src={dotdotdot_logo} alt='logo' className='h-8' />
-        </Link>
-        <nav className='hidden md:flex gap-10'>
-          <Link className='hover:text-black hover:font-semibold' to='/spaces'>
-            창작 공간들
+    <header className='sticky top-0 z-20 w-full bg-primary-4 shadow-[0_6px_60px_0_rgba(111,111,111,0.20)]'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-36 py-6 flex justify-between items-center'>
+        {/* 왼쪽: 로고 + 메뉴 */}
+        <div className='flex items-center gap-12 lg:gap-24'>
+          <Link to='/'>
+            <img
+              className='w-28 h-24 object-contain'
+              src={dotdotdotlogo}
+              alt='DotDotDot 로고'
+              loading='lazy'
+            />
           </Link>
-          <Link className='hover:text-black hover:font-semibold' to='/survey'>
-            설문 조사
+
+          <nav className='flex justify-center items-center gap-8 lg:gap-24'>
+            <Link to='/spaces' className='text-type-head-2 text-xl font-normal'>
+              창작 공간들
+            </Link>
+            <Link to='/events' className='text-type-head-2 text-xl font-normal'>
+              이벤트 정보
+            </Link>
+            <Link
+              to='/schedule'
+              className='text-type-head-2 text-xl font-normal'>
+              행사일정
+            </Link>
+          </nav>
+        </div>
+
+        {/* 오른쪽: 아이콘 + 버튼 */}
+        <div className='flex items-center gap-8 lg:gap-12'>
+          <div className='flex justify-start items-center gap-6'>
+            <a
+              href='https://www.instagram.com'
+              target='_blank'
+              rel='noopener noreferrer'>
+              <img
+                className='w-7 h-7'
+                src={instagram}
+                alt='인스타그램 아이콘'
+                loading='lazy'
+              />
+            </a>
+            <a
+              href='https://blog.example.com'
+              target='_blank'
+              rel='noopener noreferrer'>
+              <img
+                className='w-7 h-7'
+                src={blog}
+                alt='블로그 아이콘'
+                loading='lazy'
+              />
+            </a>
+          </div>
+
+          <Link
+            to='/official'
+            className='w-28 h-8 px-2.5 py-0.5 rounded-full outline outline-[1.2px] outline-type-head-2 flex justify-center items-center gap-2.5'>
+            <span className='text-center text-type-head-2 text-lg font-normal'>
+              공식 사이트
+            </span>
           </Link>
-        </nav>
-        <button
-          onClick={() => {
-            window.open('https://blog.naver.com/ifacpr');
-          }}
-          className='cursor-pointer hover:text-black hover:font-semibold'>
-          <img src={blog} alt='블로그' className='w-6 h-6 md:hidden' />
-          <span className='hidden md:flex'>인천문화재단 블로그</span>
-        </button>
+        </div>
       </div>
     </header>
   );
