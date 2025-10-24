@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'SejongGeulggot';
+  src: url('/src/assets/fonts/SejongGeulggot.ttf') format('truetype'); /* 폰트 파일의 위치 */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BrightChalk';
+  src: url('/src/assets/fonts/BrightChalk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import 'tailwindcss';
+
+:root {
+  font-family: 'SejongGeulggot', Pretendard;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  word-break: keep-all;
+}
+
+@theme {
+  --color-primary-1: #c5d596;
+  --color-primary-2: #f4ced2;
+  --color-primary-3: #bcd5ee;
+  --color-primary-4: #f8f1b5;
+  --color-sub-1: #f6f1e1;
+  --color-type-head-1: #d5cfc2;
+  --color-type-head-2: #5a5240;
+  --color-type-body: #a49a85;
+}
