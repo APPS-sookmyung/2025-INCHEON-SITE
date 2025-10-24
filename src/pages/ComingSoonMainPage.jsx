@@ -1,4 +1,4 @@
-import graphics from '../assets/svg/graphics-overview.svg';
+import graphics from '../assets/svg/graphic-overview.svg';
 import textureTile from '../assets/texture-tile.png';
 
 const ComingSoonMainPage = () => {
