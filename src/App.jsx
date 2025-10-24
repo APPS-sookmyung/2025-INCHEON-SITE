@@ -1,0 +1,29 @@
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from 'react-router-dom';
+import MainPage from './pages/MainPage';
+import SpaceDetailPage from './pages/SpaceDetailPage';
+import SpaceListPage from './pages/SpaceListPage';
+import Layout from './layout/Layout';
+import SurveyPage from './pages/SurveyPage';
+import ComingSoonPage from './pages/ComingSoonPage';
+import ComingSoonMainPage from './pages/ComingSoonMainPage';
+
+const App = () => {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path='/'>
+        <Route index element={<ComingSoonMainPage />} />
+        {/* <Route path='spaces' element={<ComingSoonPage />} />
+        <Route path='spaces/:id' element={<ComingSoonPage />} />
+        <Route path='events' element={<ComingSoonPage />} /> */}
+      </Route>
+    )
+  );
+  return <RouterProvider router={router} />;
+};
+
+export default App;
