@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
-import dotdotdotlogo from '../assets/svg/dotdotdot-logo.svg';
-import blog from '../assets/svg/blog-icon.svg';
-import instagram from '../assets/svg/instagram-icon.svg';
+import dotdotdotlogo from '@/assets/svg/dotdotdot-logo.svg';
+import blog from '@/assets/svg/blog-icon.svg';
+import instagram from '@/assets/svg/instagram-icon.svg';
 
 export default function Header() {
   return (
