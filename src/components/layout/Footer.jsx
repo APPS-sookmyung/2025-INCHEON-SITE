@@ -1,5 +1,5 @@
-import incheonlogo from '../assets/svg/incheon-logo.svg';
-import incheonfoundationlogo from '../assets/svg/incheon-foundation-logo.svg';
+import incheonlogo from '@/assets/svg/incheon-logo.svg';
+import incheonfoundationlogo from '@/assets/svg/incheon-foundation-logo.svg';
 
 const Footer = () => {
   return (
