@@ -41,4 +41,20 @@ body {
     sans-serif;
   --font-family-brightChalk: 'BrightChalk', 'SejongGeulggot', Pretendard,
     ui-sans-serif, system-ui, sans-serif;
+  --spacing-p-gap: 36px;
+}
+
+/* 반응형 오버라이드 */
+@media (min-width: 640px) {
+  /* sm */
+  :root {
+    --spacing-p-gap: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg */
+  :root {
+    --spacing-p-gap: 44.75px;
+  }
 }
