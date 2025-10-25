@@ -3,15 +3,15 @@ import curves from '../assets/svg/graphic-curves.svg';
 import sparkles from '../assets/svg/graphic-sparkles.svg';
 
 const curvesTransform = {
-  base: 'scale-40 -translate-x-25 -translate-y-19',
-  md: 'md:scale-65 md:-translate-x-25 md:-translate-y-20',
-  lg: 'lg:scale-100 lg:-translate-x-22 lg:-translate-y-23',
+  base: 'translate-x-[5%] -translate-y-[60%]',
+  md: 'md:-translate-x-[20%] md:-translate-y-[75%]',
+  lg: 'lg:-translate-x-[25%] lg-translate-y-[70%]',
 };
 
 const sparklesTransform = {
-  base: 'scale-30 translate-x-70 translate-y-14',
-  md: 'md:scale-65 md:translate-x-130 md:translate-y-20',
-  lg: 'lg:scale-100 lg:translate-x-170 lg:translate-y-30',
+  base: '-translate-x-[60%] translate-y-[50%]',
+  md: 'md:translate-x-[30%] md:translate-y-[50%]',
+  lg: 'lg:translate-x-[80%] lg:translate-y-[50%]',
 };
 
 const curvesTransformStyle = Object.values(curvesTransform).join(' ');
@@ -28,12 +28,12 @@ const ComingSoonPage = () => {
       }}>
       <section className='relative px-8 -translate-y-30'>
         <img
-          className={`absolute ${curvesTransformStyle}`}
+          className={`absolute top-0 left-0 ${curvesTransformStyle} w-23 md:w-55 lg:w-67`}
           src={curves}
           alt='graphic'
         />
         <img
-          className={`absolute ${sparklesTransformStyle}`}
+          className={`absolute bottom-0 right-0 ${sparklesTransformStyle} w-8 md:w-15 lg:w-19`}
           src={sparkles}
           alt='graphic'
         />
