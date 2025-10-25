@@ -6,7 +6,7 @@ export default function AboutSection({blobs, heading, body, layout = 'start'}) {
     layout === 'end' ? 'flex flex-col items-end' : 'flex flex-col items-start';
 
   return (
-    <Section blobs={blobs} className={`min-h-[900px] ${layoutClass}`}>
+    <Section blobs={blobs} className={`min-h-[500px] md:min-h-[700px] lg:min-h-[900px] ${layoutClass}`}>
       <SectionTitle
         pretitle={heading.pretitle}
         title={heading.title}
