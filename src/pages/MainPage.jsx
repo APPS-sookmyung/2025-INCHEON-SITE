@@ -1,50 +1,30 @@
-import background from '../assets/svg/background.svg';
-import background_blur from '../assets/svg/background_blur.svg';
-import Preview from '../components/mainpage/Preview';
-import EventScheduleSection from '../components/mainpage/EventScheduleSection';
-import EventInfoSection from '../components/mainpage/EventInfoSection';
-import title from '../assets/svg/title.svg';
-import {useState} from 'react';
+import {aboutSections} from '@/data/aboutContent.jsx';
+import AboutSection from '@/components/sections/AboutSection';
+import Section from '@/components/layout/Section';
 
-const MainPage = () => {
-  const [hover, setHover] = useState(false);
-
+export default function MainPage() {
   return (
-    <div className='relative flex justify-center py-20'>
-      <img className='absolute z-0 top-8 left-7' src={title} alt='' />
-      {hover && (
-        <img className={`absolute z-10`} src={background_blur} alt='' />
-      )}
-      {/* <h1 className='absolute z-0 top-8 left-7 text-5xl text-purple origin-left rotate-90'>
-        Incheon Foundation
-      </h1> */}
-      <div className='w-full max-w-[1078px]'>
-        <div
-          className='relative w-full'
-          style={{
-            backgroundImage: `url(${background})`,
-            backgroundSize: '100% 100%',
-            backgroundRepeat: 'no-repeat',
-            aspectRatio: '1078 / 5214',
-          }}>
-          <div
-            className='absolute w-full'
-            style={{top: '0%', height: '19.64%' /* 1024/5214 */}}>
-            <Preview setHover={setHover} />
-          </div>
-          <div
-            className='absolute w-full'
-            style={{top: '19.64%', height: '52.51%' /* 2738/5214 */}}>
-            <EventScheduleSection />
-          </div>
-          <div
-            className='absolute w-full'
-            style={{top: '72.15%', height: '27.85%' /* 1452/5214 */}}>
-            <EventInfoSection />
-          </div>
+    <main className='flex flex-col'>
+      {/* --- Preview 섹션: textureOnly --- */}
+      <Section
+        textureOnly
+        className='h-[100vh] flex items-center justify-center'>
+        <div className='text-center'>
+          <h1 className='text-5xl font-bold mb-4'>2025 점점점 프로젝트</h1>
+          <p className='text-lg text-gray-500'>예술이 흐르는 거리, 인천에서</p>
         </div>
-      </div>
-    </div>
+      </Section>
+
+      {/* --- 나머지 섹션들: blobs 적용 --- */}
+      {aboutSections.map((section, index) => (
+        <AboutSection
+          key={index}
+          blobs={section.blobs}
+          heading={section.heading}
+          body={section.body || ''}
+          layout={section.layout}
+        />
+      ))}
+    </main>
   );
-};
-export default MainPage;
+}
