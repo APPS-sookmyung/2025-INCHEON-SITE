@@ -20,9 +20,9 @@ export function SectionTitle({
   layout = 'start',
   className = '',
 }) {
-  const pretitleClass = `text-type-head-1 text-8xl font-normal leading-[111px] mb-11`;
-  const titleClass = `text-type-head-2 text-4xl font-normal leading-relaxed tracking-widest mb-[70px]`;
-  const subtitleClass = `text-type-head-2 text-4xl font-normal leading-8 mb-11`;
+  const pretitleClass = `text-type-head-1 text-6xl md:text-7xl lg:text-8xl font-normal leading-[1.2] mb-6 md:mb-8 lg:mb-11`;
+  const titleClass = `text-type-head-2 text-2xl md:text-3xl lg:text-4xl font-normal leading-relaxed tracking-widest mb-10 md:mb-14 lg:mb-[70px]`;
+  const subtitleClass = `text-type-head-2 text-2xl md:text-3xl lg:text-4xl font-normal leading-8 mb-6 md:mb-8 lg:mb-11`;
   return (
     <header
       className={`mb-6 ${

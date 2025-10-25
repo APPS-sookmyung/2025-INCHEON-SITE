@@ -64,7 +64,7 @@ export const aboutSections = [
     ],
     body: (
       <section
-        className='w-[832px] text-lg text-type-body leading-relaxed'
+        className='w-full lg:w-[832px] text-lg text-type-body leading-relaxed'
         style={{fontFamily: 'SejongGeulggot, Pretendard, sans-serif'}}>
         <p className='mb-[var(--spacing-p-gap)] text-right'>
           한때 인천의 골목마다에는 사람의 숨결이 깃든 이야기들이 있었습니다.
@@ -98,7 +98,7 @@ export const aboutSections = [
     blobs: [{url: yellow, size: '38vw auto', position: 'right 0 bottom 100px'}],
     body: (
       <section
-        className='w-[588px] text-lg text-type-body leading-relaxed'
+        className='w-full lg:w-[588px] text-lg text-type-body leading-relaxed'
         style={{fontFamily: 'SejongGeulggot, Pretendard, sans-serif'}}>
         <p className='mb-[var(--spacing-p-gap)]'>
           공동 프로젝트 “인촌에 나려오다”에 참석하지 못한다고 아쉬워 하지
