@@ -8,8 +8,7 @@ export default function MainPage() {
     <main className='flex flex-col'>
       {/* --- Preview 섹션: textureOnly --- */}
       <Section
-        textureOnly
-        className='h-[100vh] flex items-center justify-center'>
+        textureOnly>
         <Preview />
       </Section>
 
