@@ -5,12 +5,12 @@ import SocialLinks from '../SocialLinks';
 export default function Header() {
   return (
     <header className='sticky top-0 z-20 w-full bg-primary-4 shadow-[0_6px_60px_0_rgba(111,111,111,0.20)]'>
-      <div className='whitespace-nowrap px-5 py-4 md:px-12 md:py-5 md:flex md:items-center lg:px-36 lg:py-6'>
+      <div className='whitespace-nowrap px-5 py-4 md:px-12 md:flex md:items-center lg:px-36'>
         {/* 왼쪽: 로고 + 메뉴 */}
         <div className='flex items-center gap-3 md:w-3/5 md:gap-10'>
           <Link to='/'>
             <img
-              className='w-18 h-14 md:w-21 md:h-19 lg:w-28 lg:h-24 object-contain'
+              className='h-14 md:h-18 lg:h-20 object-contain'
               src={dotdotdotlogo}
               alt='DotDotDot 로고'
               loading='lazy'
