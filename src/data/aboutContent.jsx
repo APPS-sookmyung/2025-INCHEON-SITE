@@ -8,6 +8,7 @@ export const aboutSections = [
     heading: {
       pretitle: 'About Us',
       title: "'2025 문화예술 특화거리 점점점' 소개",
+      highlightColor: 'pink_short'
     },
     layout: 'start',
     blobs: [
@@ -54,6 +55,7 @@ export const aboutSections = [
       ),
       title: '2025 공동 프로젝트 ‘인촌에 나려오다’ 소개',
       subtitle: '예술마을 산책하기',
+      highlightColor: 'green',
       highlight: 'highlightProject',
       className: 'text-right',
     },
@@ -93,6 +95,7 @@ export const aboutSections = [
     heading: {
       pretitle: 'Dot Dot Dot Open Studio',
       title: '점점점 오픈 스튜디오 소개',
+      highlightColor: 'pink',
     },
     layout: 'start',
     blobs: [{url: yellow, size: '38vw auto', position: 'right 0 bottom 100px'}],
