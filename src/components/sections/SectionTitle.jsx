@@ -14,21 +14,23 @@
  * @param {string=} props.subtitleClassName   - subtitle 전용 추가 클래스
  */
 
-import watercolor_highlight_pink from '@/assets/svg/watercolor-highlight-pink.svg'
-import watercolor_highlight_green from '@/assets/svg/watercolor-highlight-green.svg'
-import watercolor_highlight_pink_short from '@/assets/svg/watercolor-highlight-pink-short.svg'
+import watercolor_highlight_pink from '@/assets/svg/watercolor-highlight-pink.svg';
+import watercolor_highlight_green from '@/assets/svg/watercolor-highlight-green.svg';
+import watercolor_highlight_pink_short from '@/assets/svg/watercolor-highlight-pink-short.svg';
 
 const highlightColorMap = {
   pink_short: watercolor_highlight_pink_short,
   green: watercolor_highlight_green,
   pink: watercolor_highlight_pink,
-}
+};
 
 const highlightClassMap = {
-  pink_short: 'scale-55 md:scale-60 lg:scale-100 -translate-x-[33%] -translate-y-[40%] md:-translate-x-[33%] md:-translate-y-[36%]',
-  green: 'scale-100 -translate-x-[5%] -translate-y-[30%] md:-translate-x-[23%] md:-translate-y-[33%]',
-  pink: 'scale-100 md:scale-110 lg:scale-160 -translate-x-[20%] -translate-y-[30%]'
-}
+  pink_short:
+    'scale-55 md:scale-60 lg:scale-100 -translate-x-[33%] -translate-y-[40%] md:-translate-x-[33%] md:-translate-y-[36%]',
+  green:
+    'scale-100 -translate-x-[5%] -translate-y-[30%] md:-translate-x-[23%] md:-translate-y-[33%]',
+  pink: 'scale-100 md:scale-110 lg:scale-160 -translate-x-[20%] -translate-y-[30%]',
+};
 
 export function SectionTitle({
   pretitle,
@@ -53,7 +55,7 @@ export function SectionTitle({
       <p
         className={`${pretitleClass}`}
         style={{
-          fontFamily: 'BrightChalk, SejongGeulggot, sans-serif',
+          fontFamily: 'SSYoungestDaughterRegular, SejongGeulggot, sans-serif',
           textAlign: layout === 'end' ? 'right' : 'left',
         }}>
         {pretitle}
@@ -61,11 +63,15 @@ export function SectionTitle({
 
       {/* title */}
       <div className='relative'>
-      <img className={`absolute ${highlightClassMap[highlightColor]}`} src={highlightColorMap[highlightColor]} alt='' />
+        <img
+          className={`absolute ${highlightClassMap[highlightColor]}`}
+          src={highlightColorMap[highlightColor]}
+          alt=''
+        />
         <h2
           className={`relative ${titleClass}`}
           style={{
-            fontFamily: 'BrightChalk, SejongGeulggot, sans-serif',
+            fontFamily: 'SSYoungestDaughterRegular, SejongGeulggot, sans-serif',
             textAlign: layout === 'end' ? 'right' : 'left',
           }}>
           {title}
