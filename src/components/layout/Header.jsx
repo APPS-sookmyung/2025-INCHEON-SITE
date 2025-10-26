@@ -29,7 +29,7 @@ export default function Header() {
               이벤트 정보
             </Link>
             <Link
-              to='/schedule'
+              to='/survey'
               className='text-type-head-2 text-sm md:text-lg lg:text-xl font-normal'>
               설문조사
             </Link>
