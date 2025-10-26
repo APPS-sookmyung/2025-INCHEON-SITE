@@ -6,8 +6,8 @@
 }
 
 @font-face {
-  font-family: 'BrightChalk';
-  src: url('/assets/fonts/BrightChalk.ttf') format('truetype');
+  font-family: 'SSYoungestDaughterRegular';
+  src: url('/assets/fonts/SSYoungestDaughterRegular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -39,7 +39,7 @@ body {
 
   --font-family-sans: 'SejongGeulggot', Pretendard, ui-sans-serif, system-ui,
     sans-serif;
-  --font-family-brightChalk: 'BrightChalk', 'SejongGeulggot', Pretendard,
+  --font-family-ssYoungestDaughterRegular: 'SSYoungestDaughterRegular', 'SejongGeulggot', Pretendard,
     ui-sans-serif, system-ui, sans-serif;
   --spacing-p-gap: 36px;
 }
