@@ -1,5 +1,5 @@
-import graphics from '../assets/svg/graphic-overview.svg';
-import textureTile from '../assets/texture-tile.png';
+import graphics from '@/assets/svg/graphic-overview.svg';
+import textureTile from '@/assets/svg/texture-tile.svg';
 
 const ComingSoonMainPage = () => {
   return (

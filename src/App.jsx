@@ -15,11 +15,12 @@ import ComingSoonMainPage from './pages/ComingSoonMainPage';
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path='/'>
-        <Route index element={<ComingSoonMainPage />} />
-        {/* <Route path='spaces' element={<ComingSoonPage />} />
-        <Route path='spaces/:id' element={<ComingSoonPage />} />
-        <Route path='events' element={<ComingSoonPage />} /> */}
+      <Route path='/' element={<Layout />}>
+        <Route index element={<MainPage />} />
+        <Route path='spaces' element={<ComingSoonPage />} />
+        {/* <Route path='spaces/:id' element={<ComingSoonPage />} /> */}
+        <Route path='events' element={<ComingSoonPage />} />
+        <Route path='survey' element={<ComingSoonPage />} />
       </Route>
     )
   );
