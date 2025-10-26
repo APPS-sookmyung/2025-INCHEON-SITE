@@ -26,9 +26,9 @@ const highlightColorMap = {
 
 const highlightClassMap = {
   pink_short:
-    'scale-55 md:scale-60 lg:scale-100 -translate-x-[33%] -translate-y-[40%] md:-translate-x-[33%] md:-translate-y-[36%]',
+    'scale-55 md:scale-60 lg:scale-100 -translate-x-[35%] -translate-y-[42%] md:-translate-x-[33%] md:-translate-y-[36%]',
   green:
-    'scale-100 -translate-x-[5%] -translate-y-[30%] md:-translate-x-[23%] md:-translate-y-[33%]',
+    'scale-100 -translate-x-[18%] -translate-y-[33%] md:-translate-x-[23%] md:-translate-y-[33%]',
   pink: 'scale-100 md:scale-110 lg:scale-160 -translate-x-[20%] -translate-y-[30%]',
 };
 
@@ -40,9 +40,9 @@ export function SectionTitle({
   layout = 'start',
   className = '',
 }) {
-  const pretitleClass = `text-type-head-1 text-6xl md:text-7xl lg:text-8xl font-normal leading-[1.2] mb-6 md:mb-8 lg:mb-11`;
-  const titleClass = `text-type-head-2 text-2xl md:text-3xl lg:text-4xl font-normal leading-relaxed tracking-widest mb-10 md:mb-14 lg:mb-[70px]`;
-  const subtitleClass = `text-type-head-2 text-2xl md:text-3xl lg:text-4xl font-normal leading-8 mb-6 md:mb-8 lg:mb-11`;
+  const pretitleClass = `text-type-head-1 text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.2] mb-6 md:mb-8 lg:mb-11`;
+  const titleClass = `text-type-head-2 text-lg md:text-3xl lg:text-4xl font-normal leading-relaxed tracking-widest mb-10 md:mb-14 lg:mb-[70px]`;
+  const subtitleClass = `text-type-head-2 text-lg md:text-3xl lg:text-4xl font-normal leading-8 mb-6 md:mb-8 lg:mb-11`;
 
   return (
     <header
