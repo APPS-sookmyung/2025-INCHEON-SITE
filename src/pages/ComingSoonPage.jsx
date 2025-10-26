@@ -42,7 +42,7 @@ const ComingSoonPage = () => {
             '인천의 골목이 예술마을로 깨어납니다 — 11월 3일, 인촌에 나려오다 대공개!'
           }
         </p>
-        <h1 className='font-[BrightChalk] text-type-head-1 text-4xl md:text-7xl lg:text-8xl'>
+        <h1 className='font-[ssYoungestDaughterRegular] text-type-head-1 text-4xl md:text-7xl lg:text-8xl'>
           {'COMING SOON'}
         </h1>
       </section>
