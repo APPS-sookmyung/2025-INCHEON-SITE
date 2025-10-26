@@ -53,7 +53,7 @@ export function SectionTitle({
       <p
         className={`${pretitleClass}`}
         style={{
-          fontFamily: 'BrightChalk, SejongGeulggot, sans-serif',
+          fontFamily: 'SSYoungestDaughterRegular, SejongGeulggot, sans-serif',
           textAlign: layout === 'end' ? 'right' : 'left',
         }}>
         {pretitle}
@@ -65,7 +65,7 @@ export function SectionTitle({
         <h2
           className={`relative ${titleClass}`}
           style={{
-            fontFamily: 'BrightChalk, SejongGeulggot, sans-serif',
+            fontFamily: 'SSYoungestDaughterRegular, SejongGeulggot, sans-serif',
             textAlign: layout === 'end' ? 'right' : 'left',
           }}>
           {title}
