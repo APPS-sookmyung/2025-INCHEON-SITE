@@ -1,6 +1,6 @@
-import textureTile from '../assets/texture-tile.png';
-import curves from '../assets/svg/graphic-curves.svg';
-import sparkles from '../assets/svg/graphic-sparkles.svg';
+import textureTile from '@/assets/svg/texture-tile.svg';
+import curves from '@/assets/svg/graphic-curves.svg';
+import sparkles from '@/assets/svg/graphic-sparkles.svg';
 
 const curvesTransform = {
   base: 'translate-x-[5%] -translate-y-[60%]',
