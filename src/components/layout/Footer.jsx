@@ -22,12 +22,15 @@ const Footer = () => {
           />
         </div>
 
-        {/* 오른쪽 연락처 */}
-        <div className='flex flex-col gap-2'>
-          <p className='text-type-head-2 text-sm md:text-xl lg:text-2xl font-normal'>
+        {/* 오른쪽 연락처 + 외부 링크 아이콘 + 저작권 표기*/}
+        <div className='relative flex flex-col gap-2'>
+          <p className='text-type-head-2 text-sm md:text-xl lg:text-2xl font-normal ml-auto'>
             032)760-1089,1093
           </p>
           <SocialLinks className='md:hidden flex gap-4 *:gap-4' />
+          <p className='absolute bottom-0 right-0 text-[10px] md:text-xs translate-y-[200%] whitespace-nowrap text-type-head-2'>
+            본 사이트는 세종글꽃체 서체를 사용하고 있습니다.
+          </p>
         </div>
       </div>
     </footer>
