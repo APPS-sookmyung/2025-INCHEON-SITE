@@ -10,6 +10,7 @@ export default function AboutSection({blobs, heading, body, layout = 'start'}) {
       <SectionTitle
         pretitle={heading.pretitle}
         title={heading.title}
+        highlightColor={heading.highlightColor}
         subtitle={heading.subtitle}
         layout={layout}
       />
