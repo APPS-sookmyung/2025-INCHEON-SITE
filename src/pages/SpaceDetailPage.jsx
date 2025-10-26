@@ -1,4 +1,4 @@
-import {SPACE_DATA} from '../util/spaceInfo.js';
+import {SPACE_DATA} from '../utils/spaceInfo.js';
 import detailBackground1 from '../assets/detail/DetailBackground1.svg';
 import detailBackground2 from '../assets/detail/DetailBackground2.svg';
 import introDot from '../assets/detail/IntroDot.svg';
