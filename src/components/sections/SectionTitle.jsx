@@ -71,7 +71,7 @@ export function SectionTitle({
         <h2
           className={`relative ${titleClass}`}
           style={{
-            fontFamily: 'SSYoungestDaughterRegular, SejongGeulggot, sans-serif',
+            fontFamily: 'SejongGeulggot, sans-serif',
             textAlign: layout === 'end' ? 'right' : 'left',
           }}>
           {title}
