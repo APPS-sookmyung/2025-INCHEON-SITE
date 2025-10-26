@@ -17,7 +17,7 @@ export default function Header() {
             />
           </Link>
 
-          <nav className='flex flex-1 justify-evenly gap-7 lg:gap-9'>
+          <nav className='flex flex-1 justify-evenly gap-7 lg:gap-9 *:hover:text-type-body'>
             <Link
               to='/spaces'
               className='text-type-head-2 text-sm md:text-lg lg:text-xl font-normal'>
