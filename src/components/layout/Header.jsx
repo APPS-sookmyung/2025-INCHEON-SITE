@@ -21,7 +21,7 @@ export default function Header() {
             <Link
               to='/spaces'
               className='text-type-head-2 text-sm md:text-lg lg:text-xl font-normal'>
-              창작 공간들
+              문화공간 소개
             </Link>
             <Link
               to='/events'
