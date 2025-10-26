@@ -7,7 +7,7 @@ const SocialLinks = ({className = ''}) => {
     <div className={`${className}`}>
       <div className='flex flex-1 justify-evenly'>
         <a
-          href='https://www.instagram.com'
+          href='https://www.instagram.com/ifacpr/'
           target='_blank'
           rel='noopener noreferrer'>
           <img
@@ -18,7 +18,7 @@ const SocialLinks = ({className = ''}) => {
           />
         </a>
         <a
-          href='https://blog.example.com'
+          href='https://blog.naver.com/PostList.naver?blogId=ifacpr'
           target='_blank'
           rel='noopener noreferrer'>
           <img
@@ -28,15 +28,17 @@ const SocialLinks = ({className = ''}) => {
             loading='lazy'
           />
         </a>
+        <div className='w-18 h-5 md:w-25 md:h-7 lg:w-28 lg:h-8 rounded-full outline-[1.2px] outline-type-head-2 hover:outline-type-body flex items-center justify-center text-center'>
+          <a
+            href='https://ifac.or.kr/index.do'
+            target='_blank'
+            rel='noopener noreferrer'>
+            <p className='text-type-head-2 hover:text-type-body text-xs md:text-base lg:text-lg font-normal'>
+              공식 사이트
+            </p>
+          </a>
+        </div>
       </div>
-
-      <Link
-        to='/official'
-        className='w-20 h-5 md:w-27 md:h-7 lg:w-28 lg:h-8 px-2.5 py-0.5 rounded-full outline-[1.2px] outline-type-head-2 flex justify-center items-center gap-2.5'>
-        <span className='text-center text-type-head-2 text-xs md:text-base lg:text-lg font-normal'>
-          공식 사이트
-        </span>
-      </Link>
     </div>
   );
 };
