@@ -17,8 +17,8 @@ const App = () => {
     createRoutesFromElements(
       <Route path='/' element={<Layout />}>
         <Route index element={<MainPage />} />
-        <Route path='spaces' element={<ComingSoonPage />} />
-        {/* <Route path='spaces/:id' element={<ComingSoonPage />} /> */}
+        <Route path='spaces' element={<SpaceListPage />} />
+        <Route path='space/:id' element={<SpaceDetailPage />} />
         <Route path='events' element={<ComingSoonPage />} />
         <Route path='survey' element={<ComingSoonPage />} />
       </Route>

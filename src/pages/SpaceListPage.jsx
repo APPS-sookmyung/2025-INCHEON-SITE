@@ -3,6 +3,7 @@ import {useMemo} from 'react';
 import {useNavigate} from 'react-router-dom';
 import listPageBg from '../assets/ListPageBg.png';
 import thumbnail from '../assets/coverimage/cover_ex.png';
+import OpenStudioSection from '../components/sections/OpenStudioSection';
 
 // district 조건과 같이 화살표 색상 설정
 function getDistrictTextColor(region, district) {
@@ -23,8 +24,6 @@ const districtColors = {
 };
 
 const ListPage = () => {
-  const navigate = useNavigate();
-
   const items = useMemo(
     () => [
       {
@@ -145,6 +144,7 @@ const ListPage = () => {
             })}
           </section>
         </div>
+        <OpenStudioSection />
       </main>
 
       {/* <Footer /> */}
@@ -163,7 +163,7 @@ function Card({
   const navigate = useNavigate();
   return (
     <article
-      onClick={() => navigate(`4`)} // 카드 컴포넌트 클릭 시 spaces/4로 이동
+      onClick={() => navigate(`/space/${place.id}`)} // 카드 컴포넌트 클릭 시 spaces/4로 이동
       className={cx(
         'relative isolate overflow-hidden',
         'min-h-[220px] group transition-colors'
