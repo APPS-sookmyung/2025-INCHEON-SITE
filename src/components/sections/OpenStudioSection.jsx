@@ -4,13 +4,13 @@ import watercolor_highlight_pink from '@/assets/svg/watercolor-highlight-pink.sv
 
 const OpenStudioSection = () => {
   return (
-    <div className='w-full min-h-screen px-10 flex flex-col md:gap-10 my-10 md:px-15 lg:px-35'>
+    <div className='w-full min-h-screen px-6 flex flex-col md:gap-10 my-10 md:px-15 lg:px-35'>
       <h1 className='text-type-head-1 font-family-ssYoungestDaughterRegular text-4xl md:text-8xl'>
         Open Studio
       </h1>
       <div className='relative py-1'>
         <img
-          className='absolute scale-80 bottom-0 left-0 -translate-x-[27%] translate-y-[38%] md:translate-y-[42%] md:-translate-x-[22%]'
+          className='pointer-events-none select-none absolute scale-80 bottom-0 left-0 -translate-x-[27%] translate-y-[38%] md:translate-y-[42%] md:-translate-x-[22%]'
           src={watercolor_highlight_pink}
           alt=''
         />
@@ -32,10 +32,10 @@ const OpenStudioSection = () => {
 
         {/* 태블릿, 데스크탑 */}
         <div className='hidden md:grid grid-cols-4 gap-5 *:text-type-body text-base lg:text-lg'>
-          <div className=''></div>
-          <div className=''>오픈스튜디오 프로그램</div>
-          <div className=''>오픈일자</div>
-          <div className=''>오픈시간</div>
+          <div></div>
+          <div>오픈스튜디오 프로그램</div>
+          <div>오픈일자</div>
+          <div>오픈시간</div>
 
           {openStudios.map((studio) => (
             <div
@@ -74,7 +74,10 @@ const OpenStudioSection = () => {
                 </>
               )}
               {studio.id < '10' && (
-                <div className='col-span-full h-1 bg-black' role='separator' />
+                <div
+                  className='w-[95%] col-span-full h-[0.1px] bg-type-body opacity-70'
+                  role='separator'
+                />
               )}
             </div>
           ))}
