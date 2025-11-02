@@ -28,11 +28,13 @@ export default function Header() {
               className='text-type-head-2 text-sm md:text-lg lg:text-xl font-normal'>
               이벤트 정보
             </Link>
-            <Link
-              to='/survey'
+            <a
+              href='https://linktr.ee/dot_dot_dot'
+              target='_blank'
+              rel='noopener noreferrer'
               className='text-type-head-2 text-sm md:text-lg lg:text-xl font-normal'>
               설문조사
-            </Link>
+            </a>
           </nav>
         </div>
 
