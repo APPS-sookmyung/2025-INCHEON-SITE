@@ -149,7 +149,7 @@ const SpaceDetailPage = () => {
         </div>
       </div>
       {/*지도*/}
-      <div className='flex justify-center mb-[100px] relative'>
+      <div className='mt-10 flex justify-center mb-[100px] relative'>
         <div className='w-[50%] pr-35'>
           <div className='relative'>
             <p
