@@ -23,7 +23,7 @@ const GoogleMap = () => {
   return (
     <div className='w-full'>
       <APIProvider apiKey={apiKey} libraries={['marker']}>
-        <div className='mx-auto w-60 h-60 md:w-90 md:h-90 lg:w-125 lg:h-125'>
+        <div className='mx-auto h-60 md:h-90 lg:h-125'>
           <Map defaultZoom={13} defaultCenter={position} mapId={mapId}>
             {spaceLocations.map((space) => (
               <div key={space.id}>
@@ -45,7 +45,7 @@ const GoogleMap = () => {
                     position={{lat: space.lat, lng: space.lng}}>
                     <div className='p-2 relative flex flex-col font-family-sans leading-tight text-[10px] md:text-sm space-y-1'>
                       <button
-                        className='absolute cursor-pointer right-0 -translate-y-2 outline-none'
+                        className='absolute right-0 -translate-y-2 outline-none'
                         onClick={() => setActiveMarker(null)}>
                         <img src={x} alt='닫기' className='w-3 h-3' />
                       </button>
