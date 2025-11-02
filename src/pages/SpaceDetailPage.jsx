@@ -1,150 +1,128 @@
-import {SPACE_DATA} from '../utils/spaceInfo.js';
-import detailBackground1 from '../assets/detail/DetailBackground1.svg';
-import detailBackground2 from '../assets/detail/DetailBackground2.svg';
-import introDot from '../assets/detail/IntroDot.svg';
-import detailDot from '../assets/detail/DetailDot.svg';
-import mapIcon from '../assets/detail/MapIcon.svg';
-import michuholLinear from '../assets/detail/MichuholLinear.svg';
-import dongLinear from '../assets/detail/DongLinear.svg';
-import jungLinear from '../assets/detail/JungLinear.svg';
-
+import textureTile from '@/assets/svg/texture-tile.svg';
 import {useParams} from 'react-router-dom';
+import {spaceEvents} from '../data/spaceEvents';
+import yellow_highlight from '../assets/svg/yellow-highlight.svg';
+import blue_highlight from '../assets/svg/blue-highlight.svg';
+import green_highlight from '../assets/svg/green-highlight.svg';
+import pink_highlight from '../assets/svg/pink-highlight.svg';
+import yellow_highlight_big from '../assets/svg/yellow-highlight-big.svg';
+import blue_highlight_big from '../assets/svg/blue-highlight-big.svg';
+import pink_highlight_big from '../assets/svg/pink-highlight-big.svg';
+import green_highlight_big from '../assets/svg/green-highlight-big.svg';
+import GoogleMap from '../components/sections/GoogleMap';
 
-const SpaceDetailPage = () => {
+const highlightColorMap = {
+  pink: pink_highlight,
+  green: green_highlight,
+  yellow: yellow_highlight,
+  blue: blue_highlight,
+};
+
+const programHighlightColorMap = {
+  pink: pink_highlight_big,
+  green: green_highlight_big,
+  yellow: yellow_highlight_big,
+  blue: blue_highlight_big,
+};
+
+const SpacehighlightPage = () => {
   const {id} = useParams();
-  const imagePath = `/assets/${1}`; // 임의로 "1" 폴더만 사용
-  const space = SPACE_DATA.find((item) => item.id === Number(id));
-  const section = space?.section;
-
-  const imageMap = {
-    michuhol: '/detail/MichuholDot.svg',
-    dong: '/detail/DongDot.svg',
-    jung: '/detail/JungDot.svg',
-  };
-  const imageSrc = imageMap[section];
-
-  const DetailCard = ({title, children}) => (
-    <div>
-      <h3 className='text-lg pb-6 font-semibold border-b-[1.8px] border-black'>
-        {title}
-      </h3>
-      <div className='text-base pt-5 relative'>{children}</div>
-    </div>
-  );
-
-  const dotColors = {
-    michuhol: 'bg-blue-600',
-    jung: 'bg-lime-600',
-    dong: 'bg-yellow-400',
-  };
+  const event = spaceEvents.find((event) => Number(event.id) === Number(id));
 
   return (
-    <div className='bg-[#FDFCF8] relative '>
-      {/* background */}
-      <div className='absolute inset-0 z-0 overflow-hidden'>
+    <div
+      className='w-full relative'
+      style={{
+        backgroundImage: `url(${textureTile})`,
+        backgroundRepeat: 'repeat',
+        backgroundSize: '90px 90px',
+      }}>
+      <div
+        className='relative w-6/7 md:w-3/4 mx-auto min-h-screen py-15 md:py-24 lg:w-full lg:px-37 lg:pt-32 lg:pb-40'
+        style={{
+          WebkitTextStrokeWidth: '0.2px',
+        }}>
         <img
-          src={detailBackground1}
-          alt='상단 배경 요소'
-          className='w-full h-full absolute top-[180px]'
+          className={`${event.imgClass} hidden md:block absolute right-0 top-0`}
+          src={
+            new URL(`../assets/spaceConcepts/${id}.svg`, import.meta.url).href
+          }
         />
-      </div>
+        <div className='relative flex flex-col text-black text-sm md:text-lg lg:text-2xl'>
+          <h1 className='text-5xl md:text-7xl lg:text-8xl font-family-ssYoungestDaughterRegular text-type-head-1 mb-4.5 md:mb-6 lg:mb-9'>
+            {event.name}
+          </h1>
+          <h3
+            className='lg:whitespace-pre text-lg md:text-2xl lg:text-4xl mb-11 md:mb-17 lg:mb-22'
+            style={{
+              WebkitTextStrokeWidth: '0.7px',
+            }}>{`< ${event.title} >`}</h3>
 
-      {/* contents */}
-      <div className='relative w-full'>
-        {/* intro */}
-        <div className='flex w-full'>
-          <div className='pl-[150px] pr-[50px] pt-[180px] w-1/2'>
-            <h1 className='font-black text-6xl tracking-tighter mb-[80px]'>
-              {space.title}
-            </h1>
-            <span className='text-sm font-normal text-white bg-black rounded-full py-2 px-4'>
+          {/* 프로그램 소개 */}
+          <div className='md:whitespace-pre space-y-5 md:space-y-7 lg:space-y-14 mb-11 md:mb-30 lg:mb-40'>
+            <img
+              className='absolute scale-60 md:scale-75 lg:scale-100 -translate-x-[30%] -translate-y-[28%] md:-translate-x-[24%] md:-translate-y-[20%] lg:-translate-x-[16%] lg:-translate-y-[16%]'
+              src={programHighlightColorMap[event.themeColor]}
+            />
+            <p
+              className='relative '
+              style={{
+                WebkitTextStrokeWidth: '0.5px',
+              }}>
               프로그램 소개
-            </span>
-            <p className='w-[80%] text-xl/10 text-left font-medium mt-[30px]'>
-              {space.program}
             </p>
-            <img src={introDot} alt='' className='h-[30px] mt-[80px]' />
+            <p className='text-type-head-2'>{event.description}</p>
           </div>
-          <div className='relative w-1/2 h-[700px] overflow-hidden rounded-bl-full '>
-            <img
-              src={`${imagePath}/main.webp`}
-              alt='대표 이미지'
-              className='absolute inset-0 w-full h-full object-cover z-10 grayscale'
-            />
-            <img
-              src={imageSrc}
-              alt=''
-              className='absolute -right-[20px] top-[50px] h-[95%] z-20'
-            />
-          </div>
-        </div>
 
-        {/* detail */}
-        <div className='relative grid mt-[100px] px-[150px] grid-cols-1 md:grid-cols-3 gap-14'>
-          {section == 'jung' && (
-            <img
-              src={jungLinear}
-              alt=''
-              className='absolute -left-8 top-[8.8px] h-[45px]'
-            />
-          )}
-          <DetailCard title='공간'>
-            <p>{space.location}</p>
-            <button
-              type='button'
-              className='mt-5 inline-flex items-center rounded-full border px-1 py-1 pr-4 text-sm'
-              // onClick={() => 길찾기 로직}
-            >
-              <img src={mapIcon} alt='지도 아이콘' className='pr-2 h-6' />
-              길찾기
-            </button>
-          </DetailCard>
-          <DetailCard title='공동 프로젝트 일정'>
-            <p>{space.projectSchedule}</p>
-          </DetailCard>
-          <DetailCard title='오픈스튜디오 정보 및 운영 일정'>
-            <div className='relative'>
-              {section == 'michuhol' && (
-                <img
-                  src={michuholLinear}
-                  alt=''
-                  className='absolute !w-[200px] !h-[45px] -right-[150px] -top-[63px]'
-                />
-              )}
-              {space.studioInfo.map((group, groupIdx) => (
-                <div key={groupIdx} className='mb-8'>
-                  {group.map((item, i) => (
-                    <div key={i} className='flex pt-1 '>
-                      {i >= 2 && (
-                        <span
-                          className={`h-3 w-3 mt-1.5 mr-2 ml-8 rounded-full flex-shrink-0 ${
-                            dotColors[space.section]
-                          }`}>
-                          {' '}
-                        </span>
-                      )}
-                      <p className={i === 0 ? 'font-bold mb-1' : ''}>{item}</p>
-                    </div>
-                  ))}
-                </div>
-              ))}
+          {/* 시간 + 장소 */}
+          <div className='md:whitespace-pre flex flex-col md:flex-row gap-11 md:gap-30 lg:gap-48'>
+            <div className='space-y-5 md:space-y-7 lg:space-y-14'>
+              <img
+                className='absolute scale-60 md:scale-80 lg:scale-100 -translate-x-[38%] -translate-y-[28%] md:-translate-x-[33%] md:-translate-y-[20%] lg:-translate-x-[28%] lg:-translate-y-[13%]'
+                src={highlightColorMap[event.themeColor]}
+              />
+              <p
+                className='relative'
+                style={{
+                  WebkitTextStrokeWidth: '0.5px',
+                }}>
+                시간
+              </p>
+              <p className='text-type-head-2'>{event.time}</p>
             </div>
-          </DetailCard>
-          <img src={detailDot} alt='' className='h-[160px] ml-[100px]' />
-        </div>
-
-        {/* map*/}
-        <div className='flex justify-center mb-[100px] relative'>
-          <div className='w-[50%] pr-35'>
-            <div className='relative'>
-              <p className='block text-lg font-semibold w-full pb-[3%]'>지도</p>
-              <p className='w-[700px] h-[700px] m-0 bg-gray-100'></p>
+            <div className='space-y-5 md:space-y-7 lg:space-y-14'>
+              <img
+                className='absolute scale-60 md:scale-80 lg:scale-100 -translate-x-[38%] -translate-y-[26%] md:-translate-x-[34%] md:-translate-y-[20%] lg:-translate-x-[28%] lg:-translate-y-[13%]'
+                src={highlightColorMap[event.themeColor]}
+              />
+              <p
+                className='relative'
+                style={{
+                  WebkitTextStrokeWidth: '0.5px',
+                }}>
+                장소
+              </p>
+              <p className='text-type-head-2'>{event.address}</p>
             </div>
           </div>
+        </div>
+        <button
+          className='absolute right-0 lg:right-28 lg:mb-auto w-fit rounded-[100px] bg-type-head-1 px-5 md:px-7 py-2 my-20 hover:text-type-head-2'
+          onClick={() =>
+            window.open(event.surveyLink, '_blank', 'noopener,noreferrer')
+          }>
+          <span className='hidden text-lg lg:text-2xl md:block'>
+            설문조사 바로가기 →
+          </span>
+          <span className='md:hidden text-sm'>설문조사 →</span>
+        </button>
+
+        <div className='w-full mt-40 md:mt-50 lg:mt-20 lg:w-3/4'>
+          <GoogleMap />
         </div>
       </div>
     </div>
   );
 };
 
-export default SpaceDetailPage;
+export default SpacehighlightPage;
