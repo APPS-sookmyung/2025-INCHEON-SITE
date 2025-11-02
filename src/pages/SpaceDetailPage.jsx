@@ -1,4 +1,4 @@
-// import textureTile from '@/assets/svg/texture-tile.svg';
+import textureTile from '@/assets/svg/texture-tile.svg';
 import {useParams} from 'react-router-dom';
 import {spaceEvents} from '../data/spaceEvents';
 import yellow_highlight from '../assets/svg/yellow-highlight.svg';
@@ -29,46 +29,57 @@ const SpacehighlightPage = () => {
   const event = spaceEvents.find((event) => Number(event.id) === Number(id));
 
   return (
-    <div className='relative w-9/10 md:w-3/4 mx-auto min-h-screen py-15 md:py-24 lg:w-full lg:px-37 lg:py-32'>
-      <img
-        className='absolute right-0 top-0 scale-40 md:scale-60 lg:scale-80 '
-        src={new URL(`../assets/spaceConcepts/${id}.svg`, import.meta.url).href}
-      />
-      <div className='relative flex flex-col text-black text-sm md:text-lg lg:text-2xl'>
-        <h1 className='text-5xl md:text-7xl lg:text-8xl font-family-ssYoungestDaughterRegular text-type-head-1 mb-4.5 md:mb-6 lg:mb-9'>
-          {event.name}
-        </h1>
-        <h3 className='text-lg md:text-2xl lg:text-4xl mb-11 md:mb-17 lg:mb-22'>{`< ${event.title} >`}</h3>
+    <div
+      className='w-full'
+      style={{
+        backgroundImage: `url(${textureTile})`,
+        backgroundRepeat: 'repeat',
+        backgroundSize: '90px 90px',
+      }}>
+      <div className='relative w-6/7 md:w-3/4 mx-auto min-h-screen py-15 md:py-24 lg:w-full lg:px-37 lg:py-32'>
+        <img
+          className={`${event.imgClass} hidden md:block absolute right-0 top-0`}
+          src={
+            new URL(`../assets/spaceConcepts/${id}.svg`, import.meta.url).href
+          }
+        />
+        <div className='relative flex flex-col text-black text-sm md:text-lg lg:text-2xl'>
+          <h1 className='text-5xl md:text-7xl lg:text-8xl font-family-ssYoungestDaughterRegular text-type-head-1 mb-4.5 md:mb-6 lg:mb-9'>
+            {event.name}
+          </h1>
+          <h3 className='lg:whitespace-pre text-lg md:text-2xl lg:text-4xl mb-11 md:mb-17 lg:mb-22'>{`< ${event.title} >`}</h3>
 
-        {/* 프로그램 소개 */}
-        <div className='md:whitespace-pre space-y-5 md:space-y-7 lg:space-y-14 mb-20 md:mb-30 lg:mb-40'>
-          <img
-            className='absolute scale-60 md:scale-75 lg:scale-100 -translate-x-[30%] -translate-y-[28%] md:-translate-x-[24%] md:-translate-y-[20%] lg:-translate-x-[16%] lg:-translate-y-[16%]'
-            src={programHighlightColorMap[event.themeColor]}
-          />
-          <p className='relative'>프로그램 소개</p>
-          <p className='text-type-head-2'>{event.description}</p>
-        </div>
+          {/* 프로그램 소개 */}
+          <div className='md:whitespace-pre space-y-5 md:space-y-7 lg:space-y-14 mb-20 md:mb-30 lg:mb-40'>
+            <img
+              className='absolute scale-60 md:scale-75 lg:scale-100 -translate-x-[30%] -translate-y-[28%] md:-translate-x-[24%] md:-translate-y-[20%] lg:-translate-x-[16%] lg:-translate-y-[16%]'
+              src={programHighlightColorMap[event.themeColor]}
+            />
+            <p className='relative'>프로그램 소개</p>
+            <p className='text-type-head-2'>{event.description}</p>
+          </div>
 
-        {/* 시간 + 장소 */}
-        <div className='whitespace-pre flex gap-15 md:gap-30 lg:gap-48'>
-          <div className='space-y-5 md:space-y-7 lg:space-y-14'>
-            <img
-              className='absolute scale-60 md:scale-80 lg:scale-100 -translate-x-[38%] -translate-y-[28%] md:-translate-x-[33%] md:-translate-y-[20%] lg:-translate-x-[28%] lg:-translate-y-[13%]'
-              src={highlightColorMap[event.themeColor]}
-            />
-            <p className='relative'>시간</p>
-            <p className='text-type-head-2'>{event.time}</p>
-          </div>
-          <div className='space-y-5 md:space-y-7 lg:space-y-14'>
-            <img
-              className='absolute scale-60 md:scale-80 lg:scale-100 -translate-x-[38%] -translate-y-[26%] md:-translate-x-[34%] md:-translate-y-[20%] lg:-translate-x-[28%] lg:-translate-y-[13%]'
-              src={highlightColorMap[event.themeColor]}
-            />
-            <p className='relative'>장소</p>
-            <p className='text-type-head-2'>{event.address}</p>
+          {/* 시간 + 장소 */}
+          <div className='md:whitespace-pre flex gap-20 md:gap-30 lg:gap-48'>
+            <div className='space-y-5 md:space-y-7 lg:space-y-14'>
+              <img
+                className='absolute scale-60 md:scale-80 lg:scale-100 -translate-x-[38%] -translate-y-[28%] md:-translate-x-[33%] md:-translate-y-[20%] lg:-translate-x-[28%] lg:-translate-y-[13%]'
+                src={highlightColorMap[event.themeColor]}
+              />
+              <p className='relative'>시간</p>
+              <p className='text-type-head-2'>{event.time}</p>
+            </div>
+            <div className='space-y-5 md:space-y-7 lg:space-y-14'>
+              <img
+                className='absolute scale-60 md:scale-80 lg:scale-100 -translate-x-[38%] -translate-y-[26%] md:-translate-x-[34%] md:-translate-y-[20%] lg:-translate-x-[28%] lg:-translate-y-[13%]'
+                src={highlightColorMap[event.themeColor]}
+              />
+              <p className='relative'>장소</p>
+              <p className='text-type-head-2'>{event.address}</p>
+            </div>
           </div>
         </div>
+        <div></div>
       </div>
     </div>
   );

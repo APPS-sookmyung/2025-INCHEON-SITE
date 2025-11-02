@@ -9,6 +9,8 @@ export const spaceEvents = [
     address: '어벙또벙이야기수선집\n(인천 동구 송림로 16, 2층)',
     themeColor: 'yellow',
     imgPath: '../assets/spaceConcepts/1.svg',
+    imgClass:
+      'md:scale-60 md:translate-x-[40%] md:translate-y-[40%] lg:translate-x-[0] lg:translate-y-[20%]',
   },
   {
     id: 2,
@@ -20,6 +22,8 @@ export const spaceEvents = [
     address: '창작집단 발아 랩실\n(인천 중구 참외전로 27번길 2, 2층)',
     themeColor: 'blue',
     imgPath: '../assets/spaceConcepts/2.svg',
+    imgClass:
+      'md:scale-30 lg:scale-80 md:translate-x-[4%] md:translate-y-[20%] lg:translate-x-[0] lg:translate-y-[20%]',
   },
   {
     id: 3,
@@ -32,6 +36,8 @@ export const spaceEvents = [
     address: '1965여관\n(인천 중구 신포로31번길 20)',
     themeColor: 'pink',
     imgPath: '../assets/spaceConcepts/3.svg',
+    imgClass:
+      'md:scale-40 lg:scale-100 md:translate-x-[47%] md:translate-y-[13%] lg:translate-x-[0] lg:translate-y-[0]',
   },
   {
     id: 4,
@@ -43,6 +49,8 @@ export const spaceEvents = [
     address: '코드스페이스\n(인천 미추홀구 주안로 78, 3층)',
     themeColor: 'green',
     imgPath: '../assets/spaceConcepts/4.svg',
+    imgClass:
+      'md:scale-40 lg:scale-70 md:translate-x-[47%] md:translate-y-[15%] lg:translate-x-[15%] lg:translate-y-[3%]',
   },
   {
     id: 5,
@@ -54,6 +62,8 @@ export const spaceEvents = [
     address: '한울소리 문화공간\n(인천 미추홀구 소성로 285 지하)',
     themeColor: 'green',
     imgPath: '../assets/spaceConcepts/5.svg',
+    imgClass:
+      'md:scale-40 lg:scale-60 md:translate-x-[47%] md:translate-y-[15%] lg:translate-x-[20%] lg:-translate-y-[8%]',
   },
   {
     id: 6,
@@ -65,6 +75,8 @@ export const spaceEvents = [
     address: '인천 중구 우현로 67번길 13, 2층\n(프로젝트 스페이스 코스모스)',
     themeColor: 'blue',
     imgPath: '../assets/spaceConcepts/6.svg',
+    imgClass:
+      'md:scale-70 lg:scale-80 md:translate-x-[31.5%] md:translate-y-[12%] lg:translate-x-[10%] lg:-translate-y-[20%]',
   },
   {
     id: 7,
@@ -76,6 +88,8 @@ export const spaceEvents = [
     address: '공간 인공빛\n(인천 중구 신포로 31번길 6, 2층)',
     themeColor: 'yellow',
     imgPath: '../assets/spaceConcepts/7.svg',
+    imgClass:
+      'md:scale-50 lg:scale-70 md:translate-x-[41.5%] md:translate-y-[5%] lg:translate-x-[15%] lg:-translate-y-[20%]',
   },
   {
     id: 8,
@@ -88,6 +102,8 @@ export const spaceEvents = [
     address: '위드달 작업장 (인천 미추홀구 석정로375번길 23)',
     themeColor: 'pink',
     imgPath: '../assets/spaceConcepts/8.svg',
+    imgClass:
+      'md:scale-40 lg:scale-70 md:translate-x-[47%] md:translate-y-[2%] lg:translate-x-[15%] lg:-translate-y-[10%]',
   },
   {
     id: 9,
@@ -99,17 +115,21 @@ export const spaceEvents = [
     address: '카츠오리진 연구소\n(인천 중구 자유공원로 5, 빽다방 3층)',
     themeColor: 'blue',
     imgPath: '../assets/spaceConcepts/9.svg',
+    imgClass:
+      'md:scale-40 lg:scale-70 md:translate-x-[47%] md:translate-y-[2%] lg:translate-x-[15%] lg:-translate-y-[24%]',
   },
   {
     id: 10,
     name: '공예루틴',
     title:
-      '<바다의 기억, 땅의 순간, 하늘의 시간>\n<토양이 전시의 소재로 그리고 테마로 변화하는 새로운 순간을 경험해 보세요.>',
+      '바다의 기억, 땅의 순간, 하늘의 시간>\n<토양이 전시의 소재로 그리고 테마로 변화하는 새로운 순간을 경험해 보세요.',
     description:
       '임시공간과 함께 하는 이번 프로젝트는 ‘바다의 기억, 땅의 순간,\n하늘의 시간’ 이라는 주제를 따라, 작가들의 리서치와 실험 과정을\n보여줍니다. 토양, 도자, 물질, 시간에 관한 감각들이 전시로\n이어지고, 오픈 토크에서는 작가와 직접 이야기를 나누며\n작품의 뒷이야기를 들을 수 있습니다.',
-    time: '전시: 11월 5일 ~ 11월 29일 (12:00 – 18:00) / 오픈토크: 11월 22일(금) 14:00',
-    address: '공예루틴 (인천 중구 신포로23번길 43)',
+    time: '전시: 11월 5일 ~ 11월 29일 (12:00 – 18:00)\n/ 오픈토크: 11월 22일(금) 14:00',
+    address: '공예루틴\n(인천 중구 신포로23번길 43)',
     themeColor: 'yellow',
     imgPath: '../assets/spaceConcepts/10.svg',
+    imgClass:
+      'md:scale-40 lg:scale-70 md:translate-x-[47%] md:-translate-y-[10%] lg:translate-x-[15%] lg:-translate-y-[13%]',
   },
 ];
