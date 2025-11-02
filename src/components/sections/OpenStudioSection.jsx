@@ -10,7 +10,7 @@ const OpenStudioSection = () => {
       </h1>
       <div className='relative py-1'>
         <img
-          className='absolute scale-80 bottom-0 left-0 -translate-x-[27%] translate-y-[38%] md:translate-y-[42%] md:-translate-x-[22%]'
+          className='pointer-events-none select-none absolute scale-80 bottom-0 left-0 -translate-x-[27%] translate-y-[38%] md:translate-y-[42%] md:-translate-x-[22%]'
           src={watercolor_highlight_pink}
           alt=''
         />
