@@ -131,12 +131,20 @@ const SpaceDetailPage = () => {
             </div>
 
             {/* 설문조사 버튼 (왼쪽 컬럼 내부 하단) */}
-            <div className='mt-12'>
-              <button>
+            <div className='mt-12 '>
+              <button
+                onClick={() =>
+                  window.open(
+                    'https://linktr.ee/dot_dot_dot',
+                    '_blank',
+                    'noopener,noreferrer'
+                  )
+                }
+                className='absolute right-10 bottom-10 w-[150px]  cursor-pointer z-50'>
                 <img
                   src={surveyButton}
                   alt='설문조사 바로가기 버튼'
-                  className='right-10 absolute w-[150px] h-auto cursor-pointer '
+                  className='w-[150px] h-auto'
                 />
               </button>
             </div>
