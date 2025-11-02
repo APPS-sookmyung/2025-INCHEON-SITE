@@ -17,11 +17,13 @@
 import watercolor_highlight_pink from '@/assets/svg/watercolor-highlight-pink.svg';
 import watercolor_highlight_green from '@/assets/svg/watercolor-highlight-green.svg';
 import watercolor_highlight_pink_short from '@/assets/svg/watercolor-highlight-pink-short.svg';
+import watercolor_highlight_pink_long from '@/assets/svg/watercolor-highlight-pink-long.svg';
 
 const highlightColorMap = {
   pink_short: watercolor_highlight_pink_short,
   green: watercolor_highlight_green,
   pink: watercolor_highlight_pink,
+  pink_long: watercolor_highlight_pink_long,
 };
 
 const highlightClassMap = {
@@ -30,6 +32,8 @@ const highlightClassMap = {
   green:
     'scale-100 -translate-x-[18%] -translate-y-[33%] md:-translate-x-[23%] md:-translate-y-[33%]',
   pink: 'scale-100 md:scale-110 lg:scale-160 -translate-x-[20%] -translate-y-[30%]',
+  pink_long:
+    'scale-100 md:scale-110 lg:scale-120 -translate-x-[10%] -translate-y-[30%]',
 };
 
 export function SectionTitle({
