@@ -11,6 +11,7 @@ export const spaceEvents = [
     imgPath: '../assets/spaceConcepts/1.svg',
     imgClass:
       'md:scale-60 md:translate-x-[40%] md:translate-y-[40%] lg:translate-x-[0] lg:translate-y-[20%]',
+    surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=133',
   },
   {
     id: 2,
@@ -24,12 +25,13 @@ export const spaceEvents = [
     imgPath: '../assets/spaceConcepts/2.svg',
     imgClass:
       'md:scale-30 lg:scale-80 md:translate-x-[50%] md:translate-y-[15%] lg:translate-x-[0] lg:translate-y-[20%]',
+    surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=125',
   },
   {
     id: 3,
     name: '올라아트컴퍼니',
     title:
-      '오래된 여관에 남겨진 의문의 사건. 단서와 목격담을 따라,\n숨겨진 진실을 밝혀내세요.',
+      '오래된 여관에 남겨진 의문의 사건. 단서와 목격담을 따라, 숨겨진\n진실을 밝혀내세요.',
     description:
       '〈여관괴담〉은 시골의 오래된 여관을 배경으로 펼쳐지는 짧고 강렬한 참여형\n연극 콘텐츠입니다. 관객은 직접 사건의 목격자이자 조사자가 되어 여관 안에\n숨겨진 공포와 미스터리를 추적합니다.\n\n연극적 서사, 실제 공간, 그리고 역할 놀이가 결합되어 짧지만 깊은 몰입과\n긴장감을 경험하게 됩니다.',
     time: '14:00 – 18:00',
@@ -38,6 +40,7 @@ export const spaceEvents = [
     imgPath: '../assets/spaceConcepts/3.svg',
     imgClass:
       'md:scale-40 lg:scale-100 md:translate-x-[47%] md:translate-y-[13%] lg:translate-x-[0] lg:translate-y-[0]',
+    surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=119',
   },
   {
     id: 4,
@@ -51,6 +54,7 @@ export const spaceEvents = [
     imgPath: '../assets/spaceConcepts/4.svg',
     imgClass:
       'md:scale-40 lg:scale-70 md:translate-x-[47%] md:translate-y-[15%] lg:translate-x-[15%] lg:translate-y-[3%]',
+    surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=127',
   },
   {
     id: 5,
@@ -64,6 +68,7 @@ export const spaceEvents = [
     imgPath: '../assets/spaceConcepts/5.svg',
     imgClass:
       'md:scale-40 lg:scale-60 md:translate-x-[47%] md:translate-y-[15%] lg:translate-x-[20%] lg:-translate-y-[8%]',
+    surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=117',
   },
   {
     id: 6,
@@ -77,6 +82,7 @@ export const spaceEvents = [
     imgPath: '../assets/spaceConcepts/6.svg',
     imgClass:
       'md:scale-70 lg:scale-80 md:translate-x-[31.5%] md:translate-y-[12%] lg:translate-x-[10%] lg:-translate-y-[20%]',
+    surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=129',
   },
   {
     id: 7,
@@ -90,6 +96,7 @@ export const spaceEvents = [
     imgPath: '../assets/spaceConcepts/7.svg',
     imgClass:
       'md:scale-50 lg:scale-70 md:translate-x-[41.5%] md:translate-y-[5%] lg:translate-x-[15%] lg:-translate-y-[20%]',
+    surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=135',
   },
   {
     id: 8,
@@ -104,6 +111,7 @@ export const spaceEvents = [
     imgPath: '../assets/spaceConcepts/8.svg',
     imgClass:
       'md:scale-40 lg:scale-70 md:translate-x-[47%] md:translate-y-[2%] lg:translate-x-[15%] lg:-translate-y-[10%]',
+    surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=121',
   },
   {
     id: 9,
@@ -117,6 +125,7 @@ export const spaceEvents = [
     imgPath: '../assets/spaceConcepts/9.svg',
     imgClass:
       'md:scale-40 lg:scale-70 md:translate-x-[47%] md:translate-y-[2%] lg:translate-x-[15%] lg:-translate-y-[24%]',
+    surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=131',
   },
   {
     id: 10,
@@ -131,5 +140,6 @@ export const spaceEvents = [
     imgPath: '../assets/spaceConcepts/10.svg',
     imgClass:
       'md:scale-40 lg:scale-70 md:translate-x-[47%] md:-translate-y-[10%] lg:translate-x-[15%] lg:-translate-y-[13%]',
+    surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=123',
   },
 ];
