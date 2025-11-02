@@ -11,6 +11,7 @@ import Layout from './layout/Layout';
 import SurveyPage from './pages/SurveyPage';
 import ComingSoonPage from './pages/ComingSoonPage';
 import ComingSoonMainPage from './pages/ComingSoonMainPage';
+import EventsPage from './pages/EventsPage';
 
 const App = () => {
   const router = createBrowserRouter(
