@@ -7,8 +7,7 @@ export default function MainPage() {
   return (
     <main className='flex flex-col'>
       {/* --- Preview 섹션: textureOnly --- */}
-      <Section
-        textureOnly>
+      <Section textureOnly>
         <Preview />
       </Section>
 
