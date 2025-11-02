@@ -4,7 +4,7 @@ import watercolor_highlight_pink from '@/assets/svg/watercolor-highlight-pink.sv
 
 const OpenStudioSection = () => {
   return (
-    <div className='w-full min-h-screen px-10 flex flex-col md:gap-10 my-10 md:px-15 lg:px-35'>
+    <div className='w-full min-h-screen px-6 flex flex-col md:gap-10 my-10 md:px-15 lg:px-35'>
       <h1 className='text-type-head-1 font-family-ssYoungestDaughterRegular text-4xl md:text-8xl'>
         Open Studio
       </h1>
@@ -32,10 +32,10 @@ const OpenStudioSection = () => {
 
         {/* 태블릿, 데스크탑 */}
         <div className='hidden md:grid grid-cols-4 gap-5 *:text-type-body text-base lg:text-lg'>
-          <div className=''></div>
-          <div className=''>오픈스튜디오 프로그램</div>
-          <div className=''>오픈일자</div>
-          <div className=''>오픈시간</div>
+          <div></div>
+          <div>오픈스튜디오 프로그램</div>
+          <div>오픈일자</div>
+          <div>오픈시간</div>
 
           {openStudios.map((studio) => (
             <div
@@ -74,7 +74,10 @@ const OpenStudioSection = () => {
                 </>
               )}
               {studio.id < '10' && (
-                <div className='col-span-full h-1 bg-black' role='separator' />
+                <div
+                  className='w-[92%] col-span-full h-[0.1px] bg-type-body opacity-70'
+                  role='separator'
+                />
               )}
             </div>
           ))}
