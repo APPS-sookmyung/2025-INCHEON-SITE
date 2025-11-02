@@ -23,7 +23,7 @@ export const spaceEvents = [
     themeColor: 'blue',
     imgPath: '../assets/spaceConcepts/2.svg',
     imgClass:
-      'md:scale-30 lg:scale-80 md:translate-x-[4%] md:translate-y-[20%] lg:translate-x-[0] lg:translate-y-[20%]',
+      'md:scale-30 lg:scale-80 md:translate-x-[50%] md:translate-y-[15%] lg:translate-x-[0] lg:translate-y-[20%]',
   },
   {
     id: 3,
