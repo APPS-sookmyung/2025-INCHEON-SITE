@@ -46,6 +46,10 @@ body {
   --spacing-p-gap: 36px;
 }
 
+.gm-ui-hover-effect {
+  display: none !important; /* hide Google’s close button */
+}
+
 /* 반응형 오버라이드 */
 @media (min-width: 640px) {
   /* sm */
