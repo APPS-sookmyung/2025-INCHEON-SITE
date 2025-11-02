@@ -15,7 +15,7 @@ export const PLACES = [
     content:
       '우리 마을에 있는 싹이 튼 텃밭이에요. 작은 원인에 싸움을 바꾸려는 힘, 그 씨앗이 무엇으로 발아될지 궁금하죠?',
     image: '@/assets/svg/space-teotbat.svg',
-    hoverBgColor: 'var(--color-primary-3)', 
+    hoverBgColor: 'var(--color-primary-3)',
   },
   {
     id: 'eumakjangteo',
