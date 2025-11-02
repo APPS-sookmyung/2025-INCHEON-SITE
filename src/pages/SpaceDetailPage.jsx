@@ -41,11 +41,11 @@ const SpaceDetailPage = () => {
         backgroundRepeat: 'repeat',
         backgroundSize: '90px 90px',
       }}>
-      <div className='relative z-10 w-full px-36 pt-28 pb-20'>
+      <div className='relative z-10 w-full px-6 pt-24 pb-16 lg:px-36 lg:pt-28 lg:pb-20'>
         {/* 제목 */}
         <div className='mb-12'>
           <h1
-            className='text-[56px] font-normal tracking-tight mb-4'
+            className='text-4xl lg:text-[56px] font-normal tracking-tight mb-4'
             style={{
               fontFamily: 'ssYoungestDaughterRegular',
               lineHeight: '1.1',
@@ -56,7 +56,7 @@ const SpaceDetailPage = () => {
           {/* 부제목 */}
           <div>
             <p
-              className='text-[24px] inline-block'
+              className='text-xl lg:text-[24px] inline-block'
               style={{
                 backgroundImage: `url(${titleSrc})`,
                 backgroundRepeat: 'no-repeat',
@@ -70,9 +70,9 @@ const SpaceDetailPage = () => {
           </div>
         </div>
 
-        <div className='flex mt-16 relative'>
+        <div className='flex mt-10 lg:mt-16 relative'>
           {/* 왼쪽 정보 영역 */}
-          <div className='w-1/2 pr-10'>
+          <div className='w-full lg:w-1/2 lg:pr-10'>
             {/* 프로그램 소개 */}
             <div>
               <h3
@@ -89,12 +89,14 @@ const SpaceDetailPage = () => {
 
               {/* 프로그램 설명 */}
               <div>
-                <p className='text-base/7'>{space.program_info}</p>
+                <p className='text-lg mt-4  font-bold text-type-head-2 tracking-[-0.75px] text-base md:text-lg lg:text-2xl'>
+                  {space.program_info}
+                </p>
               </div>
             </div>
 
             {/* 시간 & 장소 */}
-            <div className='mt-10 flex gap-16'>
+            <div className='mt-10 flex flex-col gap-8 lg:flex-row lg:gap-16'>
               <div>
                 <h3
                   className='text-lg font-semibold  mb-3'
@@ -106,7 +108,9 @@ const SpaceDetailPage = () => {
                   }}>
                   시간
                 </h3>
-                <p className='text-base'>{space.time}</p>
+                <p className='text-lg mt-4  font-bold text-type-head-2 tracking-[-0.75px] text-base md:text-lg lg:text-2xl'>
+                  {space.time}
+                </p>
               </div>
 
               <div>
@@ -120,7 +124,7 @@ const SpaceDetailPage = () => {
                   }}>
                   장소
                 </h3>
-                <p className='text-base whitespace-pre-line'>
+                <p className='text-lg mt-4  font-bold text-type-head-2 tracking-[-0.75px] text-base md:text-lg lg:text-2xl'>
                   {space.detail_location}
                 </p>
               </div>
@@ -132,28 +136,28 @@ const SpaceDetailPage = () => {
                 <img
                   src={surveyButton}
                   alt='설문조사 바로가기 버튼'
-                  className='absolute bottom-0 right-10 w-[150px] h-auto cursor-pointer '
+                  className='right-10 absolute w-[150px] h-auto cursor-pointer '
                 />
               </button>
             </div>
           </div>
           {/* 오른쪽 이미지 영역 */}
         </div>
-        <div className='w-1/2 absolute top-0 right-0 h-full'>
+        <div className=' w-full absolute top-[20%] right-0 h-full lg:w-1/2 lg:block'>
           <img
             src={imageSrc}
             alt={`${space.title} 대표 이미지`}
-            className='absolute top-[-100px] right-[-200px] w-[90%] h-auto opacity-40 max-w-none scale-150'
+            className='absolute top-[-220px] right-[-200px] w-[90%] h-auto opacity-40 max-w-none scale-100 z-10'
             style={{transformOrigin: 'right top'}}
           />
         </div>
       </div>
       {/*지도*/}
-      <div className='mt-10 flex justify-center mb-[100px] relative'>
-        <div className='w-[50%] pr-35'>
+      <div className='mt-10 mb-[100px] relative px-6 md:px-12 lg:px-36'>
+        <div className='w-full lg:w-1/2 lg:pr-10'>
           <div className='relative'>
             <p
-              className='block text-lg font-semibold w-full pb-[3%]'
+              className='block text-lg font-semibold  w-full pb-[3%]'
               style={{
                 backgroundImage: `url(${detailHighlightSrc})`,
                 backgroundRepeat: 'no-repeat',
@@ -162,7 +166,7 @@ const SpaceDetailPage = () => {
               }}>
               지도
             </p>
-            <p className='w-[700px] h-[700px] m-0 bg-gray-100'></p>
+            <p className='w-full h-[350px] lg:h-[500px] m-0 bg-gray-100'></p>
           </div>
         </div>
       </div>
