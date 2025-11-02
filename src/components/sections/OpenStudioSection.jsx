@@ -75,7 +75,7 @@ const OpenStudioSection = () => {
               )}
               {studio.id < '10' && (
                 <div
-                  className='w-[92%] col-span-full h-[0.1px] bg-type-body opacity-70'
+                  className='w-[95%] col-span-full h-[0.1px] bg-type-body opacity-70'
                   role='separator'
                 />
               )}
