@@ -29,15 +29,19 @@ const SpacehighlightPage = () => {
   const event = spaceEvents.find((event) => Number(event.id) === Number(id));
 
   return (
-    <div className='w-9/10 md:w-3/4 mx-auto min-h-screen py-15 md:py-24 lg:w-full lg:px-37 lg:py-32'>
-      <div className='flex flex-col text-black text-sm md:text-lg lg:text-2xl'>
+    <div className='relative w-9/10 md:w-3/4 mx-auto min-h-screen py-15 md:py-24 lg:w-full lg:px-37 lg:py-32'>
+      <img
+        className='absolute right-0 top-0 scale-40 md:scale-60 lg:scale-80 '
+        src={new URL(`../assets/spaceConcepts/${id}.svg`, import.meta.url).href}
+      />
+      <div className='relative flex flex-col text-black text-sm md:text-lg lg:text-2xl'>
         <h1 className='text-5xl md:text-7xl lg:text-8xl font-family-ssYoungestDaughterRegular text-type-head-1 mb-4.5 md:mb-6 lg:mb-9'>
           {event.name}
         </h1>
         <h3 className='text-lg md:text-2xl lg:text-4xl mb-11 md:mb-17 lg:mb-22'>{`< ${event.title} >`}</h3>
 
         {/* 프로그램 소개 */}
-        <div className='whitespace-pre space-y-5 md:space-y-7 lg:space-y-14 mb-20 md:mb-30 lg:mb-40'>
+        <div className='md:whitespace-pre space-y-5 md:space-y-7 lg:space-y-14 mb-20 md:mb-30 lg:mb-40'>
           <img
             className='absolute scale-60 md:scale-75 lg:scale-100 -translate-x-[30%] -translate-y-[28%] md:-translate-x-[24%] md:-translate-y-[20%] lg:-translate-x-[16%] lg:-translate-y-[16%]'
             src={programHighlightColorMap[event.themeColor]}

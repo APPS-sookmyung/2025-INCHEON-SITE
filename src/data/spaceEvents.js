@@ -8,6 +8,7 @@ export const spaceEvents = [
     time: '13:00 - 18:00',
     address: '어벙또벙이야기수선집\n(인천 동구 송림로 16, 2층)',
     themeColor: 'yellow',
+    imgPath: '../assets/spaceConcepts/1.svg',
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const spaceEvents = [
     time: '12:00 - 18:00',
     address: '창작집단 발아 랩실\n(인천 중구 참외전로 27번길 2, 2층)',
     themeColor: 'blue',
+    imgPath: '../assets/spaceConcepts/2.svg',
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ export const spaceEvents = [
     time: '14:00 – 18:00',
     address: '1965여관\n(인천 중구 신포로31번길 20)',
     themeColor: 'pink',
+    imgPath: '../assets/spaceConcepts/3.svg',
   },
   {
     id: 4,
@@ -39,6 +42,7 @@ export const spaceEvents = [
     time: '11월 14, 21일 18:00~22:00\n/ 15, 22일 14:00~18:00',
     address: '코드스페이스\n(인천 미추홀구 주안로 78, 3층)',
     themeColor: 'green',
+    imgPath: '../assets/spaceConcepts/4.svg',
   },
   {
     id: 5,
@@ -49,6 +53,7 @@ export const spaceEvents = [
     time: '11월 14일, 21일 19:00~20:00\n/ 11월 15일, 22일 15:00~16:00\n(정시 1차 공연 시작, 30분 2차 공연 시작)',
     address: '한울소리 문화공간\n(인천 미추홀구 소성로 285 지하)',
     themeColor: 'green',
+    imgPath: '../assets/spaceConcepts/5.svg',
   },
   {
     id: 6,
@@ -59,6 +64,7 @@ export const spaceEvents = [
     time: '12:00 – 18:00',
     address: '인천 중구 우현로 67번길 13, 2층\n(프로젝트 스페이스 코스모스)',
     themeColor: 'blue',
+    imgPath: '../assets/spaceConcepts/6.svg',
   },
   {
     id: 7,
@@ -69,6 +75,7 @@ export const spaceEvents = [
     time: '19:30 – 23:00',
     address: '공간 인공빛\n(인천 중구 신포로 31번길 6, 2층)',
     themeColor: 'yellow',
+    imgPath: '../assets/spaceConcepts/7.svg',
   },
   {
     id: 8,
@@ -80,6 +87,7 @@ export const spaceEvents = [
     time: '14:00 – 16:00',
     address: '위드달 작업장 (인천 미추홀구 석정로375번길 23)',
     themeColor: 'pink',
+    imgPath: '../assets/spaceConcepts/8.svg',
   },
   {
     id: 9,
@@ -90,6 +98,7 @@ export const spaceEvents = [
     time: '11:00 – 18:00',
     address: '카츠오리진 연구소\n(인천 중구 자유공원로 5, 빽다방 3층)',
     themeColor: 'blue',
+    imgPath: '../assets/spaceConcepts/9.svg',
   },
   {
     id: 10,
@@ -101,5 +110,6 @@ export const spaceEvents = [
     time: '전시: 11월 5일 ~ 11월 29일 (12:00 – 18:00) / 오픈토크: 11월 22일(금) 14:00',
     address: '공예루틴 (인천 중구 신포로23번길 43)',
     themeColor: 'yellow',
+    imgPath: '../assets/spaceConcepts/10.svg',
   },
 ];
