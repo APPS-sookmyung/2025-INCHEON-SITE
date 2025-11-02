@@ -1,27 +1,28 @@
 import {SPACE_DATA} from '../utils/spaceInfo.js';
-import detailBackground1 from '../assets/detail/DetailBackground1.svg';
-import detailBackground2 from '../assets/detail/DetailBackground2.svg';
-import introDot from '../assets/detail/IntroDot.svg';
-import detailDot from '../assets/detail/DetailDot.svg';
-import mapIcon from '../assets/detail/MapIcon.svg';
-import michuholLinear from '../assets/detail/MichuholLinear.svg';
-import dongLinear from '../assets/detail/DongLinear.svg';
-import jungLinear from '../assets/detail/JungLinear.svg';
-
+import textureTile from '@/assets/svg/texture-tile.svg';
+import {SPACE_IMAGES} from '../data/SpaceImages.jsx';
+import surveyButton from '../assets/svg/survey-button.svg';
+import {INFO_HIGHLIGHT} from '../data/InfoHighlights.jsx';
+import {DETAIL_HIGHLIGHT} from '../data/DetailHighlights.jsx';
+import {TITLE_HIGHLIGHTS} from '../data/TItleHighlights.jsx';
 import {useParams} from 'react-router-dom';
 
 const SpaceDetailPage = () => {
   const {id} = useParams();
-  const imagePath = `/assets/${1}`; // 임의로 "1" 폴더만 사용
+  //const imagePath = `/assets/${1}`; // 임의로 "1" 폴더만 사용
   const space = SPACE_DATA.find((item) => item.id === Number(id));
-  const section = space?.section;
+  // const section = space?.section;
+  //const imagekey=space.image;
+  // const imageMap = {
+  //   michuhol: '/detail/MichuholDot.svg',
+  //   dong: '/detail/DongDot.svg',
+  //   jung: '/detail/JungDot.svg',
+  // };
 
-  const imageMap = {
-    michuhol: '/detail/MichuholDot.svg',
-    dong: '/detail/DongDot.svg',
-    jung: '/detail/JungDot.svg',
-  };
-  const imageSrc = imageMap[section];
+  const imageSrc = SPACE_IMAGES[id];
+  const titleSrc = TITLE_HIGHLIGHTS[id];
+  const infoHighlightSrc = INFO_HIGHLIGHT[id];
+  const detailHighlightSrc = DETAIL_HIGHLIGHT[id];
 
   const DetailCard = ({title, children}) => (
     <div>
@@ -32,114 +33,136 @@ const SpaceDetailPage = () => {
     </div>
   );
 
-  const dotColors = {
-    michuhol: 'bg-blue-600',
-    jung: 'bg-lime-600',
-    dong: 'bg-yellow-400',
-  };
-
   return (
-    <div className='bg-[#FDFCF8] relative '>
-      {/* background */}
-      <div className='absolute inset-0 z-0 overflow-hidden'>
-        <img
-          src={detailBackground1}
-          alt='상단 배경 요소'
-          className='w-full h-full absolute top-[180px]'
-        />
-      </div>
-
-      {/* contents */}
-      <div className='relative w-full'>
-        {/* intro */}
-        <div className='flex w-full'>
-          <div className='pl-[150px] pr-[50px] pt-[180px] w-1/2'>
-            <h1 className='font-black text-6xl tracking-tighter mb-[80px]'>
-              {space.title}
-            </h1>
-            <span className='text-sm font-normal text-white bg-black rounded-full py-2 px-4'>
-              프로그램 소개
-            </span>
-            <p className='w-[80%] text-xl/10 text-left font-medium mt-[30px]'>
-              {space.program}
+    <div
+      className='relative min-h-screen'
+      style={{
+        backgroundImage: `url(${textureTile})`,
+        backgroundRepeat: 'repeat',
+        backgroundSize: '90px 90px',
+      }}>
+      <div className='relative z-10 w-full px-36 pt-28 pb-20'>
+        {/* 제목 */}
+        <div className='mb-12'>
+          <h1
+            className='text-[56px] font-normal tracking-tight mb-4'
+            style={{
+              fontFamily: 'ssYoungestDaughterRegular',
+              lineHeight: '1.1',
+              color: '#D5CFC2',
+            }}>
+            {space.title}
+          </h1>
+          {/* 부제목 */}
+          <div>
+            <p
+              className='text-[24px] inline-block'
+              style={{
+                backgroundImage: `url(${titleSrc})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'auto 100%',
+                backgroundPosition: 'left ',
+                lineHeight: '1.3',
+                padding: '0.2em 0.2em ',
+              }}>
+              {space.sub_title}
             </p>
-            <img src={introDot} alt='' className='h-[30px] mt-[80px]' />
-          </div>
-          <div className='relative w-1/2 h-[700px] overflow-hidden rounded-bl-full '>
-            <img
-              src={`${imagePath}/main.webp`}
-              alt='대표 이미지'
-              className='absolute inset-0 w-full h-full object-cover z-10 grayscale'
-            />
-            <img
-              src={imageSrc}
-              alt=''
-              className='absolute -right-[20px] top-[50px] h-[95%] z-20'
-            />
           </div>
         </div>
 
-        {/* detail */}
-        <div className='relative grid mt-[100px] px-[150px] grid-cols-1 md:grid-cols-3 gap-14'>
-          {section == 'jung' && (
-            <img
-              src={jungLinear}
-              alt=''
-              className='absolute -left-8 top-[8.8px] h-[45px]'
-            />
-          )}
-          <DetailCard title='공간'>
-            <p>{space.location}</p>
-            <button
-              type='button'
-              className='mt-5 inline-flex items-center rounded-full border px-1 py-1 pr-4 text-sm'
-              // onClick={() => 길찾기 로직}
-            >
-              <img src={mapIcon} alt='지도 아이콘' className='pr-2 h-6' />
-              길찾기
-            </button>
-          </DetailCard>
-          <DetailCard title='공동 프로젝트 일정'>
-            <p>{space.projectSchedule}</p>
-          </DetailCard>
-          <DetailCard title='오픈스튜디오 정보 및 운영 일정'>
-            <div className='relative'>
-              {section == 'michuhol' && (
+        <div className='flex mt-16 relative'>
+          {/* 왼쪽 정보 영역 */}
+          <div className='w-1/2 pr-10'>
+            {/* 프로그램 소개 */}
+            <div>
+              <h3
+                className='text-lg font-semibold  mb-3'
+                style={{
+                  backgroundImage: `url(${infoHighlightSrc})`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'auto 110%',
+                  backgroundPosition: 'left ',
+                }}>
+                프로그램 소개
+              </h3>
+              <p className='text-base/7'>{space.program}</p>
+
+              {/* 프로그램 설명 */}
+              <div>
+                <p className='text-base/7'>{space.program_info}</p>
+              </div>
+            </div>
+
+            {/* 시간 & 장소 */}
+            <div className='mt-10 flex gap-16'>
+              <div>
+                <h3
+                  className='text-lg font-semibold  mb-3'
+                  style={{
+                    backgroundImage: `url(${detailHighlightSrc})`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'auto 80%',
+                    backgroundPosition: 'left ',
+                  }}>
+                  시간
+                </h3>
+                <p className='text-base'>{space.time}</p>
+              </div>
+
+              <div>
+                <h3
+                  className='text-lg font-semibold  mb-3'
+                  style={{
+                    backgroundImage: `url(${detailHighlightSrc})`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'auto 80%',
+                    backgroundPosition: 'left ',
+                  }}>
+                  장소
+                </h3>
+                <p className='text-base whitespace-pre-line'>
+                  {space.detail_location}
+                </p>
+              </div>
+            </div>
+
+            {/* 설문조사 버튼 (왼쪽 컬럼 내부 하단) */}
+            <div className='mt-12'>
+              <button>
                 <img
-                  src={michuholLinear}
-                  alt=''
-                  className='absolute !w-[200px] !h-[45px] -right-[150px] -top-[63px]'
+                  src={surveyButton}
+                  alt='설문조사 바로가기 버튼'
+                  className='absolute bottom-0 right-10 w-[150px] h-auto cursor-pointer '
                 />
-              )}
-              {space.studioInfo.map((group, groupIdx) => (
-                <div key={groupIdx} className='mb-8'>
-                  {group.map((item, i) => (
-                    <div key={i} className='flex pt-1 '>
-                      {i >= 2 && (
-                        <span
-                          className={`h-3 w-3 mt-1.5 mr-2 ml-8 rounded-full flex-shrink-0 ${
-                            dotColors[space.section]
-                          }`}>
-                          {' '}
-                        </span>
-                      )}
-                      <p className={i === 0 ? 'font-bold mb-1' : ''}>{item}</p>
-                    </div>
-                  ))}
-                </div>
-              ))}
+              </button>
             </div>
-          </DetailCard>
-          <img src={detailDot} alt='' className='h-[160px] ml-[100px]' />
+          </div>
+          {/* 오른쪽 이미지 영역 */}
         </div>
-
-        {/* map*/}
-        <div className='flex justify-center mb-[100px] relative'>
-          <div className='w-[50%] pr-35'>
-            <div className='relative'>
-              <p className='block text-lg font-semibold w-full pb-[3%]'>지도</p>
-              <p className='w-[700px] h-[700px] m-0 bg-gray-100'></p>
-            </div>
+        <div className='w-1/2 absolute top-0 right-0 h-full'>
+          <img
+            src={imageSrc}
+            alt={`${space.title} 대표 이미지`}
+            className='absolute top-[-100px] right-[-200px] w-[90%] h-auto opacity-40 max-w-none scale-150'
+            style={{transformOrigin: 'right top'}}
+          />
+        </div>
+      </div>
+      {/*지도*/}
+      <div className='flex justify-center mb-[100px] relative'>
+        <div className='w-[50%] pr-35'>
+          <div className='relative'>
+            <p
+              className='block text-lg font-semibold w-full pb-[3%]'
+              style={{
+                backgroundImage: `url(${detailHighlightSrc})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'auto 80%',
+                backgroundPosition: 'auto ',
+              }}>
+              지도
+            </p>
+            <p className='w-[700px] h-[700px] m-0 bg-gray-100'></p>
           </div>
         </div>
       </div>
