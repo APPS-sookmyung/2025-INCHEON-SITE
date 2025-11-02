@@ -3,6 +3,7 @@ import {useMemo} from 'react';
 import {useNavigate} from 'react-router-dom';
 import listPageBg from '../assets/ListPageBg.png';
 import thumbnail from '../assets/coverimage/cover_ex.png';
+import OpenStudioSection from '../components/sections/OpenStudioSection';
 
 // district 조건과 같이 화살표 색상 설정
 function getDistrictTextColor(region, district) {
@@ -23,8 +24,6 @@ const districtColors = {
 };
 
 const ListPage = () => {
-  const navigate = useNavigate();
-
   const items = useMemo(
     () => [
       {
@@ -145,6 +144,7 @@ const ListPage = () => {
             })}
           </section>
         </div>
+        <OpenStudioSection />
       </main>
 
       {/* <Footer /> */}
