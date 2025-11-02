@@ -58,7 +58,7 @@ const SpacehighlightPage = () => {
             }}>{`< ${event.title} >`}</h3>
 
           {/* 프로그램 소개 */}
-          <div className='md:whitespace-pre space-y-5 md:space-y-7 lg:space-y-14 mb-20 md:mb-30 lg:mb-40'>
+          <div className='md:whitespace-pre space-y-5 md:space-y-7 lg:space-y-14 mb-15 md:mb-30 lg:mb-40'>
             <img
               className='absolute scale-60 md:scale-75 lg:scale-100 -translate-x-[30%] -translate-y-[28%] md:-translate-x-[24%] md:-translate-y-[20%] lg:-translate-x-[16%] lg:-translate-y-[16%]'
               src={programHighlightColorMap[event.themeColor]}
@@ -74,7 +74,7 @@ const SpacehighlightPage = () => {
           </div>
 
           {/* 시간 + 장소 */}
-          <div className='md:whitespace-pre flex flex-col md:flex-row gap-20 md:gap-30 lg:gap-48'>
+          <div className='md:whitespace-pre flex flex-col md:flex-row gap-15 md:gap-30 lg:gap-48'>
             <div className='space-y-5 md:space-y-7 lg:space-y-14'>
               <img
                 className='absolute scale-60 md:scale-80 lg:scale-100 -translate-x-[38%] -translate-y-[28%] md:-translate-x-[33%] md:-translate-y-[20%] lg:-translate-x-[28%] lg:-translate-y-[13%]'
