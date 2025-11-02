@@ -36,12 +36,18 @@ body {
   --color-type-head-1: #d5cfc2;
   --color-type-head-2: #5a5240;
   --color-type-body: #a49a85;
+  --color-black: #3f3a39;
 
-  --font-family-sans: 'SejongGeulggot', Pretendard, ui-sans-serif, system-ui,
-    sans-serif;
-  --font-family-ssYoungestDaughterRegular: 'SSYoungestDaughterRegular', 'SejongGeulggot', Pretendard,
-    ui-sans-serif, system-ui, sans-serif;
+  --font-family-sans:
+    'SejongGeulggot', Pretendard, ui-sans-serif, system-ui, sans-serif;
+  --font-family-ssYoungestDaughterRegular:
+    'SSYoungestDaughterRegular', 'SejongGeulggot', Pretendard, ui-sans-serif,
+    system-ui, sans-serif;
   --spacing-p-gap: 36px;
+}
+
+.gm-ui-hover-effect {
+  display: none !important; /* hide Google’s close button */
 }
 
 /* 반응형 오버라이드 */
@@ -57,4 +63,11 @@ body {
   :root {
     --spacing-p-gap: 44.75px;
   }
+}
+
+html,
+body {
+  cursor:
+    url('/cursor.png') 2 2,
+    auto;
 }

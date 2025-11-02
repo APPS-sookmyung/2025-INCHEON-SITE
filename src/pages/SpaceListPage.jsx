@@ -1,8 +1,10 @@
 import {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import {PLACES} from '../data/places';
 import PlaceCardDefault from '@/components/cards/PlaceCardDefault';
 import PlaceCardHover from '@/components/cards/PlaceCardHover';
+import OpenStudioSection from '../components/sections/OpenStudioSection';
+import Section from '@/components/layout/Section';
+import {PLACES} from '@/data/places';
 
 // className 유틸리티 함수
 const cx = (...classes) => classes.filter(Boolean).join(' ');
@@ -28,35 +30,38 @@ const ListPage = () => {
   }, []);
 
   return (
-    <div className='mx-auto max-w-6xl px-5 py-12'>
-      {/* 그리드 라인 */}
-      <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0'>
-        {PLACES.map((p, i) => {
-          const COLS = cols;
-          const col = (i % COLS) + 1;
-          const row = Math.floor(i / COLS) + 1;
-          const rows = Math.ceil(PLACES.length / COLS);
-          const isLastRow = row === rows;
-          const isLastItem = i === PLACES.length - 1; // 전체 마지막 아이템
-          const isIncompleteLastRow = isLastItem && col < COLS; // 마지막 행이 불완전한 경우
+    <Section textureOnly>
+      <div className='mx-auto max-w-6xl px-5 py-12'>
+        {/* 그리드 라인 */}
+        <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0'>
+          {PLACES.map((p, i) => {
+            const COLS = cols;
+            const col = (i % COLS) + 1;
+            const row = Math.floor(i / COLS) + 1;
+            const rows = Math.ceil(PLACES.length / COLS);
+            const isLastRow = row === rows;
+            const isLastItem = i === PLACES.length - 1; // 전체 마지막 아이템
+            const isIncompleteLastRow = isLastItem && col < COLS; // 마지막 행이 불완전한 경우
 
-          // 다음 행 같은 열에 아이템이 없으면 이 열의 마지막
-          const nextRowSameCol = i + COLS; // 다음 행 같은 열의 인덱스
-          const isLastInColumn = nextRowSameCol >= PLACES.length;
+            // 다음 행 같은 열에 아이템이 없으면 이 열의 마지막
+            const nextRowSameCol = i + COLS; // 다음 행 같은 열의 인덱스
+            const isLastInColumn = nextRowSameCol >= PLACES.length;
 
-          return (
-            <Card
-              key={`${p.id}-${i}`}
-              place={p}
-              isFirstCol={col === 1}
-              isLastRow={isLastRow}
-              isLastInColumn={isLastInColumn}
-              isIncompleteLastRow={isIncompleteLastRow}
-            />
-          );
-        })}
-      </section>
-    </div>
+            return (
+              <Card
+                key={`${p.id}-${i}`}
+                place={p}
+                isFirstCol={col === 1}
+                isLastRow={isLastRow}
+                isLastInColumn={isLastInColumn}
+                isIncompleteLastRow={isIncompleteLastRow}
+              />
+            );
+          })}
+        </section>
+        <OpenStudioSection />
+      </div>
+    </Section>
   );
 };
 
