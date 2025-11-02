@@ -60,3 +60,10 @@ body {
     --spacing-p-gap: 44.75px;
   }
 }
+
+html,
+body {
+  cursor:
+    url('/cursor.png') 2 2,
+    auto;
+}
