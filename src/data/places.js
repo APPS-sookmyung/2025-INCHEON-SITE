@@ -19,8 +19,7 @@ export const PLACES = [
     image: jangseungImg,
     hoverBgColor: 'var(--color-primary-4)',
     hoverTitle: '< 어벙대장군과 또벙여장군이 들려주는 전설들을 만나보세요! >',
-    hoverContent:
-      '이야기가 모이고 만들어지는 이야기 수선집\n... 더보기',
+    hoverContent: '이야기가 모이고 만들어지는 이야기 수선집\n... 더보기',
     time: '13:00 -18:00',
     address: '인천 동구 송림로 16, 2층',
   },
