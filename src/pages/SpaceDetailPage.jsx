@@ -36,7 +36,11 @@ const SpacehighlightPage = () => {
         backgroundRepeat: 'repeat',
         backgroundSize: '90px 90px',
       }}>
-      <div className='relative w-6/7 md:w-3/4 mx-auto min-h-screen py-15 md:py-24 lg:w-full lg:px-37 lg:pt-32 lg:pb-50'>
+      <div
+        className='relative w-6/7 md:w-3/4 mx-auto min-h-screen py-15 md:py-24 lg:w-full lg:px-37 lg:pt-32 lg:pb-50'
+        style={{
+          WebkitTextStrokeWidth: '0.2px',
+        }}>
         <img
           className={`${event.imgClass} hidden md:block absolute right-0 top-0`}
           src={
@@ -47,7 +51,11 @@ const SpacehighlightPage = () => {
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-family-ssYoungestDaughterRegular text-type-head-1 mb-4.5 md:mb-6 lg:mb-9'>
             {event.name}
           </h1>
-          <h3 className='lg:whitespace-pre text-lg md:text-2xl lg:text-4xl mb-11 md:mb-17 lg:mb-22'>{`< ${event.title} >`}</h3>
+          <h3
+            className='lg:whitespace-pre text-lg md:text-2xl lg:text-4xl mb-11 md:mb-17 lg:mb-22'
+            style={{
+              WebkitTextStrokeWidth: '0.7px',
+            }}>{`< ${event.title} >`}</h3>
 
           {/* 프로그램 소개 */}
           <div className='md:whitespace-pre space-y-5 md:space-y-7 lg:space-y-14 mb-20 md:mb-30 lg:mb-40'>
@@ -55,7 +63,13 @@ const SpacehighlightPage = () => {
               className='absolute scale-60 md:scale-75 lg:scale-100 -translate-x-[30%] -translate-y-[28%] md:-translate-x-[24%] md:-translate-y-[20%] lg:-translate-x-[16%] lg:-translate-y-[16%]'
               src={programHighlightColorMap[event.themeColor]}
             />
-            <p className='relative'>프로그램 소개</p>
+            <p
+              className='relative '
+              style={{
+                WebkitTextStrokeWidth: '0.5px',
+              }}>
+              프로그램 소개
+            </p>
             <p className='text-type-head-2'>{event.description}</p>
           </div>
 
@@ -66,7 +80,13 @@ const SpacehighlightPage = () => {
                 className='absolute scale-60 md:scale-80 lg:scale-100 -translate-x-[38%] -translate-y-[28%] md:-translate-x-[33%] md:-translate-y-[20%] lg:-translate-x-[28%] lg:-translate-y-[13%]'
                 src={highlightColorMap[event.themeColor]}
               />
-              <p className='relative'>시간</p>
+              <p
+                className='relative'
+                style={{
+                  WebkitTextStrokeWidth: '0.5px',
+                }}>
+                시간
+              </p>
               <p className='text-type-head-2'>{event.time}</p>
             </div>
             <div className='space-y-5 md:space-y-7 lg:space-y-14'>
@@ -74,14 +94,24 @@ const SpacehighlightPage = () => {
                 className='absolute scale-60 md:scale-80 lg:scale-100 -translate-x-[38%] -translate-y-[26%] md:-translate-x-[34%] md:-translate-y-[20%] lg:-translate-x-[28%] lg:-translate-y-[13%]'
                 src={highlightColorMap[event.themeColor]}
               />
-              <p className='relative'>장소</p>
+              <p
+                className='relative'
+                style={{
+                  WebkitTextStrokeWidth: '0.5px',
+                }}>
+                장소
+              </p>
               <p className='text-type-head-2'>{event.address}</p>
             </div>
           </div>
         </div>
-        <button className='absolute right-3 md:right-8 lg:right-28  lg:mb-auto w-fit rounded-[100px] bg-type-head-1 px-7 py-2 my-20'>
-          <span className='hidden md:block'>설문조사 바로가기 →</span>
-          <span className='md:hidden'>설문조사 →</span>
+        <button
+          className='absolute right-3 md:right-8 lg:right-28  lg:mb-auto w-fit rounded-[100px] bg-type-head-1 px-5 md:px-7 py-2 my-20 hover:text-type-head-2'
+          onClick={() =>
+            window.open(event.surveyLink, '_blank', 'noopener,noreferrer')
+          }>
+          <span className='hidden text-2xl md:block'>설문조사 바로가기 →</span>
+          <span className='md:hidden text-sm'>설문조사 →</span>
         </button>
       </div>
     </div>
