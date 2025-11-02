@@ -23,7 +23,7 @@ const GoogleMap = () => {
   return (
     <div className='w-full'>
       <APIProvider apiKey={apiKey} libraries={['marker']}>
-        <div className='mx-auto h-60 md:h-90 lg:h-125'>
+        <div className='mx-auto h-65 md:h-90 lg:h-125'>
           <Map defaultZoom={13} defaultCenter={position} mapId={mapId}>
             {spaceLocations.map((space) => (
               <div key={space.id}>

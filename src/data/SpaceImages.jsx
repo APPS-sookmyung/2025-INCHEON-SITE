@@ -10,14 +10,14 @@ import gongyeroutineImage from '../assets/svg/gongyeroutine-image.svg';
 import hanulsoriImage from '../assets/svg/hanulsori-image.svg';
 
 export const SPACE_IMAGES = {
-  9: ballaImage,
-  3: cordartImage,
-  8: ollartImage,
-  7: moisoImage,
-  5: ingongbitImage,
-  2: withdalImage,
-  10: katchoriginImage,
-  6: gongyeroutineImage,
-  4: hanulsoriImage,
-  11: eobeongImage,
+  8: ballaImage,
+  2: cordartImage,
+  7: ollartImage,
+  6: moisoImage,
+  4: ingongbitImage,
+  1: withdalImage,
+  9: katchoriginImage,
+  5: gongyeroutineImage,
+  3: hanulsoriImage,
+  10: eobeongImage,
 };
