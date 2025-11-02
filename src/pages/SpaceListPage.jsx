@@ -163,7 +163,7 @@ function Card({
   const navigate = useNavigate();
   return (
     <article
-      onClick={() => navigate(`4`)} // 카드 컴포넌트 클릭 시 spaces/4로 이동
+      onClick={() => navigate(`/space/${place.id}`)} // 카드 컴포넌트 클릭 시 spaces/4로 이동
       className={cx(
         'relative isolate overflow-hidden',
         'min-h-[220px] group transition-colors'
