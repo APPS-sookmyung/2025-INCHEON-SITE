@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {PLACES} from '../data/places';
+import PlaceCardDefault from '@/components/cards/PlaceCardDefault';
+import PlaceCardHover from '@/components/cards/PlaceCardHover';
 
 // className 유틸리티 함수
 const cx = (...classes) => classes.filter(Boolean).join(' ');
@@ -59,24 +61,41 @@ const ListPage = () => {
 };
 
 // 카드
-function Card({isFirstCol, isLastRow, isLastInColumn, isIncompleteLastRow}) {
+function Card({
+  place,
+  isFirstCol,
+  isLastRow,
+  isLastInColumn,
+  isIncompleteLastRow,
+}) {
   const navigate = useNavigate();
+
+  if (!place) return null;
+
+  const handleClick = () => {
+    if (place.id) {
+      navigate(`/spaces/${place.id}`);
+    }
+  };
+
   return (
     <article
-      onClick={() => navigate(`4`)} // 카드 컴포넌트 클릭 시 spaces/4로 이동
+      onClick={handleClick}
       className={cx(
-        'relative isolate overflow-hidden',
-        'min-h-[220px] group transition-colors'
+        'relative isolate cursor-pointer transition-all duration-500',
+        'min-h-[294px] overflow-visible group'
       )}>
-      {/* 배경 이미지 */}
-      <div
-        aria-hidden
-        className='absolute inset-0 z-0 bg-center bg-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100 rounded-[10px]'
-      />
-      <div
-        aria-hidden
-        className='absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[linear-gradient(to_top,rgba(0,0,0,.45),rgba(0,0,0,.1),transparent)] rounded-[10px]'
-      />
+      {/* 호버 시 배경 색상 */}
+      {place.hoverBgColor && (
+        <div
+          className='absolute inset-0 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100 rounded-[20px]'
+          style={{
+            backgroundColor: place.hoverBgColor,
+          }}
+        />
+      )}
+
+      {/* 그리드 라인 */}
       <div className='pointer-events-none absolute inset-0'>
         {/* 모든 카드에 상단선 */}
         <div className='absolute top-0 h-px bg-type-body left-[7.5px] right-[7.5px]' />
@@ -93,6 +112,12 @@ function Card({isFirstCol, isLastRow, isLastInColumn, isIncompleteLastRow}) {
           <div className='absolute right-0 w-px bg-type-body top-[7.5px] bottom-[7.5px]' />
         )}
       </div>
+
+      {/* 호버 전 상태 */}
+      <PlaceCardDefault place={place} />
+
+      {/* 호버 후 상태 */}
+      <PlaceCardHover place={place} />
     </article>
   );
 }
