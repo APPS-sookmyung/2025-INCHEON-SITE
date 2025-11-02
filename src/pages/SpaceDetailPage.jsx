@@ -6,6 +6,7 @@ import {INFO_HIGHLIGHT} from '../data/InfoHighlights.jsx';
 import {DETAIL_HIGHLIGHT} from '../data/DetailHighlights.jsx';
 import {TITLE_HIGHLIGHTS} from '../data/TItleHighlights.jsx';
 import {useParams} from 'react-router-dom';
+import GoogleMap from '../components/sections/GoogleMap.jsx';
 
 const SpaceDetailPage = () => {
   const {id} = useParams();
@@ -151,19 +152,7 @@ const SpaceDetailPage = () => {
       {/*지도*/}
       <div className='flex justify-center mb-[100px] relative'>
         <div className='w-[50%] pr-35'>
-          <div className='relative'>
-            <p
-              className='block text-lg font-semibold w-full pb-[3%]'
-              style={{
-                backgroundImage: `url(${detailHighlightSrc})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'auto 80%',
-                backgroundPosition: 'auto ',
-              }}>
-              지도
-            </p>
-            <p className='w-[700px] h-[700px] m-0 bg-gray-100'></p>
-          </div>
+          <GoogleMap />
         </div>
       </div>
     </div>
