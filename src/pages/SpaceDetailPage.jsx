@@ -1,8 +1,30 @@
 // import textureTile from '@/assets/svg/texture-tile.svg';
 import {useParams} from 'react-router-dom';
 import {spaceEvents} from '../data/spaceEvents';
+import yellow_highlight from '../assets/svg/yellow-highlight.svg';
+import blue_highlight from '../assets/svg/blue-highlight.svg';
+import green_highlight from '../assets/svg/green-highlight.svg';
+import pink_highlight from '../assets/svg/pink-highlight.svg';
+import yellow_highlight_big from '../assets/svg/yellow-highlight-big.svg';
+import blue_highlight_big from '../assets/svg/blue-highlight-big.svg';
+import pink_highlight_big from '../assets/svg/pink-highlight-big.svg';
+import green_highlight_big from '../assets/svg/green-highlight-big.svg';
 
-const SpaceDetailPage = () => {
+const highlightColorMap = {
+  pink: pink_highlight,
+  green: green_highlight,
+  yellow: yellow_highlight,
+  blue: blue_highlight,
+};
+
+const programHighlightColorMap = {
+  pink: pink_highlight_big,
+  green: green_highlight_big,
+  yellow: yellow_highlight_big,
+  blue: blue_highlight_big,
+};
+
+const SpacehighlightPage = () => {
   const {id} = useParams();
   const event = spaceEvents.find((event) => Number(event.id) === Number(id));
 
@@ -16,18 +38,30 @@ const SpaceDetailPage = () => {
 
         {/* 프로그램 소개 */}
         <div className='whitespace-pre space-y-5 md:space-y-7 lg:space-y-14 mb-20 md:mb-30 lg:mb-40'>
-          <p>프로그램 소개</p>
+          <img
+            className='absolute scale-60 md:scale-75 lg:scale-100 -translate-x-[30%] -translate-y-[28%] md:-translate-x-[24%] md:-translate-y-[20%] lg:-translate-x-[16%] lg:-translate-y-[16%]'
+            src={programHighlightColorMap[event.themeColor]}
+          />
+          <p className='relative'>프로그램 소개</p>
           <p className='text-type-head-2'>{event.description}</p>
         </div>
 
         {/* 시간 + 장소 */}
-        <div className='flex gap-15 md:gap-30 lg:gap-48'>
+        <div className='whitespace-pre flex gap-15 md:gap-30 lg:gap-48'>
           <div className='space-y-5 md:space-y-7 lg:space-y-14'>
-            <p>시간</p>
+            <img
+              className='absolute scale-60 md:scale-80 lg:scale-100 -translate-x-[38%] -translate-y-[28%] md:-translate-x-[33%] md:-translate-y-[20%] lg:-translate-x-[28%] lg:-translate-y-[13%]'
+              src={highlightColorMap[event.themeColor]}
+            />
+            <p className='relative'>시간</p>
             <p className='text-type-head-2'>{event.time}</p>
           </div>
           <div className='space-y-5 md:space-y-7 lg:space-y-14'>
-            <p>장소</p>
+            <img
+              className='absolute scale-60 md:scale-80 lg:scale-100 -translate-x-[38%] -translate-y-[26%] md:-translate-x-[34%] md:-translate-y-[20%] lg:-translate-x-[28%] lg:-translate-y-[13%]'
+              src={highlightColorMap[event.themeColor]}
+            />
+            <p className='relative'>장소</p>
             <p className='text-type-head-2'>{event.address}</p>
           </div>
         </div>
@@ -36,4 +70,4 @@ const SpaceDetailPage = () => {
   );
 };
 
-export default SpaceDetailPage;
+export default SpacehighlightPage;
