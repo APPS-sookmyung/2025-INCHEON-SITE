@@ -8,7 +8,7 @@ export const aboutSections = [
     heading: {
       pretitle: 'About Us',
       title: "'2025 문화예술 특화거리 점점점' 소개",
-      highlightColor: 'pink_short'
+      highlightColor: 'pink_short',
     },
     layout: 'start',
     blobs: [

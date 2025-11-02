@@ -11,6 +11,7 @@ import Layout from './layout/Layout';
 import SurveyPage from './pages/SurveyPage';
 import ComingSoonPage from './pages/ComingSoonPage';
 import ComingSoonMainPage from './pages/ComingSoonMainPage';
+import EventsPage from './pages/EventsPage';
 
 const App = () => {
   const router = createBrowserRouter(
@@ -19,7 +20,7 @@ const App = () => {
         <Route index element={<MainPage />} />
         <Route path='spaces' element={<ComingSoonPage />} />
         {/* <Route path='spaces/:id' element={<ComingSoonPage />} /> */}
-        <Route path='events' element={<ComingSoonPage />} />
+        <Route path='events' element={<EventsPage />} />
         <Route path='survey' element={<ComingSoonPage />} />
       </Route>
     )
