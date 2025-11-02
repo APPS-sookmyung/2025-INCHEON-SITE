@@ -1,7 +1,7 @@
 const StudioItem = ({studio}) => {
   return (
-    <div className='w-full font-medium leading-8'>
-      <h3 className='text-type-body font-medium pt-5 pb-2'>
+    <div className='w-full leading-8 border-b-[0.5px] border-type-body px-3 py-4 last:border-none'>
+      <h3 className='text-type-body pb-2'>
         {studio.id} {studio.name}
       </h3>
       {studio.program ? (
@@ -52,9 +52,6 @@ const StudioItem = ({studio}) => {
             </div>
           ))}
         </div>
-      )}
-      {studio.id < '10' && (
-        <div className='col-span-full h-1 bg-black' role='separator' />
       )}
     </div>
   );
