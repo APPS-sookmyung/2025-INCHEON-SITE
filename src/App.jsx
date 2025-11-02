@@ -5,8 +5,8 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import MainPage from './pages/MainPage';
-import SpaceDetailPage from './pages/SpaceDetailPage';
 import SpaceListPage from './pages/SpaceListPage';
+import SpaceDetailPage from './pages/SpaceDetailPage';
 import Layout from './layout/Layout';
 import SurveyPage from './pages/SurveyPage';
 import ComingSoonPage from './pages/ComingSoonPage';
