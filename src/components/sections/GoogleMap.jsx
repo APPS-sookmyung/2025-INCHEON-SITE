@@ -29,7 +29,7 @@ const GoogleMap = () => {
               <div key={space.id}>
                 <AdvancedMarker
                   position={{lat: space.lat, lng: space.lng}}
-                  onMouseEnter={() => setActiveMarker(space.id)}>
+                  onClick={() => setActiveMarker(space.id)}>
                   <Pin
                     background={
                       Number(space.id) === Number(id) ? '#f4ced2' : '#bcd5ee'
@@ -40,12 +40,10 @@ const GoogleMap = () => {
                 </AdvancedMarker>
 
                 {space.id === activeMarker && (
-                  <InfoWindow
-                    background={'#f6f1e1'}
-                    position={{lat: space.lat, lng: space.lng}}>
-                    <div className='p-2 relative flex flex-col font-family-sans leading-tight text-[10px] md:text-sm space-y-1'>
+                  <InfoWindow position={{lat: space.lat, lng: space.lng}}>
+                    <div className='pt-4 p-2 relative flex flex-col font-family-sans leading-tight text-[10px] md:text-sm space-y-1'>
                       <button
-                        className='absolute right-0 -translate-y-2 outline-none'
+                        className='absolute right-0 -translate-y-4 outline-none'
                         onClick={() => setActiveMarker(null)}>
                         <img src={x} alt='닫기' className='w-3 h-3' />
                       </button>
