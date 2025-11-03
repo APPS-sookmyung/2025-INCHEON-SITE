@@ -38,7 +38,7 @@ const SpacehighlightPage = () => {
         backgroundSize: '90px 90px',
       }}>
       <div
-        className='relative w-6/7 md:w-3/4 mx-auto min-h-screen pt-15 md:pt-24 lg:w-full lg:px-37 lg:pt-32 lg:pb-40'
+        className='relative w-6/7 md:w-3/4 mx-auto min-h-screen py-15 md:py-24 lg:w-full lg:px-37 lg:pt-32 lg:pb-40'
         style={{
           WebkitTextStrokeWidth: '0.2px',
         }}>
@@ -116,6 +116,9 @@ const SpacehighlightPage = () => {
           </span>
           <span className='md:hidden text-sm'>설문조사 →</span>
         </button>
+        <div className='w-full mt-40 md:mt-50 lg:mt-20 lg:w-3/4'>
+          <GoogleMap />
+        </div>
       </div>
     </div>
   );
