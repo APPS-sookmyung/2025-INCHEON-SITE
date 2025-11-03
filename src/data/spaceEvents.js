@@ -28,7 +28,7 @@ export const spaceEvents = [
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=125',
   },
   {
-    id: 3,
+    id: 4,
     name: '올라아트컴퍼니',
     title:
       '오래된 여관에 남겨진 의문의 사건. 단서와 목격담을 따라, 숨겨진\n진실을 밝혀내세요.',
@@ -43,7 +43,7 @@ export const spaceEvents = [
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=119',
   },
   {
-    id: 4,
+    id: 3,
     name: '코드아트',
     title: '예술과 물건, 사연이 어우러진 특별한 공간으로 여러분을 초대합니다.',
     description:
@@ -57,7 +57,7 @@ export const spaceEvents = [
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=127',
   },
   {
-    id: 5,
+    id: 7,
     name: '한울소리',
     title: '아련한 기억 속의 소리들이 눈 앞에 펼쳐지는 새로운 추억 여행의 방식',
     description:
@@ -71,7 +71,7 @@ export const spaceEvents = [
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=117',
   },
   {
-    id: 6,
+    id: 5,
     name: '모이소',
     title: '도심을 거닐다 나오는 돌탑을 잠시 바라보고 가세요!',
     description:
@@ -85,7 +85,7 @@ export const spaceEvents = [
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=129',
   },
   {
-    id: 7,
+    id: 6,
     name: '인공빛',
     title: '창문 너머로, 공간들이 간직한 이야기가 흘러나온다',
     description:
