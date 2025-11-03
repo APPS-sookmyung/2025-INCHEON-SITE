@@ -1,8 +1,9 @@
 import {Link} from 'react-router-dom';
 import blog from '@/assets/svg/blog-icon.svg';
+import blogFooter from '@/assets/svg/blog-icon-footer.svg';
 import instagram from '@/assets/svg/instagram-icon.svg';
 
-const SocialLinks = ({className = ''}) => {
+const SocialLinks = ({className = '', isFooter = false}) => {
   return (
     <div className={`${className}`}>
       <div className='flex flex-1 justify-evenly'>
@@ -23,7 +24,7 @@ const SocialLinks = ({className = ''}) => {
           rel='noopener noreferrer'>
           <img
             className='w-4.5 h-4.5 md:w-6 md:h-6 lg:w-7 lg:h-7'
-            src={blog}
+            src={isFooter ? blogFooter : blog}
             alt='블로그 아이콘'
             loading='lazy'
           />
