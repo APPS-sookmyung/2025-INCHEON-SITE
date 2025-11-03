@@ -4,7 +4,7 @@ import watercolor_highlight_pink from '@/assets/svg/watercolor-highlight-pink.sv
 
 const OpenStudioSection = () => {
   return (
-    <div className='w-full min-h-screen px-6 flex flex-col md:gap-10 my-10 md:px-15 lg:px-35'>
+    <div className='w-full flex flex-col md:gap-10 mb-10 mt-20'>
       <h1 className='text-type-head-1 font-family-ssYoungestDaughterRegular text-4xl md:text-8xl'>
         Open Studio
       </h1>
