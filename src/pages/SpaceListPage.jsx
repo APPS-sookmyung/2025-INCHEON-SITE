@@ -51,6 +51,7 @@ const ListPage = () => {
               <Card
                 key={`${p.id}-${i}`}
                 place={p}
+                id={i + 1}
                 isFirstCol={col === 1}
                 isLastRow={isLastRow}
                 isLastInColumn={isLastInColumn}
@@ -68,6 +69,7 @@ const ListPage = () => {
 // 카드
 function Card({
   place,
+  id,
   isFirstCol,
   isLastRow,
   isLastInColumn,
@@ -78,8 +80,8 @@ function Card({
   if (!place) return null;
 
   const handleClick = () => {
-    if (place.id) {
-      navigate(`/spaces/${place.id}`);
+    if (id) {
+      navigate(`/space/${id}`);
     }
   };
 
