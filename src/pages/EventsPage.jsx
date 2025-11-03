@@ -8,18 +8,20 @@ import textureUrl from '@/assets/svg/texture-tile.svg';
 export default function EventsPage() {
   return (
     <main className='flex flex-col'>
-      <EventsIntro />
+      <div className='overflow-x-hidden'>
+        <EventsIntro />
 
-      {eventSection.map((section, index) => (
-        <EventItem
-          key={index}
-          blobs={section.blobs}
-          heading={section.heading}
-          body={section.body}
-          layout={section.layout}
-          contentClassName={section.contentClassName}
-        />
-      ))}
+        {eventSection.map((section, index) => (
+          <EventItem
+            key={index}
+            blobs={section.blobs}
+            heading={section.heading}
+            body={section.body}
+            layout={section.layout}
+            contentClassName={section.contentClassName}
+          />
+        ))}
+      </div>
 
       <div className='relative text-center text-sm sm:text-base lg:text-xl pb-20 text-gray-400'>
         <div
