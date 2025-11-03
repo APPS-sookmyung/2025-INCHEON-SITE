@@ -46,7 +46,15 @@ export const eventSection = [
           </p>
           <p>
             <span className='text-type-head-2'>증정 선물: </span>
-            <span>피크닉 도시락통</span>
+            <span>피크닉 테이블 바구니</span>
+          </p>
+          <p>
+            <span className='text-type-head-2'>참여 기간: </span>
+            <span>2025.11.22(토) 14:00까지</span>
+          </p>
+          <p>
+            <span className='text-type-head-2'>당첨자 발표: </span>
+            <span>인천문화재단 인스타그램(@ifacpr), 12월 1주 예정</span>
           </p>
         </div>
       </section>
@@ -95,7 +103,9 @@ export const eventSection = [
           </p>
           <p>
             <span className='text-type-head-2'>증정 선물: </span>
-            <span>젓가락 받침대 & 소원카드{`(1인 1개)`}</span>
+            <span>소원 카드 & 젓가락 받침대{`(선착순 증정)`}</span>
+            <br />
+            <span>{`(TIP: 여러 공간에 방문하면 귀엽고 다양한 야채 받침대들을 모을 수 있어요!)`}</span>
           </p>
         </div>
       </section>
@@ -129,17 +139,19 @@ export const eventSection = [
         }}>
         <p className='last:mb-0'>
           <span className='text-type-head-2'>
-            점점점 마을에서 보낸 즐거운 순간을 인스타그램에 소개해주세요!
+            점점점 마을에서 보낸 즐거운 순간을 SNS에 소개해주세요!
           </span>
           <br />
           필수 해시태그와 함께 사진을 올려주시면
-          <br /> 추첨을 통해 예쁜 {`<텀블러 끈 캐리어(빼이따이)>`}를 선물합니다.
+          <br /> 추첨을 통해 예쁜 {`<레디고 런치박스>`}를 선물합니다.
         </p>
         <div className='my-20'>
           <p>
             <span className='text-type-head-2'>참여 방법: </span>
             <span>
-              필수 해시태그와 함께 인스타그램에 방문 인증샷 올리기
+              필수 해시태그와 함께 SNS에 방문 인증샷 올리고 공간 담당자에게
+              보여주기 <br />
+              (홍보 및 사업관리 목적의 정보 활용 동의 완료 후 지급)
               <br />
               {`(TIP: 여러 공간을 방문하면 당첨률이 올라가요!)`}
             </span>
@@ -151,7 +163,7 @@ export const eventSection = [
           <br />
           <p>
             <span className='text-type-head-2'>증정 선물: </span>
-            <span>텀블러 끈 캐리어</span>
+            <span>레디고 런치박스(선착순 증정)</span>
           </p>
         </div>
       </section>

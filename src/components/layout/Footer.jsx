@@ -27,7 +27,7 @@ const Footer = () => {
           <p className='text-type-head-2 text-sm md:text-xl lg:text-2xl font-normal mx-auto'>
             032)760-1089,1093
           </p>
-          <SocialLinks className='md:hidden flex gap-4 *:gap-4' />
+          <SocialLinks className='md:hidden flex gap-4 *:gap-4' isFooter />
           <p className='absolute bottom-0 right-0 text-[10px] md:text-xs -translate-x-[23%] md:translate-x-0 translate-y-[200%] whitespace-nowrap text-type-head-2'>
             본 사이트는 세종글꽃체 서체를 사용하고 있습니다.
           </p>
