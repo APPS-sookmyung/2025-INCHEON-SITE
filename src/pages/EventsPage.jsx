@@ -37,10 +37,7 @@ export default function EventsPage() {
             WebkitTextStrokeWidth: '0.2px',
             WebkitTextStrokeColor: 'var(--type-body, #A49A85)',
           }}>
-          ※ 모든 이벤트는 운영 상황에 따라 조기 마감될 수 있습니다. 당첨자
-          발표는 인천문화재단 인스타그램{`(@ifacpr)`}을 참고해 주세요.
-          {`(12월 1주
-          예정)`}
+          ※ 모든 이벤트는 운영 상황에 따라 조기 마감될 수 있습니다.
         </p>
       </div>
     </main>
