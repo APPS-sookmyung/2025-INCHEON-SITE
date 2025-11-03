@@ -54,7 +54,7 @@ export const PLACES = [
   },
   {
     id: 'yeogwan',
-    subtitle: '올라아트컴퍼니',
+    subtitle: '올라이트컴퍼니',
     title: '<여관>',
     content:
       '우리 마을에서 가장 오래된 여관은 의문의 시간이었어요. 진실을 알려줄 사람을 늘 찾고 있죠.',
@@ -97,7 +97,7 @@ export const PLACES = [
   },
   {
     id: 'golmok',
-    subtitle: '㈜한울소리',
+    subtitle: '주가한술리',
     title: '<골목>',
     content: '골목 속으로 들어가면 아이들의 놀이소리와 음악소리가 크게 들려요.',
     image: golmokImg,
@@ -111,7 +111,7 @@ export const PLACES = [
   },
   {
     id: 'munbanggu',
-    subtitle: '㈜위드달',
+    subtitle: '㈜위런드',
     title: '<문방구>',
     content: '골목 초입에 있는 주인아저씨 문방구는 아이들의 놀이터예요.',
     image: munbangguImg,
@@ -125,7 +125,7 @@ export const PLACES = [
   },
   {
     id: 'dabang',
-    subtitle: '카츠오리진연구소',
+    subtitle: '카노오리연구소',
     title: '<다방>',
     content: '작은 다방에는 작은 조각보도 만들 수 있어요.',
     image: dabangImg,
@@ -139,7 +139,7 @@ export const PLACES = [
   },
   {
     id: 'bangatgan',
-    subtitle: '공예루틴',
+    subtitle: '몽예루틴',
     title: '<방앗간>',
     content: '골목에는 유명한 방앗간이 있는데 손님이 담긴 이야기가 펼쳐져요.',
     image: bangatganImg,
