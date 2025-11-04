@@ -51,7 +51,7 @@ const ListPage = () => {
               <Card
                 key={`${p.id}-${i}`}
                 place={p}
-                id={i + 1}
+                id={p.id}
                 isFirstCol={col === 1}
                 isLastRow={isLastRow}
                 isLastInColumn={isLastInColumn}

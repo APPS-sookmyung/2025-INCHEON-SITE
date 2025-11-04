@@ -1,6 +1,6 @@
 export const spaceEvents = [
   {
-    id: 1,
+    id: 'jangseung',
     name: '어벙또벙이야기수선집',
     title: '어벙대장군과 또벙여장군이 들려주는 전설들을 만나보세요!',
     description:
@@ -14,8 +14,8 @@ export const spaceEvents = [
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=133',
   },
   {
-    id: 2,
-    name: '발아',
+    id: 'teotbat',
+    name: '창작집단발아',
     title: '읽고, 쓰고, 심고, 돌보는 작은 여정에 당신을 초대합니다.',
     description:
       '창작 도서관의 희곡을 읽으며 휴식을 가집니다. 차분하고 안전한 공간에서\n책과 함께 마음을 돌아보며, 책 속 마음에 남는 문장을 화분에\n담습니다. 화분을 꾸미고 씨앗을 심으며 완성된 화분은 집으로\n가져가 식물처럼 문장을 돌봅니다.',
@@ -28,12 +28,12 @@ export const spaceEvents = [
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=125',
   },
   {
-    id: 4,
+    id: 'yeogwan',
     name: '올라아트컴퍼니',
     title:
       '오래된 여관에 남겨진 의문의 사건. 단서와 목격담을 따라, 숨겨진\n진실을 밝혀내세요.',
     description:
-      '〈여관괴담〉은 시골의 오래된 여관을 배경으로 펼쳐지는 짧고 강렬한 참여형\n연극 콘텐츠입니다. 관객은 직접 사건의 목격자이자 조사자가 되어 여관 안에\n숨겨진 공포와 미스터리를 추적합니다.\n\n연극적 서사, 실제 공간, 그리고 역할 놀이가 결합되어 짧지만 깊은 몰입과\n긴장감을 경험하게 됩니다.',
+      '〈 여관괴담 〉은 시골의 오래된 여관을 배경으로 펼쳐지는 짧고 강렬한 참여형\n연극 콘텐츠입니다. 관객은 직접 사건의 목격자이자 조사자가 되어 여관 안에\n숨겨진 공포와 미스터리를 추적합니다.\n\n연극적 서사, 실제 공간, 그리고 역할 놀이가 결합되어 짧지만 깊은 몰입과\n긴장감을 경험하게 됩니다.',
     time: '14:00 – 18:00',
     address: '1965여관\n(인천 중구 신포로31번길 20)',
     themeColor: 'pink',
@@ -43,7 +43,7 @@ export const spaceEvents = [
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=119',
   },
   {
-    id: 3,
+    id: 'eumakjangteo',
     name: '코드아트',
     title: '예술과 물건, 사연이 어우러진 특별한 공간으로 여러분을 초대합니다.',
     description:
@@ -57,8 +57,8 @@ export const spaceEvents = [
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=127',
   },
   {
-    id: 7,
-    name: '한울소리',
+    id: 'golmok',
+    name: '㈜한울소리',
     title: '아련한 기억 속의 소리들이 눈 앞에 펼쳐지는 새로운 추억 여행의 방식',
     description:
       '시골 마을의 풍경과 소리를 주제로, ‘보는’ 영상과 더불어, ‘듣고,\n느끼는’ 오감 체험이 가능한 실감형 음향을 한울소리 공간에\n전시합니다.',
@@ -71,7 +71,7 @@ export const spaceEvents = [
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=117',
   },
   {
-    id: 5,
+    id: 'doltap',
     name: '모이소',
     title: '도심을 거닐다 나오는 돌탑을 잠시 바라보고 가세요!',
     description:
@@ -85,8 +85,8 @@ export const spaceEvents = [
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=129',
   },
   {
-    id: 6,
-    name: '인공빛',
+    id: 'dokkaebibul',
+    name: '공간인공빛',
     title: '창문 너머로, 공간들이 간직한 이야기가 흘러나온다',
     description:
       '해가 지고 어둑해지면 2층의 공간 인공빛 창문에서 빛이 어른거립니다. 소리\n가 없는 무성 영화처럼, 짧막한 이야기들이 스쳐 지나갑니다. 인천의 공간들\n이 지녔던 이야기가 될 수 있겠습니다.\n\n<인공빛이 나타났다 II>는 기간 내내 길을 지나는 행인 모두가\n관객이 되는 야외 상설 전시의 형태로 진행됩니다.',
@@ -99,7 +99,7 @@ export const spaceEvents = [
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=135',
   },
   {
-    id: 8,
+    id: 'munbanggu',
     name: '(주)위드달',
     title:
       '‘문방구’는 세대와 세대를 잇는 추억의 공간이자, 놀이와\n 창의력이 시작되는 작은 우주입니다.',
@@ -114,8 +114,8 @@ export const spaceEvents = [
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=121',
   },
   {
-    id: 9,
-    name: '카츠오리진',
+    id: 'dabang',
+    name: '카츠오리진연구소',
     title: '오래된 골목 위 작은 다방에서 당신의 상상도 살며시 놓아두고 가세요.',
     description:
       '다방처럼 꾸며진 공간에서는 앉아 차를 마시듯 쉬어가며,\n직접 조각보 티코스터도 만들어보실 수 있습니다.',
@@ -128,7 +128,7 @@ export const spaceEvents = [
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=131',
   },
   {
-    id: 10,
+    id: 'bangatgan',
     name: '공예루틴',
     title:
       '바다의 기억, 땅의 순간, 하늘의 시간>\n<토양이 전시의 소재로 그리고 테마로 변화하는 새로운 순간을 경험해 보세요.',
