@@ -35,7 +35,7 @@ const HIGHLIGHT_POSITION_CLASSES = {
     'absolute scale-60 md:scale-80 lg:scale-100 -translate-x-[38%] -translate-y-[26%] md:-translate-x-[34%] md:-translate-y-[20%] lg:-translate-x-[28%] lg:-translate-y-[13%]',
 };
 
-const SpacehighlightPage = () => {
+const SpaceDetailPage = () => {
   const {id} = useParams();
   const event = spaceEvents.find((event) => event.id === id);
 
@@ -119,4 +119,4 @@ const SpacehighlightPage = () => {
   );
 };
 
-export default SpacehighlightPage;
+export default SpaceDetailPage;
