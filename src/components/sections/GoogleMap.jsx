@@ -29,9 +29,7 @@ const GoogleMap = () => {
                   position={{lat: space.lat, lng: space.lng}}
                   onClick={() => setActiveMarker(space.id)}>
                   <Pin
-                    background={
-                      Number(space.id) === Number(id) ? '#f4ced2' : '#bcd5ee'
-                    }
+                    background={space.id === id ? '#f4ced2' : '#bcd5ee'}
                     borderColor='none'
                     glyphColor='#f6f1e1'
                   />
