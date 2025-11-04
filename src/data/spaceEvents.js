@@ -6,9 +6,8 @@ export const spaceEvents = [
     description:
       '이야기가 모이고 만들어지는 이야기 수선집.\n이번에는 장승이 된 어벙또벙이 점점점 장소들이 있는 인촌에서\n숨은 전설들을 찾았습니다. 이야기 전시와 함께 공간 한 켠에서\n‘나만의 장승 인형 만들기’ 체험이 가능합니다.',
     time: '13:00 - 18:00',
-    address: '어벙또벙이야기수선집\n(인천 동구 송림로 16, 2층)',
+    address: '어벙또벙이야기수선집 (인천 동구 송림로 16, 2층)',
     themeColor: 'yellow',
-    imgPath: '../assets/spaceConcepts/1.svg',
     imgClass:
       'md:scale-60 md:translate-x-[40%] md:translate-y-[40%] lg:translate-x-[0] lg:translate-y-[20%]',
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=133',
@@ -22,7 +21,6 @@ export const spaceEvents = [
     time: '12:00 - 18:00',
     address: '창작집단 발아 랩실\n(인천 중구 참외전로 27번길 2, 2층)',
     themeColor: 'blue',
-    imgPath: '../assets/spaceConcepts/2.svg',
     imgClass:
       'md:scale-30 lg:scale-80 md:translate-x-[50%] md:translate-y-[15%] lg:translate-x-[0] lg:translate-y-[20%]',
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=125',
@@ -37,7 +35,6 @@ export const spaceEvents = [
     time: '14:00 – 18:00',
     address: '1965여관\n(인천 중구 신포로31번길 20)',
     themeColor: 'pink',
-    imgPath: '../assets/spaceConcepts/3.svg',
     imgClass:
       'md:scale-40 lg:scale-100 md:translate-x-[47%] md:translate-y-[13%] lg:translate-x-[0] lg:translate-y-[0]',
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=119',
@@ -51,7 +48,6 @@ export const spaceEvents = [
     time: '11월 14, 21일 18:00~22:00\n/ 15, 22일 14:00~18:00',
     address: '코드스페이스\n(인천 미추홀구 주안로 78, 3층)',
     themeColor: 'green',
-    imgPath: '../assets/spaceConcepts/4.svg',
     imgClass:
       'md:scale-40 lg:scale-70 md:translate-x-[47%] md:translate-y-[15%] lg:translate-x-[15%] lg:translate-y-[3%]',
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=127',
@@ -65,7 +61,6 @@ export const spaceEvents = [
     time: '11월 14일, 21일 19:00~20:00\n/ 11월 15일, 22일 15:00~16:00\n(정시 1차 공연 시작, 30분 2차 공연 시작)',
     address: '한울소리 문화공간\n(인천 미추홀구 소성로 285 지하)',
     themeColor: 'green',
-    imgPath: '../assets/spaceConcepts/5.svg',
     imgClass:
       'md:scale-40 lg:scale-60 md:translate-x-[47%] md:translate-y-[15%] lg:translate-x-[20%] lg:-translate-y-[8%]',
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=117',
@@ -79,7 +74,6 @@ export const spaceEvents = [
     time: '12:00 – 18:00',
     address: '인천 중구 우현로 67번길 13, 2층\n(프로젝트 스페이스 코스모스)',
     themeColor: 'blue',
-    imgPath: '../assets/spaceConcepts/6.svg',
     imgClass:
       'md:scale-70 lg:scale-80 md:translate-x-[31.5%] md:translate-y-[12%] lg:translate-x-[10%] lg:-translate-y-[20%]',
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=129',
@@ -93,7 +87,6 @@ export const spaceEvents = [
     time: '19:30 – 23:00',
     address: '공간 인공빛\n(인천 중구 신포로 31번길 6, 2층)',
     themeColor: 'yellow',
-    imgPath: '../assets/spaceConcepts/7.svg',
     imgClass:
       'md:scale-50 lg:scale-70 md:translate-x-[41.5%] md:translate-y-[5%] lg:translate-x-[15%] lg:-translate-y-[20%]',
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=135',
@@ -108,7 +101,6 @@ export const spaceEvents = [
     time: '14:00 – 16:00',
     address: '위드달 작업장 (인천 미추홀구 석정로375번길 23)',
     themeColor: 'pink',
-    imgPath: '../assets/spaceConcepts/8.svg',
     imgClass:
       'md:scale-40 lg:scale-70 md:translate-x-[47%] md:translate-y-[2%] lg:translate-x-[15%] lg:-translate-y-[10%]',
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=121',
@@ -122,7 +114,6 @@ export const spaceEvents = [
     time: '11:00 – 18:00',
     address: '카츠오리진 연구소\n(인천 중구 자유공원로 5, 빽다방 3층)',
     themeColor: 'blue',
-    imgPath: '../assets/spaceConcepts/9.svg',
     imgClass:
       'md:scale-40 lg:scale-70 md:translate-x-[47%] md:translate-y-[2%] lg:translate-x-[15%] lg:-translate-y-[24%]',
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=131',
@@ -137,7 +128,6 @@ export const spaceEvents = [
     time: '전시: 11월 5일 ~ 11월 29일 (12:00 – 18:00)\n/ 오픈토크: 11월 22일(금) 14:00',
     address: '공예루틴\n(인천 중구 신포로23번길 43)',
     themeColor: 'yellow',
-    imgPath: '../assets/spaceConcepts/10.svg',
     imgClass:
       'md:scale-40 lg:scale-70 md:translate-x-[47%] md:-translate-y-[10%] lg:translate-x-[15%] lg:-translate-y-[13%]',
     surveyLink: 'https://kon.kric.com/project/2506024_A/INDEX.asp?SC=123',
