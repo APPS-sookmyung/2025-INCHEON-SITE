@@ -43,7 +43,7 @@ const OpenStudioSection = () => {
               className='contents *:whitespace-pre *:not-first:text-black'>
               <div className='flex gap-10.5'>
                 <p>{studio.id}</p>
-                <p>{studio.name}</p>
+                <p className='truncate'>{studio.name}</p>
               </div>
               {studio.program ? (
                 <>

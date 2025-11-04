@@ -31,7 +31,7 @@ const ListPage = () => {
 
   return (
     <Section textureOnly>
-      <div className='mx-auto max-w-6xl px-5 py-12'>
+      <div className='mx-auto max-w-6xl px-2 py-12'>
         {/* 그리드 라인 */}
         <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0'>
           {PLACES.map((p, i) => {
