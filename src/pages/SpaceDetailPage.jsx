@@ -56,7 +56,7 @@ const SpaceDetailPage = () => {
         backgroundPosition: 'top left',
       }}>
       <article
-        className='relative w-6/7 md:w-3/4 mx-auto min-h-screen py-15 md:py-24 lg:w-full lg:px-37 lg:pt-32 lg:pb-40'
+        className='relative mx-auto w-6/7 md:w-3/4 lg:w-full min-h-screen py-15 md:py-24 lg:px-37 lg:pt-32 lg:pb-23'
         style={{WebkitTextStrokeWidth: '0.2px'}}
         aria-labelledby='space-title'>
         {/* 공간 컨셉 일러스트 */}
@@ -101,7 +101,7 @@ const SpaceDetailPage = () => {
               label='장소'
               highlight={HIGHLIGHT_POSITION_CLASSES.address}
               theme={HIGHLIGHT_IMAGE_MAP[theme]}
-              className='md:whitespace-pre'>
+              className=''>
               {event.address}
             </InfoItem>
           </div>
@@ -111,7 +111,7 @@ const SpaceDetailPage = () => {
         <SurveyButton link={event.surveyLink} />
 
         {/* 지도 섹션 */}
-        <section className='w-full mt-40 md:mt-50 lg:mt-20 lg:w-3/4'>
+        <section className='w-full mt-40 md:mt-50 lg:w-3/4'>
           <GoogleMap aria-label={`${event.name} 위치 지도`} />
         </section>
       </article>
