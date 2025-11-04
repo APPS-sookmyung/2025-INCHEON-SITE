@@ -13,9 +13,7 @@ import x from '../../assets/svg/x.svg';
 const GoogleMap = () => {
   const {id} = useParams();
   const [activeMarker, setActiveMarker] = useState(null);
-  const spaceLocation = spaceLocations.find(
-    (space) => Number(space.id) === Number(id)
-  );
+  const spaceLocation = spaceLocations.find((space) => space.id === id);
   const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
   const mapId = import.meta.env.VITE_GOOGLE_MAPS_ID;
   const position = {lat: spaceLocation.lat, lng: spaceLocation.lng};
