@@ -6,7 +6,7 @@ import instagram from '@/assets/svg/instagram-icon.svg';
 const SocialLinks = ({className = '', isFooter = false}) => {
   return (
     <div className={`${className}`}>
-      <div className='flex flex-1 justify-evenly *:p-1'>
+      <div className='flex flex-1 justify-evenly'>
         <a
           href='https://www.instagram.com/ifacpr/'
           target='_blank'
