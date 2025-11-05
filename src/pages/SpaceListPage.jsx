@@ -10,7 +10,6 @@ import {PLACES} from '@/data/places';
 const cx = (...classes) => classes.filter(Boolean).join(' ');
 
 const ListPage = () => {
-  // responsive columns: match Tailwind breakpoints used in the grid
   const [cols, setCols] = useState(() => {
     if (typeof window === 'undefined') return 3;
     const w = window.innerWidth;
