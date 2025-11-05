@@ -8,7 +8,7 @@ export default function Header() {
       <div className='whitespace-nowrap px-5 py-4 md:px-12 md:flex md:items-center lg:px-36'>
         {/* 왼쪽: 로고 + 메뉴 */}
         <div
-          className='flex items-center gap-3 md:w-3/5 md:gap-10'
+          className='flex items-center gap-3 md:w-3/5 md:gap-5 lg:gap-10'
           style={{
             WebkitTextStrokeWidth: '0.2px',
           }}>
@@ -21,7 +21,7 @@ export default function Header() {
             />
           </Link>
 
-          <nav className='flex flex-1 justify-evenly gap-7 lg:gap-9'>
+          <nav className='flex flex-1 justify-evenly gap-5 lg:gap-9'>
             <NavLink
               to='/spaces'
               className={({isActive}) =>

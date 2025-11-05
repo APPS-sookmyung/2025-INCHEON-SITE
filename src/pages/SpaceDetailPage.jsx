@@ -75,7 +75,7 @@ const SpaceDetailPage = () => {
           </h1>
           <p
             className='text-lg md:text-2xl lg:text-[33px]'
-            style={{WebkitTextStrokeWidth: '0.7px'}}
+            style={{WebkitTextStrokeWidth: '0.6px'}}
             aria-label={`공간 타이틀: ${event.title}`}>
             {`< ${event.title} >`}
           </p>
