@@ -44,6 +44,8 @@ body {
     'SSYoungestDaughterRegular', 'SejongGeulggot', Pretendard, ui-sans-serif,
     system-ui, sans-serif;
   --spacing-p-gap: 36px;
+
+  --breakpoint-md: 744px;
 }
 
 .gm-ui-hover-effect {
