@@ -42,7 +42,7 @@ export const PLACES = [
     subtitle: '코드아트',
     title: '<음악장터>',
     content:
-      '텃밭을 지나면 음악 정터가 나와요! 특별한 날에는 예술가들의 사연이 담긴 공연을 판대요.',
+      '텃밭을 지나면 음악 장터가 나와요! 특별한 날에는 예술가들의 사연이 담긴 공연을 판대요.',
     image: eumakjangteoImg,
     hoverBgColor: 'var(--color-primary-1)',
     hoverTitle:
@@ -86,7 +86,7 @@ export const PLACES = [
     subtitle: '공간인공빛',
     title: '<도깨비불>',
     content:
-      '텃밭을 지나면 음악 정터가 나와요! 특별한 날에는 예술가들의 사연이 담긴 공연을 한대요.',
+      '뒷산으로 가면 돌탑이 나와요. 소원을 빌어 봐요. 어두워지면 도깨비불도 볼 수 있대요!',
     image: dokkaebibulImg,
     hoverBgColor: 'var(--color-primary-2)',
     hoverTitle: '< 창문 너머로, 공간들이 간직한 이야기가 흘러나온다 >',
