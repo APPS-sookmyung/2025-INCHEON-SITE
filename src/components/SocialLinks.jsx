@@ -29,7 +29,7 @@ const SocialLinks = ({className = '', isFooter = false}) => {
             loading='lazy'
           />
         </a>
-        <div className='w-18 h-5 md:w-25 md:h-7 lg:w-28 lg:h-8 rounded-full outline-[1.2px] outline-type-head-2 hover:outline-type-body md:outline-type-body md:hover:outline-type-head-2 flex items-center justify-center text-center'>
+        <div className='w-18 h-5 md:w-25 md:h-7 lg:w-28 lg:h-8 rounded-full border border-type-head-2 md:border-type-body hover:border-type-body md:hover:border-type-head-2 flex items-center justify-center text-center'>
           <a
             href='https://ifac.or.kr/index.do'
             target='_blank'
