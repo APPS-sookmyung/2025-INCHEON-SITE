@@ -40,7 +40,7 @@ const SpaceDetailPage = () => {
   const event = spaceEvents.find((event) => event.id === id);
 
   const conceptImgUrl = new URL(
-    `../assets/spaceConcepts/${id}.svg`,
+    `../assets/svg/spaceConcepts/${id}.svg`,
     import.meta.url
   ).href;
 

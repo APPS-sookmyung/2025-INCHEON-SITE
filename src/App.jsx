@@ -9,11 +9,17 @@ import SpaceListPage from './pages/SpaceListPage';
 import SpaceDetailPage from './pages/SpaceDetailPage';
 import Layout from './layout/Layout';
 import EventsPage from './pages/EventsPage';
+import useScrollToTop from '@/hooks/useScrollToTop';
 
-const App = () => {
+const Root = () => {
+  useScrollToTop();
+  return <Layout />;
+};
+
+function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path='/' element={<Layout />}>
+      <Route path='/' element={<Root />}>
         <Route index element={<MainPage />} />
         <Route path='spaces' element={<SpaceListPage />} />
         <Route path='space/:id' element={<SpaceDetailPage />} />
@@ -22,6 +28,6 @@ const App = () => {
     )
   );
   return <RouterProvider router={router} />;
-};
+}
 
 export default App;
