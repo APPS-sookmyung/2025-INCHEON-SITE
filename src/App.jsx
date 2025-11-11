@@ -9,7 +9,7 @@ import SpaceListPage from './pages/SpaceListPage';
 import SpaceDetailPage from './pages/SpaceDetailPage';
 import Layout from './layout/Layout';
 import EventsPage from './pages/EventsPage';
-import useScrollToTop from './hooks/useScrolltoTop';
+import useScrollToTop from '@/hooks/useScrollToTop';
 
 const Root = () => {
   useScrollToTop();
