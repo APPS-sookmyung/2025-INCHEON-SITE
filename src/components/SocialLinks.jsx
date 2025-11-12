@@ -31,11 +31,11 @@ const SocialLinks = ({className = '', isFooter = false}) => {
         </a>
         <div className='w-18 h-5 md:w-25 md:h-7 lg:w-28 lg:h-8 rounded-full border border-type-head-2 md:border-type-body hover:border-type-body md:hover:border-type-head-2 flex items-center justify-center text-center'>
           <a
-            href='https://ifac.or.kr/index.do'
+            href='https://2025dotdotdot.vercel.app/'
             target='_blank'
             rel='noopener noreferrer'>
             <p className='text-type-head-2 hover:text-type-body text-xs md:text-type-body md:hover:text-type-head-2 md:text-base lg:text-lg font-normal'>
-              공식 사이트
+              타임테이블
             </p>
           </a>
         </div>

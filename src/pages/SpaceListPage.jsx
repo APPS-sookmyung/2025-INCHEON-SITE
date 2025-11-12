@@ -33,10 +33,20 @@ const ListPage = () => {
       <div className='mx-auto max-w-6xl px-2'>
         <header>
           <p
-            className='text-base md:text-2xl lg:text-3xl text-type-head-2 text-center pb-12'
+            className='text-base md:text-2xl lg:text-3xl text-type-head-2 text-center pb-5 md:pb-12'
             style={{WebkitTextStrokeWidth: '0.5px'}}>
             말풍선을 클릭하면 단체 이야기를 더 볼 수 있어요
           </p>
+          <a
+            href='https://2025dotdotdot.vercel.app/'
+            target='_blank'
+            rel='noopener noreferrer'>
+            <p
+              className='md:hidden text-type-body hover:text-type-head-2 text-xs text-right p-3 pb-4'
+              style={{WebkitTextStrokeWidth: '0.2px'}}>
+              타임테이블 확인하기
+            </p>
+          </a>
         </header>
         {/* 그리드 라인 */}
         <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0'>
