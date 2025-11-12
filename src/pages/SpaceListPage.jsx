@@ -42,7 +42,7 @@ const ListPage = () => {
             target='_blank'
             rel='noopener noreferrer'>
             <p
-              className='md:hidden text-type-body hover:text-type-head-2 text-xs text-right p-3 pb-4'
+              className='text-type-body hover:text-type-head-2 text-xs md:text-base lg:text-lg text-right p-3 pb-4'
               style={{WebkitTextStrokeWidth: '0.2px'}}>
               타임테이블 확인하기
             </p>
