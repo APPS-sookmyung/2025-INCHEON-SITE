@@ -37,16 +37,30 @@ const ListPage = () => {
             style={{WebkitTextStrokeWidth: '0.5px'}}>
             말풍선을 클릭하면 단체 이야기를 더 볼 수 있어요
           </p>
-          <a
-            href='https://2025dotdotdot.vercel.app/'
-            target='_blank'
-            rel='noopener noreferrer'>
-            <p
-              className='text-type-body hover:text-type-head-2 text-xs md:text-base lg:text-lg text-right p-3 pb-4'
-              style={{WebkitTextStrokeWidth: '0.2px'}}>
-              타임테이블 확인하기
-            </p>
-          </a>
+          <div className='flex justify-end mb-4'>
+            <a
+              href='https://2025dotdotdot.vercel.app/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline-block rounded-full px-4 md:px-6 py-2 text-type-head-2 hover:text-black transition-all duration-200 bg-[#d5e5b0]'
+              style={{
+                animation: 'bounceUpDown 2s ease-in-out infinite',
+              }}>
+              <span className='text-xs md:text-base lg:text-lg'>
+                타임테이블 확인하기 →
+              </span>
+            </a>
+          </div>
+          <style>{`
+            @keyframes bounceUpDown {
+              0%, 100% {
+                transform: translateY(0px);
+              }
+              50% {
+                transform: translateY(-8px);
+              }
+            }
+          `}</style>
         </header>
         {/* 그리드 라인 */}
         <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0'>
