@@ -6,7 +6,8 @@ export default function PlaceCardHover({place}) {
       // primary-1 (연한 초록)
       return {
         hoverTitle: '#566346',
-        hoverContent: '#9AA78A',
+        hoverContent: '#566346',
+        hoverMore: '#9aa78a',
         time: '#899679',
         address: '#899679',
       };
@@ -15,6 +16,7 @@ export default function PlaceCardHover({place}) {
       return {
         hoverTitle: '#867171',
         hoverContent: '#867171',
+        hoverMore: '#867171',
         time: '#B69D98',
         address: '#B69D98',
       };
@@ -22,7 +24,8 @@ export default function PlaceCardHover({place}) {
       // primary-3 (연한 파랑)
       return {
         hoverTitle: '#496573',
-        hoverContent: '#8DA5B1',
+        hoverContent: '#496573',
+        hoverMore: '#8DA5B1',
         time: '#7798A8',
         address: '#7798A8',
       };
@@ -30,7 +33,8 @@ export default function PlaceCardHover({place}) {
       // primary-4 (연한 노랑)
       return {
         hoverTitle: 'var(--color-type-head-2)',
-        hoverContent: '#B1AD8A',
+        hoverContent: 'var(--color-type-head-2)',
+        hoverMore: '#B1AD8A',
         time: 'var(--color-type-body)',
         address: 'var(--color-type-body)',
       };
@@ -53,10 +57,11 @@ export default function PlaceCardHover({place}) {
       {/* 호버 시 메인 제목 */}
       {place.hoverTitle && (
         <div
-          className='justify-start text-slate-600 text-2xl font-normal leading-8'
+          className='justify-start text-base md:text-lg lg:text-2xl font-normal leading-8'
           style={{
             color: textColors.hoverTitle,
             fontFamily: 'SejongGeulggot',
+            WebkitTextStroke: `0.5px ${textColors.hoverTitle}`,
           }}>
           {place.hoverTitle}
         </div>
@@ -64,25 +69,32 @@ export default function PlaceCardHover({place}) {
 
       {/* 호버 시 설명 */}
       {place.hoverContent && (
-        <p
-          className='w-80 justify-start flex-1'
-          style={{color: textColors.hoverContent}}>
-          {place.hoverContent}
-        </p>
+        <div>
+          <p
+            className='truncate text-[15px]'
+            style={{
+              color: textColors.hoverContent,
+            }}>
+            {place.hoverContent}
+          </p>
+          <span className='text-[15px]' style={{color: textColors.hoverMore}}>
+            더보기
+          </span>
+        </div>
       )}
 
       {/* 하단: 시간 + 주소 */}
       <div className='mt-auto space-y-1'>
         {place.time && (
           <p
-            className='justify-start text-type-body text-base font-normal leading-7'
+            className='justify-start text-[15px] font-normal leading-7'
             style={{color: textColors.time}}>
             {place.time}
           </p>
         )}
         {place.address && (
           <p
-            className='justify-start text-slate-400 text-base font-normal leading-7'
+            className='justify-start text-[15px] font-normal leading-7'
             style={{color: textColors.address}}>
             {place.address}
           </p>
