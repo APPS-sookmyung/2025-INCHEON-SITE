@@ -57,7 +57,7 @@ export default function PlaceCardHover({place}) {
       {/* 호버 시 메인 제목 */}
       {place.hoverTitle && (
         <div
-          className='justify-start text-base md:text-lg lg:text-2xl font-normal leading-8'
+          className='justify-start text-base md:text-lg lg:text-xl font-normal leading-8'
           style={{
             color: textColors.hoverTitle,
             fontFamily: 'SejongGeulggot',
