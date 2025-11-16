@@ -163,7 +163,7 @@ export const eventSection = [
           <br />
           <p>
             <span className='text-type-head-2'>증정 선물: </span>
-            <span>레디고 런치박스(선착순 증정)</span>
+            <span>런치박스(선착순 증정)</span>
           </p>
         </div>
       </section>
